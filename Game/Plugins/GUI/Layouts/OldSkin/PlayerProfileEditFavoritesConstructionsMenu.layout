@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="TaharezLook/FrameWindow" Name="PlayerProfileEditFavCstrsWin" >
+        <Property Name="Text" Value="Edit Favorites Constuctions" />
+        <Property Name="TitlebarFont" Value="DejaVuSans-10" />
+        <Property Name="ClippedByParent" Value="False" />
+        <Property Name="TitlebarEnabled" Value="True" />
+        <Property Name="UnifiedAreaRect" Value="{{0.363021,0},{0.253459,0},{0.612499,0},{0.785431,0}}" />
+        <Window Type="TaharezLook/Listbox" Name="PlayerProfileEditFavCstrsWin/FavoritedConstructionSelector" >
+            <Property Name="UnifiedAreaRect" Value="{{-2.54598e-005,0},{0.30013,0},{1.00003,0},{0.929598,0}}" />
+        </Window>
+        <Window Type="TaharezLook/Button" Name="PlayerProfileEditFavCstrsWin/SaveAndCloseBttn" >
+            <Property Name="Text" Value="Save &amp; Close" />
+            <Property Name="UnifiedAreaRect" Value="{{0.606908,0},{0.945911,0},{0.990088,0},{0.992785,0}}" />
+        </Window>
+        <Window Type="TaharezLook/Button" Name="PlayerProfileEditFavCstrsWin/SaveBttn" >
+            <Property Name="Text" Value="Save" />
+            <Property Name="UnifiedAreaRect" Value="{{0.30674,0},{0.943944,0},{0.583667,0},{0.990818,0}}" />
+        </Window>
+        <Window Type="TaharezLook/Button" Name="PlayerProfileEditFavCstrsWin/CancelBttn" >
+            <Property Name="Text" Value="Cancel" />
+            <Property Name="UnifiedAreaRect" Value="{{0.0119322,0},{0.941977,0},{0.290567,0},{0.988852,0}}" />
+        </Window>
+        <Window Type="TaharezLook/StaticText" Name="PlayerProfileEditFavCstrsWin/Text" >
+            <Property Name="Text" Value="Liste des constructions en favoris : " />
+            <Property Name="HorzExtent" Value="282" />
+            <Property Name="VertExtent" Value="12.3136" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{0.0166769,0},{0.254892,0},{0.733346,0},{0.300369,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Property Name="VertScrollPosition" Value="0" />
+        </Window>
+        <Window Type="TaharezLook/Menubar" Name="PlayerProfileEditFavCstrsWin/Menubar" >
+            <Property Name="ItemSpacing" Value="10" />
+            <Property Name="UnifiedAreaRect" Value="{{-0.0020869,0},{0.000490805,0},{1.02292,0},{0.0459668,0}}" />
+            <Window Type="TaharezLook/MenuItem" Name="PlayerProfileEditFavCstrsWin/Menubar/FileButton" >
+                <Property Name="Text" Value="File" />
+                <Property Name="UnifiedAreaRect" Value="{{0,10},{0,0},{0,52},{0,20}}" />
+                <Property Name="VerticalAlignment" Value="Centre" />
+                <Window Type="TaharezLook/PopupMenu" Name="PlayerProfileEditFavCstrsWin/Menubar/FileButton/FileMenu" >
+                    <Property Name="Visible" Value="False" />
+                    <Property Name="FadeInTime" Value="0" />
+                    <Property Name="FadeOutTime" Value="0" />
+                    <Property Name="ItemSpacing" Value="2" />
+                    <Property Name="ClippedByParent" Value="False" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0,22},{0,200},{0,95.8846}}" />
+                    <Property Name="AutoResizeEnabled" Value="True" />
+                    <Window Type="TaharezLook/MenuItem" Name="PlayerProfileEditFavCstrsWin/Menubar/FileButton/FileMenu/Load" >
+                        <Property Name="Text" Value="Load favorite list..." />
+                        <Property Name="Tooltip" Value="Load favorite list" />
+                        <Property Name="UnifiedAreaRect" Value="{{0,5},{0,3},{0,190},{0,23}}" />
+                    </Window>
+                    <Window Type="TaharezLook/MenuItem" Name="PlayerProfileEditFavCstrsWin/Menubar/FileButton/FileMenu/Save" >
+                        <Property Name="Text" Value="Save favorite list" />
+                        <Property Name="Tooltip" Value="Save favorite list" />
+                        <Property Name="Disabled" Value="True" />
+                        <Property Name="UnifiedAreaRect" Value="{{0,5},{0,25},{0,190},{0,45}}" />
+                    </Window>
+                    <Window Type="TaharezLook/MenuItem" Name="PlayerProfileEditFavCstrsWin/Menubar/FileButton/FileMenu/SaveAs" >
+                        <Property Name="Text" Value="Save favorite list as..." />
+                        <Property Name="Tooltip" Value="Save favorite list as ..." />
+                        <Property Name="UnifiedAreaRect" Value="{{0,5},{0,47},{0,190},{0,67}}" />
+                    </Window>
+                </Window>
+            </Window>
+        </Window>
+        <Window Type="TaharezLook/Button" Name="PlayerProfileEditFavCstrsWin/AddFavBttn" >
+            <Property Name="Text" Value="Add" />
+            <Property Name="UnifiedAreaRect" Value="{{0.691836,0},{0.133851,0},{0.98752,0},{0.185228,0}}" />
+        </Window>
+        <Window Type="TaharezLook/Button" Name="PlayerProfileEditFavCstrsWin/ReplaceFavBttn" >
+            <Property Name="Text" Value="Replace selected" />
+            <Property Name="UnifiedAreaRect" Value="{{0.00916877,0},{0.138516,0},{0.49064,0},{0.189893,0}}" />
+        </Window>
+        <Window Type="TaharezLook/Combobox" Name="PlayerProfileEditFavCstrsWin/ConstructionSelector" >
+            <Property Name="ReadOnly" Value="True" />
+            <Property Name="ClippedByParent" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{0.00616464,0},{0.081961,0},{0.990431,0},{0.975599,0}}" />
+            <Property Name="MaxEditTextLength" Value="1073741823" />
+        </Window>
+        <Window Type="TaharezLook/StaticText" Name="PlayerProfileEditFavCstrsWin/Text1" >
+            <Property Name="Text" Value="Constructions enregistrés :" />
+            <Property Name="HorzExtent" Value="213" />
+            <Property Name="VertExtent" Value="12.3136" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{0.0165896,0},{0.0434771,0},{0.537423,0},{0.0830547,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Property Name="VertScrollPosition" Value="0" />
+        </Window>
+        <Window Type="TaharezLook/Button" Name="PlayerProfileEditFavCstrsWin/DelFavBttn" >
+            <Property Name="Text" Value="Delete Selected" />
+            <Property Name="UnifiedAreaRect" Value="{{0.00687169,0},{0.201078,0},{0.486256,0},{0.252455,0}}" />
+        </Window>
+    </Window>
+</GUILayout>

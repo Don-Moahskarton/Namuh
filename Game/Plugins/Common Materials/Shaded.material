@@ -1,0 +1,45 @@
+material Template/Red
+{
+   technique
+   {
+      pass
+      {
+         lighting on
+ 
+         ambient 0.3 0.1 0.1 1
+         diffuse 0.8 0.05 0.05 1
+         emissive 0.4 0.05 0.1 1
+      }
+   }
+}
+ 
+ 
+material Template/Blue
+{
+   technique
+   {
+      pass
+      {
+         lighting on
+ 
+         ambient 0.3 0.3 0.3 1
+         diffuse 0.1 0.2 0.7 1
+         emissive 0.05 0.05 0.6 1
+      }
+   }
+}
+ 
+material Templates/RadioactiveGreen
+{
+   technique
+   {
+      pass
+      {
+         lighting on
+ 
+         ambient 0.1 0.3 0.1 1
+         diffuse 0.2 0.2 0.2 1
+         emissive 0.05 0.8 0.05 1
+      }
+   }
+}

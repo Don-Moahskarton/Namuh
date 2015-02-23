@@ -1,0 +1,18 @@
+import * from "general.material"
+ material Tourelle : base_material
+{
+    // any of these maps can be left out if you don't have one
+    set_texture_alias diffuseMap BarkPine0012_1_M.jpg
+    set_texture_alias specMap BarkPine0012_1_M_SPEC.jpg
+    set_texture_alias normalMap BarkPine0012_1_M2_NRM.jpg
+    //set_texture_alias aoMap BarkPine0012_1_M_OCC.jpg
+ 
+    // diffuse colour multiplier 
+    set $diffuseCol "1 1 1"
+    // specular colour multiplier
+    set $specularCol "0.7 0.7 0.7"
+    // specular power (shininess) (the higher, the sharper the highlights)
+    set $shininess "200"
+ 
+    // once again, you can leave any of these configurables out if you don't need them
+}

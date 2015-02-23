@@ -1,0 +1,44 @@
+<?xml version="1.0" ?>
+<GUILayout>
+<Window Type="DefaultGUISheet" Name="root">
+	<Window Type="DefaultGUISheet" Name="Test">
+		<Property Name="RelativeMaxSize" Value="w:1 h:2" />
+		<Property Name="Size" Value="w:1 h:2" />
+
+		<Window Type="TaharezLook/FrameWindow" Name="Test/Window1">
+			<Property Name="Position" Value="x:0.05 y:0.1" />
+			<Property Name="RelativeMaxSize" Value="w:0.5 h:1" />
+			<Property Name="AbsoluteMinSize" Value="w:128 h:128" />
+			<Property Name="Size" Value="w:0.4 h:0.3" />
+			<Property Name="Text" Value="Demo 8 - Listbox Demo" />
+
+			<Window Type="TaharezLook/Listbox" Name="Test/Window1/Listbox">
+				<Property Name="Position" Value="x:0.05 y:0.1" />
+				<Property Name="RelativeMaxSize" Value="w:1 h:1" />
+				<Property Name="Size" Value="w:0.9 h:0.485" />
+			</Window>
+
+			<Window Type="TaharezLook/Editbox" Name="Test/Window1/Controls/Editbox">
+				<Property Name="Position" Value="x:0.05 y:0.625" />
+				<Property Name="RelativeMaxSize" Value="w:1 h:1" />
+				<Property Name="Size" Value="w:0.6 h:0.10" />
+			</Window>
+
+			<Window Type="TaharezLook/Button" Name="Test/Window1/Controls/Add">
+				<Property Name="Position" Value="x:0.68 y:0.625" />
+				<Property Name="RelativeMaxSize" Value="w:1 h:1" />
+				<Property Name="Size" Value="w:0.27 h:0.10" />
+				<Property Name="Text" Value="Add" />
+			</Window>
+
+			<Window Type="TaharezLook/StaticText" Name="Test/Window1/Controls/ins1">
+				<Property Name="Position" Value="x:0.05 y:0.75" />
+				<Property Name="RelativeMaxSize" Value="w:1 h:1" />
+				<Property Name="Size" Value="w:0.9 h:0.2" />
+				<Property Name="HorzFormatting" Value="WordWrapCentred" />
+				<Property Name="Text" Value="Use this panel to add items.  The scrollbars change the selection colour." />
+			</Window>
+		</Window>
+	</Window>
+</Window>
+</GUILayout>

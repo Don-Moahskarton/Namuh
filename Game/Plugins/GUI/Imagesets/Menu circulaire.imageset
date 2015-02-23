@@ -1,0 +1,5 @@
+<?xml version="1.0" ?>
+<Imageset Name="Menu-circulaire" Imagefile="Menu circulaire4.png" NativeHorzRes="500" NativeVertRes="500" AutoScaled="true">
+	<Image Name="quatre" XPos="0" YPos="0" Width="500" Height="500" />
+	<Image Name="viseur" XPos="230" YPos="230" Width="60" Height="60" />
+</Imageset>

@@ -1,0 +1,170 @@
+material grass
+{
+	technique
+	{
+		pass
+		{
+			//lighting off
+			cull_hardware none
+			cull_software none
+			scene_blend alpha_blend
+			alpha_rejection greater_equal 128
+			//depth_write off
+			
+			texture_unit
+			{
+				texture grass.png
+			}
+		}
+	}
+}
+
+material grass2
+{
+	technique
+	{
+		pass
+		{
+			//lighting off
+			cull_hardware none
+			cull_software none
+			scene_blend alpha_blend
+			alpha_rejection greater_equal 128
+			//depth_write off
+			
+			texture_unit
+			{
+				texture grass2.png
+			}
+		}
+	}
+}
+
+material grass3
+{
+	technique
+	{
+		pass
+		{
+			//lighting off
+			cull_hardware none
+			cull_software none
+			scene_blend alpha_blend
+			alpha_rejection greater_equal 128
+			//depth_write off
+			
+			texture_unit
+			{
+				texture grass3.png
+			}
+		}
+	}
+}
+
+material grass4
+{
+	technique
+	{
+		pass
+		{
+			//lighting off
+			cull_hardware none
+			cull_software none
+			scene_blend alpha_blend
+			alpha_rejection greater_equal 128
+			//depth_write off
+			
+			texture_unit
+			{
+				texture grass4.png
+			}
+		}
+	}
+}
+
+material fleur_violette_profil
+{
+	technique
+	{
+		pass
+		{
+			//lighting off
+			cull_hardware none
+			cull_software none
+			scene_blend alpha_blend
+			alpha_rejection greater_equal 128
+			//depth_write off
+			
+			texture_unit
+			{
+				texture "fleur violette profil512.png"
+			}
+		}
+	}
+}
+
+material fleur_jaune_profil
+{
+	technique
+	{
+		pass
+		{
+			//lighting off
+			cull_hardware none
+			cull_software none
+			scene_blend alpha_blend
+			alpha_rejection greater_equal 128
+			//depth_write off
+			
+			texture_unit
+			{
+				texture "fleur jaune profil512.png"
+			}
+		}
+	}
+}
+
+
+
+material fleur_violette_face
+{
+	technique
+	{
+		pass
+		{
+			//lighting off
+			cull_hardware none
+			cull_software none
+			scene_blend alpha_blend
+			alpha_rejection greater_equal 128
+			//depth_write off
+			
+			texture_unit
+			{
+				texture "grass_fleur violette profil.png"
+			}
+		}
+	}
+}
+
+
+material gramine01
+{
+	technique
+	{
+		pass
+		{
+			//lighting off
+			cull_hardware none
+			cull_software none
+			scene_blend alpha_blend
+			alpha_rejection greater_equal 128
+			//depth_write off
+			
+			texture_unit
+			{
+				texture gramine01.png
+			}
+		}
+	}
+}

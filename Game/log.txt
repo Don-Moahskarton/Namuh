@@ -1,0 +1,911 @@
+13:24:21: Creating resource group General
+13:24:21: Creating resource group Internal
+13:24:21: Creating resource group Autodetect
+13:24:21: SceneManagerFactory for type 'DefaultSceneManager' registered.
+13:24:21: Registering ResourceManager for type Material
+13:24:21: Registering ResourceManager for type Mesh
+13:24:21: Registering ResourceManager for type Skeleton
+13:24:21: MovableObjectFactory for type 'ParticleSystem' registered.
+13:24:21: OverlayElementFactory for type Panel registered.
+13:24:21: OverlayElementFactory for type BorderPanel registered.
+13:24:21: OverlayElementFactory for type TextArea registered.
+13:24:21: Registering ResourceManager for type Font
+13:24:21: ArchiveFactory for archive type FileSystem registered.
+13:24:21: ArchiveFactory for archive type Zip registered.
+13:24:21: DDS codec registering
+13:24:21: FreeImage version: 3.13.1
+13:24:21: This program uses FreeImage, a free, open source image library supporting all common bitmap formats. See http://freeimage.sourceforge.net for details
+13:24:21: Supported formats: bmp,ico,jpg,jif,jpeg,jpe,jng,koa,iff,lbm,mng,pbm,pbm,pcd,pcx,pgm,pgm,png,ppm,ppm,ras,tga,targa,tif,tiff,wap,wbmp,wbm,psd,cut,xbm,xpm,gif,hdr,g3,sgi,exr,j2k,j2c,jp2,pfm,pct,pict,pic,bay,bmq,cr2,crw,cs1,dc2,dcr,dng,erf,fff,hdr,k25,kdc,mdc,mos,mrw,nef,orf,pef,pxn,raf,raw,rdc,sr2,srf,arw,3fr,cine,ia,kc2,mef,nrw,qtk,rw2,sti,drf,dsc,ptx,cap,iiq,rwz
+13:24:21: Registering ResourceManager for type HighLevelGpuProgram
+13:24:21: Registering ResourceManager for type Compositor
+13:24:21: MovableObjectFactory for type 'Entity' registered.
+13:24:21: MovableObjectFactory for type 'Light' registered.
+13:24:21: MovableObjectFactory for type 'BillboardSet' registered.
+13:24:21: MovableObjectFactory for type 'ManualObject' registered.
+13:24:21: MovableObjectFactory for type 'BillboardChain' registered.
+13:24:21: MovableObjectFactory for type 'RibbonTrail' registered.
+13:24:21: Loading library .\RenderSystem_Direct3D9
+13:24:22: Installing plugin: D3D9 RenderSystem
+13:24:22: D3D9 : Direct3D9 Rendering Subsystem created.
+13:24:22: D3D9: Driver Detection Starts
+13:24:22: D3D9: Driver Detection Ends
+13:24:22: Plugin successfully installed
+13:24:22: Loading library .\RenderSystem_Direct3D10
+13:24:22: Installing plugin: D3D10 RenderSystem
+13:24:22: D3D10 : Direct3D10 Rendering Subsystem created.
+13:24:22: D3D10: Driver Detection Starts
+13:24:22: D3D10: Driver Detection Ends
+13:24:22: Plugin successfully installed
+13:24:22: Loading library .\RenderSystem_Direct3D11
+13:24:23: Installing plugin: D3D11 RenderSystem
+13:24:23: D3D11 : Direct3D11 Rendering Subsystem created.
+13:24:23: D3D11: Driver Detection Starts
+13:24:23: D3D11: Driver Detection Ends
+13:24:23: Plugin successfully installed
+13:24:23: Loading library .\Plugin_ParticleFX
+13:24:23: Installing plugin: ParticleFX
+13:24:23: Particle Emitter Type 'Point' registered
+13:24:23: Particle Emitter Type 'Box' registered
+13:24:23: Particle Emitter Type 'Ellipsoid' registered
+13:24:23: Particle Emitter Type 'Cylinder' registered
+13:24:23: Particle Emitter Type 'Ring' registered
+13:24:23: Particle Emitter Type 'HollowEllipsoid' registered
+13:24:23: Particle Affector Type 'LinearForce' registered
+13:24:23: Particle Affector Type 'ColourFader' registered
+13:24:23: Particle Affector Type 'ColourFader2' registered
+13:24:23: Particle Affector Type 'ColourImage' registered
+13:24:23: Particle Affector Type 'ColourInterpolator' registered
+13:24:23: Particle Affector Type 'Scaler' registered
+13:24:23: Particle Affector Type 'Rotator' registered
+13:24:23: Particle Affector Type 'DirectionRandomiser' registered
+13:24:23: Particle Affector Type 'DeflectorPlane' registered
+13:24:23: Plugin successfully installed
+13:24:23: Loading library .\Plugin_BSPSceneManager
+13:24:23: Installing plugin: BSP Scene Manager
+13:24:23: Plugin successfully installed
+13:24:23: Loading library .\Plugin_CgProgramManager
+13:24:24: Installing plugin: Cg Program Manager
+13:24:24: Plugin successfully installed
+13:24:24: Loading library .\Plugin_PCZSceneManager
+13:24:24: Installing plugin: Portal Connected Zone Scene Manager
+13:24:24: PCZone Factory Type 'ZoneType_Default' registered
+13:24:24: Plugin successfully installed
+13:24:24: Loading library .\Plugin_OctreeZone
+13:24:24: Installing plugin: Octree Zone Factory
+13:24:24: Plugin successfully installed
+13:24:24: Loading library .\Plugin_OctreeSceneManager
+13:24:24: Installing plugin: Octree & Terrain Scene Manager
+13:24:24: Plugin successfully installed
+13:24:24: *-*-* OGRE Initialising
+13:24:24: *-*-* Version 1.7.4 (Cthugha)
+13:24:24: Creating resource group Fonts
+13:24:24: Added resource location 'Plugins/GUI/fonts' of type 'FileSystem' to resource group 'Fonts'
+13:24:24: Added resource location '.' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Plugins' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Plugins/Hydrax' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Plugins/ASCII' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Plugins/HDR' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Plugins/GUI' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Plugins/GUI/fonts' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Plugins/Relief mapping' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Plugins/Contrast Modificator' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Plugins/Bloom' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Plugins/Fresnel' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Plugins/Common Materials' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Plugins/SSAO' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Plugins/SSAO/compositors' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Plugins/SSAO/programs' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Plugins/SSAO/scripts' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Plugins/SSAO/textures' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Maps' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Maps/Test' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Maps/Flat' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Maps/Caribean Lost Island' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Maps/Chutes Bresiliennes' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Maps/Main Menu background' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Grass' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Cube' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Palm' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Beach Palm' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Palmier_droit' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Radeau_base' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Menhir' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Falaise' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Falaise/Long' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Falaise/Haut' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Falaise/Haut2' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Falaise/Long VErt' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Falaise/Carre' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Falaise/Pik' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Falaise/Ovale' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Petite Grotte' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Tourelle' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Rondin' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Rocher' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Particules' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Sapiens01' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Sapiens02' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Lance Pierre' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/ArcEnBois' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Fleche' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Pierre du Lance Pierre' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Javelot' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Arbre Large' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Buissons' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Buissons/Rond' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Buissons/Rond2' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Buissons/Sol' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Aquatic Plants' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Chesne2' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Chesne Groupe 1' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Ground Plants' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Fishes' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Mamoths' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Disk' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Sphere' of type 'FileSystem' to resource group 'General'
+13:24:24: Added resource location 'Objects/Rope' of type 'FileSystem' to resource group 'General'
+13:24:24: Creating resource group Hydrax
+13:24:24: Added resource location 'Plugins/Hydrax' of type 'FileSystem' to resource group 'Hydrax'
+13:24:24: Creating resource group Imagesets
+13:24:24: Added resource location 'Plugins/GUI/imagesets' of type 'FileSystem' to resource group 'Imagesets'
+13:24:24: Creating resource group Layouts
+13:24:24: Added resource location 'Plugins/GUI/layouts' of type 'FileSystem' to resource group 'Layouts'
+13:24:24: Creating resource group LookNFeel
+13:24:24: Added resource location 'Plugins/GUI/looknfeel' of type 'FileSystem' to resource group 'LookNFeel'
+13:24:24: Creating resource group Schemes
+13:24:24: Added resource location 'Plugins/GUI/schemes' of type 'FileSystem' to resource group 'Schemes'
+13:24:24: Creating resource group SkyX
+13:24:24: Added resource location 'Plugins/SkyX' of type 'FileSystem' to resource group 'SkyX'
+13:24:24: D3D10 : RenderSystem Option: Allow NVPerfHUD = No
+13:24:24: D3D10 : RenderSystem Option: Driver type = Hardware
+13:24:24: D3D10 : RenderSystem Option: FSAA = 0
+13:24:24: D3D10 : RenderSystem Option: Floating-point mode = Fastest
+13:24:24: D3D10 : RenderSystem Option: Full Screen = No
+13:24:24: D3D10 : RenderSystem Option: Information Queue Exceptions Bottom Level = Info (exception on any message)
+13:24:24: D3D10 : RenderSystem Option: Rendering Device = AMD Radeon HD 6800 Series
+13:24:24: D3D10 : RenderSystem Option: VSync = No
+13:24:24: D3D10 : RenderSystem Option: VSync Interval = 1
+13:24:25: D3D10 : RenderSystem Option: Video Mode = 1920 x 1080 @ 32-bit colour
+13:24:25: D3D10 : RenderSystem Option: sRGB Gamma Conversion = No
+13:24:25: D3D11 : RenderSystem Option: Allow NVPerfHUD = No
+13:24:25: D3D11 : RenderSystem Option: Driver type = Hardware
+13:24:25: D3D11 : RenderSystem Option: FSAA = 0
+13:24:25: D3D11 : RenderSystem Option: Floating-point mode = Fastest
+13:24:25: D3D11 : RenderSystem Option: Full Screen = Yes
+13:24:25: D3D11 : RenderSystem Option: Information Queue Exceptions Bottom Level = Info (exception on any message)
+13:24:25: D3D11 : RenderSystem Option: Rendering Device = Intel(R) HD Graphics Family
+13:24:25: D3D11 : RenderSystem Option: VSync = No
+13:24:25: D3D11 : RenderSystem Option: VSync Interval = 1
+13:24:25: D3D11 : RenderSystem Option: Video Mode = 800 x 600 @ 32-bit colour
+13:24:25: D3D11 : RenderSystem Option: sRGB Gamma Conversion = No
+13:24:25: D3D9 : RenderSystem Option: Allow NVPerfHUD = No
+13:24:25: D3D9 : RenderSystem Option: FSAA = 0
+13:24:25: D3D9 : RenderSystem Option: Floating-point mode = Fastest
+13:24:25: D3D9 : RenderSystem Option: Full Screen = No
+13:24:25: D3D9 : RenderSystem Option: Rendering Device = Monitor-1-Intel(R) HD Graphics Family
+13:24:25: D3D9 : RenderSystem Option: Resource Creation Policy = Create on active device
+13:24:25: D3D9 : RenderSystem Option: VSync = No
+13:24:25: D3D9 : RenderSystem Option: VSync Interval = 1
+13:24:25: D3D9 : RenderSystem Option: Video Mode = 1920 x 1080 @ 32-bit colour
+13:24:25: D3D9 : RenderSystem Option: sRGB Gamma Conversion = No
+13:24:25: CPU Identifier & Features
+13:24:25: -------------------------
+13:24:25:  *   CPU ID: GenuineIntel: Intel(R) Core(TM) i7-4500U CPU @ 1.80GHz
+13:24:25:  *      SSE: yes
+13:24:25:  *     SSE2: yes
+13:24:25:  *     SSE3: yes
+13:24:25:  *      MMX: yes
+13:24:25:  *   MMXEXT: yes
+13:24:25:  *    3DNOW: no
+13:24:25:  * 3DNOWEXT: no
+13:24:25:  *     CMOV: yes
+13:24:25:  *      TSC: yes
+13:24:25:  *      FPU: yes
+13:24:25:  *      PRO: yes
+13:24:25:  *       HT: no
+13:24:25: -------------------------
+13:24:25: D3D9 : Subsystem Initialising
+13:24:25: Registering ResourceManager for type Texture
+13:24:25: Registering ResourceManager for type GpuProgram
+13:24:25: D3D9RenderSystem::_createRenderWindow "Namuh - 16:54:23 Jun  9 2014", 1920x1080 windowed  miscParams: FSAA=0 FSAAHint= colourDepth=32 gamma=false monitorIndex=0 useNVPerfHUD=false vsync=false vsyncInterval=1 
+13:24:25: D3D9 : Created D3D9 Rendering Window 'Namuh - 16:54:23 Jun  9 2014' : 1904x1011, 32bpp
+13:24:25: D3D9 : WARNING - disabling VSync in windowed mode can cause timing issues at lower frame rates, turn VSync on if you observe this problem.
+13:24:25: D3D9: Vertex texture format supported - PF_L8
+13:24:25: D3D9: Vertex texture format supported - PF_L16
+13:24:25: D3D9: Vertex texture format supported - PF_A8
+13:24:25: D3D9: Vertex texture format supported - PF_A4L4
+13:24:25: D3D9: Vertex texture format supported - PF_BYTE_LA
+13:24:25: D3D9: Vertex texture format supported - PF_R5G6B5
+13:24:25: D3D9: Vertex texture format supported - PF_B5G6R5
+13:24:25: D3D9: Vertex texture format supported - PF_A4R4G4B4
+13:24:25: D3D9: Vertex texture format supported - PF_A1R5G5B5
+13:24:25: D3D9: Vertex texture format supported - PF_A8R8G8B8
+13:24:25: D3D9: Vertex texture format supported - PF_B8G8R8A8
+13:24:25: D3D9: Vertex texture format supported - PF_A2R10G10B10
+13:24:25: D3D9: Vertex texture format supported - PF_A2B10G10R10
+13:24:25: D3D9: Vertex texture format supported - PF_DXT1
+13:24:25: D3D9: Vertex texture format supported - PF_DXT2
+13:24:25: D3D9: Vertex texture format supported - PF_DXT3
+13:24:25: D3D9: Vertex texture format supported - PF_DXT4
+13:24:25: D3D9: Vertex texture format supported - PF_DXT5
+13:24:25: D3D9: Vertex texture format supported - PF_FLOAT16_RGB
+13:24:25: D3D9: Vertex texture format supported - PF_FLOAT16_RGBA
+13:24:25: D3D9: Vertex texture format supported - PF_FLOAT32_RGB
+13:24:25: D3D9: Vertex texture format supported - PF_FLOAT32_RGBA
+13:24:25: D3D9: Vertex texture format supported - PF_X8R8G8B8
+13:24:25: D3D9: Vertex texture format supported - PF_X8B8G8R8
+13:24:25: D3D9: Vertex texture format supported - PF_R8G8B8A8
+13:24:25: D3D9: Vertex texture format supported - PF_DEPTH
+13:24:25: D3D9: Vertex texture format supported - PF_SHORT_RGBA
+13:24:25: D3D9: Vertex texture format supported - PF_FLOAT16_R
+13:24:25: D3D9: Vertex texture format supported - PF_FLOAT32_R
+13:24:25: D3D9: Vertex texture format supported - PF_SHORT_GR
+13:24:25: D3D9: Vertex texture format supported - PF_FLOAT16_GR
+13:24:25: D3D9: Vertex texture format supported - PF_FLOAT32_GR
+13:24:25: D3D9: Vertex texture format supported - PF_SHORT_RGB
+13:24:25: D3D9: Vertex texture format supported - PF_PVRTC_RGB2
+13:24:25: D3D9: Vertex texture format supported - PF_PVRTC_RGBA2
+13:24:25: D3D9: Vertex texture format supported - PF_PVRTC_RGB4
+13:24:25: D3D9: Vertex texture format supported - PF_PVRTC_RGBA4
+13:24:25: RenderSystem capabilities
+13:24:25: -------------------------
+13:24:25: RenderSystem Name: Direct3D9 Rendering Subsystem
+13:24:25: GPU Vendor: intel
+13:24:25: Device Name: Monitor-1-Intel(R) HD Graphics Family
+13:24:25: Driver Version: 8.17.10.1333
+13:24:25:  * Fixed function pipeline: yes
+13:24:25:  * Hardware generation of mipmaps: yes
+13:24:25:  * Texture blending: yes
+13:24:25:  * Anisotropic texture filtering: yes
+13:24:25:  * Dot product texture operation: yes
+13:24:25:  * Cube mapping: yes
+13:24:25:  * Hardware stencil buffer: yes
+13:24:25:    - Stencil depth: 8
+13:24:25:    - Two sided stencil support: yes
+13:24:25:    - Wrap stencil values: yes
+13:24:25:  * Hardware vertex / index buffers: yes
+13:24:25:  * Vertex programs: yes
+13:24:25:  * Number of floating-point constants for vertex programs: 256
+13:24:25:  * Number of integer constants for vertex programs: 16
+13:24:25:  * Number of boolean constants for vertex programs: 16
+13:24:25:  * Fragment programs: yes
+13:24:25:  * Number of floating-point constants for fragment programs: 224
+13:24:25:  * Number of integer constants for fragment programs: 16
+13:24:25:  * Number of boolean constants for fragment programs: 16
+13:24:25:  * Geometry programs: no
+13:24:25:  * Number of floating-point constants for geometry programs: 0
+13:24:25:  * Number of integer constants for geometry programs: 0
+13:24:25:  * Number of boolean constants for geometry programs: 0
+13:24:25:  * Supported Shader Profiles: hlsl ps_1_1 ps_1_2 ps_1_3 ps_1_4 ps_2_0 ps_2_a ps_2_b ps_2_x ps_3_0 vs_1_1 vs_2_0 vs_2_a vs_2_x vs_3_0
+13:24:25:  * Texture Compression: yes
+13:24:25:    - DXT: yes
+13:24:25:    - VTC: no
+13:24:25:    - PVRTC: no
+13:24:25:  * Scissor Rectangle: yes
+13:24:25:  * Hardware Occlusion Query: yes
+13:24:25:  * User clip planes: yes
+13:24:25:  * VET_UBYTE4 vertex element type: yes
+13:24:25:  * Infinite far plane projection: yes
+13:24:25:  * Hardware render-to-texture: yes
+13:24:25:  * Floating point textures: yes
+13:24:25:  * Non-power-of-two textures: yes
+13:24:25:  * Volume textures: yes
+13:24:25:  * Multiple Render Targets: 4
+13:24:25:    - With different bit depths: yes
+13:24:25:  * Point Sprites: yes
+13:24:25:  * Extended point parameters: yes
+13:24:25:  * Max Point Size: 10
+13:24:25:  * Vertex texture fetch: yes
+13:24:25:  * Number of world matrices: 0
+13:24:25:  * Number of texture units: 8
+13:24:25:  * Stencil buffer depth: 8
+13:24:25:  * Number of vertex blend matrices: 0
+13:24:25:    - Max vertex textures: 4
+13:24:25:    - Vertex textures shared: no
+13:24:25:  * Render to Vertex Buffer : no
+13:24:25:  * DirectX per stage constants: yes
+13:24:25: ***************************************
+13:24:25: *** D3D9 : Subsystem Initialised OK ***
+13:24:25: ***************************************
+13:24:25: DefaultWorkQueue('Root') initialising on thread main.
+13:24:25: Particle Renderer Type 'billboard' registered
+13:24:25: SceneManagerFactory for type 'BspSceneManager' registered.
+13:24:25: Registering ResourceManager for type BspLevel
+13:24:25: SceneManagerFactory for type 'PCZSceneManager' registered.
+13:24:25: MovableObjectFactory for type 'PCZLight' registered.
+13:24:25: MovableObjectFactory for type 'Portal' registered.
+13:24:25: MovableObjectFactory for type 'AntiPortal' registered.
+13:24:25: PCZone Factory Type 'ZoneType_Octree' registered
+13:24:25: PCZone Factory Type 'ZoneType_Terrain' registered
+13:24:25: SceneManagerFactory for type 'OctreeSceneManager' registered.
+13:24:25: SceneManagerFactory for type 'TerrainSceneManager' registered.
+13:24:25: Parsing scripts for resource group Autodetect
+13:24:25: Finished parsing scripts for resource group Autodetect
+13:24:25: Parsing scripts for resource group Fonts
+13:24:25: Parsing script Fonts.fontdef
+13:24:25: Bad attribute line: source The Lost Paintings.ttf in font TheLostPaintings10
+13:24:25: Bad attribute line: source The Lost Paintings.ttf in font The-Lost-Paintings10
+13:24:25: Bad attribute line: source The Lost Paintings.ttf in font TheLostPaintings12
+13:24:25: Bad attribute line: source The Lost Paintings.ttf in font TheLostPaintings14
+13:24:25: Bad attribute line: source The Lost Paintings.ttf in font TheLostPaintings18
+13:24:25: Finished parsing scripts for resource group Fonts
+13:24:25: Parsing scripts for resource group General
+13:24:25: Parsing script StdQuad_vp.program
+13:24:25: Parsing script general.program
+13:24:25: OGRE EXCEPTION(2:InvalidParametersException): Parameter called lightSpec0 does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreGpuProgramParams.cpp (line 1435)
+13:24:25: Compiler error: invalid parameters in general.program(50): setting of constant failed
+13:24:25: Parsing script StdQuad_vp.program
+13:24:25: Parsing script ambient.program
+13:24:25: Parsing script diffuse.program
+13:24:25: Parsing script shadow_caster.program
+13:24:25: Parsing script ASCII.material
+13:24:25: Parsing script hdr.material
+13:24:25: Parsing script general.material
+13:24:25: Parsing script Contrast.material
+13:24:25: Parsing script Bloom.material
+13:24:25: Parsing script Bloom2.material
+13:24:25: Parsing script Fresnel.material
+13:24:25: Compiler error: invalid parameters in Fresnel.material(32): incorrect type specified; only variants of int and float allowed
+13:24:25: OGRE EXCEPTION(2:InvalidParametersException): Parameter called fresnelBias does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreGpuProgramParams.cpp (line 1435)
+13:24:25: Compiler error: invalid parameters in Fresnel.material(40): setting of constant failed
+13:24:25: OGRE EXCEPTION(2:InvalidParametersException): Parameter called fresnelScale does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreGpuProgramParams.cpp (line 1435)
+13:24:25: Compiler error: invalid parameters in Fresnel.material(41): setting of constant failed
+13:24:25: OGRE EXCEPTION(2:InvalidParametersException): Parameter called fresnelPower does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreGpuProgramParams.cpp (line 1435)
+13:24:25: Compiler error: invalid parameters in Fresnel.material(42): setting of constant failed
+13:24:25: Parsing script Blink.material
+13:24:25: Parsing script Fur.material
+13:24:25: OGRE EXCEPTION(2:InvalidParametersException): Parameter called totalLayerCount does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreGpuProgramParams.cpp (line 1435)
+13:24:25: Compiler error: invalid parameters in Fur.material(43): setting of constant failed
+13:24:25: Parsing script Hide.material
+13:24:25: Parsing script Shaded.material
+13:24:25: Parsing script colours.material
+13:24:26: Parsing script diffuse.material
+13:24:26: Parsing script shadow_caster.material
+13:24:26: Parsing script ssao.material
+13:24:26: Parsing script Map.material
+13:24:26: Parsing script Grotte.material
+13:24:26: Parsing script grass.material
+13:24:26: Parsing script Cube.material
+13:24:26: Parsing script Palm.material
+13:24:26: Parsing script Beach Palm.material
+13:24:26: Compiler error: unknown error in Beach Palm.material(23): token "cull_hardware" is not recognized
+13:24:26: Compiler error: unknown error in Beach Palm.material(24): token "alpha_rejection" is not recognized
+13:24:26: Compiler error: unknown error in Beach Palm.material(25): token "scene_blend" is not recognized
+13:24:26: Parsing script Palmier_droit.material
+13:24:26: Compiler error: unknown error in Palmier_droit.material(13): token "specular" is not recognized
+13:24:26: Parsing script Radeau_base.material
+13:24:26: Parsing script Menhir.material
+13:24:26: Parsing script Falaise_large.material
+13:24:26: Parsing script Falaise_long.material
+13:24:26: Parsing script Falaise_Rond.material
+13:24:26: Parsing script Rocher Ovale.material
+13:24:26: Parsing script Long_Lopoly.material
+13:24:26: Parsing script Falaise_haut.material
+13:24:26: Parsing script Haut2.material
+13:24:26: Parsing script Long_vert.material
+13:24:26: Parsing script Rocher 4K carre 15mx15m.material
+13:24:26: Parsing script Rocher 4K pik15mx15m.material
+13:24:26: Parsing script Rocher527pOvale5mX10m.material
+13:24:26: Parsing script Rocher7kOvale5mX10m.material
+13:24:26: Parsing script Petite Grotte.material
+13:24:26: Parsing script Tourelle.material
+13:24:26: Parsing script Rondin.material
+13:24:26: Parsing script Rocher.material
+13:24:26: Parsing script Particles materials.material
+13:24:26: Parsing script Sapiens_01.material
+13:24:26: Parsing script Sapiens_02.material
+13:24:26: Parsing script Lance pierre.material
+13:24:26: Parsing script ArcEnBois.material
+13:24:26: Parsing script Fleche.material
+13:24:26: Parsing script Pierre du Lance Pierre.material
+13:24:26: Parsing script Javelot.material
+13:24:26: Parsing script Arbre Large.material
+13:24:26: Parsing script Buisson Rond.material
+13:24:26: Parsing script Buisson Rond2.material
+13:24:26: Parsing script Buisson rampant.material
+13:24:26: Parsing script Aquatic Plants.material
+13:24:26: Parsing script Chesne2.material
+13:24:26: Parsing script Chesne Groupe 1.material
+13:24:26: Parsing script Ground Plant 01.material
+13:24:26: Parsing script Fish01.material
+13:24:26: Parsing script Mamoth std.material
+13:24:26: Parsing script Disk.material
+13:24:26: Parsing script Sphere.material
+13:24:26: Parsing script rope.material
+13:24:26: Parsing script Examples.compositor
+13:24:26: Parsing script ssao.compositor
+13:24:26: Parsing script Fonts.fontdef
+13:24:26: Bad attribute line: source The Lost Paintings.ttf in font TheLostPaintings10
+13:24:26: Bad attribute line: source The Lost Paintings.ttf in font The-Lost-Paintings10
+13:24:26: Bad attribute line: source The Lost Paintings.ttf in font TheLostPaintings12
+13:24:26: Bad attribute line: source The Lost Paintings.ttf in font TheLostPaintings14
+13:24:26: Bad attribute line: source The Lost Paintings.ttf in font TheLostPaintings18
+13:24:26: Finished parsing scripts for resource group General
+13:24:26: Parsing scripts for resource group Hydrax
+13:24:26: Finished parsing scripts for resource group Hydrax
+13:24:26: Parsing scripts for resource group Imagesets
+13:24:26: Finished parsing scripts for resource group Imagesets
+13:24:26: Parsing scripts for resource group Internal
+13:24:26: Finished parsing scripts for resource group Internal
+13:24:26: Parsing scripts for resource group Layouts
+13:24:26: Finished parsing scripts for resource group Layouts
+13:24:26: Parsing scripts for resource group LookNFeel
+13:24:26: Finished parsing scripts for resource group LookNFeel
+13:24:26: Parsing scripts for resource group Schemes
+13:24:26: Finished parsing scripts for resource group Schemes
+13:24:26: Parsing scripts for resource group SkyX
+13:24:26: Parsing script SkyX.material
+13:24:27: Finished parsing scripts for resource group SkyX
+13:24:27: TerrainSceneManager: Registered a new PageSource for type Heightmap
+13:24:27: Creating viewport on target 'Namuh - 16:54:23 Jun  9 2014', rendering from camera 'Camera', relative dimensions 8192L: 0 T: 0 W: 1 H: 1 ZOrder: 0
+13:24:27: Viewport for camera 'Camera', actual dimensions 8192L: 0 T: 0 W: 1904 H: 1011
+13:24:27: (Live Debugger Exeption) Unable to send message 'Initialising CEGUI...' : Debugger not enbled 
+13:24:27: Texture: _cegui_ogre_0: Loading 1 faces(PF_A8B8G8R8,256x256x1) with 0 generated mipmaps from Image. Internal format is PF_A8R8G8B8,256x256x1.
+13:24:28: Texture: _cegui_ogre_1: Loading 1 faces(PF_A8B8G8R8,500x500x1) with 0 generated mipmaps from Image. Internal format is PF_A8R8G8B8,500x500x1.
+13:24:28: Texture: _cegui_ogre_2: Loading 1 faces(PF_A8B8G8R8,500x500x1) with 0 generated mipmaps from Image. Internal format is PF_A8R8G8B8,500x500x1.
+13:24:28: Texture: _cegui_ogre_3: Loading 1 faces(PF_A8B8G8R8,200x200x1) with 0 generated mipmaps from Image. Internal format is PF_A8R8G8B8,200x200x1.
+13:24:28: Texture: _cegui_ogre_4: Loading 1 faces(PF_A8B8G8R8,3x3x1) with 0 generated mipmaps from Image. Internal format is PF_A8R8G8B8,3x3x1.
+13:24:28: Texture: _cegui_ogre_5: Loading 1 faces(PF_A8B8G8R8,600x600x1) with 0 generated mipmaps from Image. Internal format is PF_A8R8G8B8,600x600x1.
+13:24:28: Texture: _cegui_ogre_6: Loading 1 faces(PF_A8B8G8R8,600x600x1) with 0 generated mipmaps from Image. Internal format is PF_A8R8G8B8,600x600x1.
+13:24:28: Texture: _cegui_ogre_7: Loading 1 faces(PF_B8G8R8,1920x1080x1) with 0 generated mipmaps from Image. Internal format is PF_X8R8G8B8,1920x1080x1.
+13:24:28: Texture: _cegui_ogre_8: Loading 1 faces(PF_A8B8G8R8,1024x1024x1) with 0 generated mipmaps from Image. Internal format is PF_A8R8G8B8,1024x1024x1.
+13:24:28: Texture: _cegui_ogre_9: Loading 1 faces(PF_A8B8G8R8,256x256x1) with 0 generated mipmaps from Image. Internal format is PF_A8R8G8B8,256x256x1.
+13:24:28: Texture: _cegui_ogre_10: Loading 1 faces(PF_A8B8G8R8,512x512x1) with 0 generated mipmaps from Image. Internal format is PF_A8R8G8B8,512x512x1.
+13:24:29: (Live Debugger Exeption) Unable to send message 'CEGUI sucessfully initialised' : Debugger not enbled 
+13:24:29: (Live Debugger Exeption) Unable to send message 'Ogre sucessfully initialised' : Debugger not enbled 
+13:24:29: (Live Debugger Exeption) Unable to send message 'initialising Raknet_mgr with ID_3' : Debugger not enbled 
+13:24:29: (Live Debugger Exeption) Unable to send message 'Declaration of Perso ID_3' : Debugger not enbled 
+13:24:29: (Live Debugger Exeption) Unable to send message '(Map Parser Info) Parsing file : Namuh.cfg' : Debugger not enbled 
+13:24:29: (Live Debugger Exeption) Unable to send message 'File Namuh.cfg sucessfully parsed (Nblines :  4)' : Debugger not enbled 
+13:24:29: (Live Debugger Exeption) Unable to send message '(Map Parser Info) Parsing file : MainFile.cfg' : Debugger not enbled 
+13:24:29: (Live Debugger Exeption) Unable to send message 'File MainFile.cfg sucessfully parsed (Nblines :  16)' : Debugger not enbled 
+13:24:29: Creating viewport on target 'Namuh - 16:54:23 Jun  9 2014', rendering from camera 'NULL', relative dimensions 8192L: 0 T: 0 W: 1 H: 1 ZOrder: 0
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 1904 H: 1011
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 1904 H: 1011
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 1904 H: 1011
+13:24:29: Creating viewport on target 'rtt/116330704/_cegui_ogre_11', rendering from camera 'NULL', relative dimensions 8192L: 0 T: 0 W: 1 H: 1 ZOrder: 0
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 128 H: 128
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 128 H: 128
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 128 H: 128
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 190 H: 101
+13:24:29: Render Target 'rtt/116330704/_cegui_ogre_11' Average FPS: 0 Best FPS: 0 Worst FPS: 999
+13:24:29: Creating viewport on target 'rtt/116330968/_cegui_ogre_12', rendering from camera 'NULL', relative dimensions 8192L: 0 T: 0 W: 1 H: 1 ZOrder: 0
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 190 H: 101
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 190 H: 101
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 190 H: 101
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 212 H: 204
+13:24:29: Render Target 'rtt/116330968/_cegui_ogre_12' Average FPS: 0 Best FPS: 0 Worst FPS: 999
+13:24:29: Creating viewport on target 'rtt/116330704/_cegui_ogre_13', rendering from camera 'NULL', relative dimensions 8192L: 0 T: 0 W: 1 H: 1 ZOrder: 0
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 212 H: 204
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 212 H: 204
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 212 H: 204
+13:24:29: Creating viewport on target 'rtt/116330968/_cegui_ogre_14', rendering from camera 'NULL', relative dimensions 8192L: 0 T: 0 W: 1 H: 1 ZOrder: 0
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 128 H: 128
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 128 H: 128
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 128 H: 128
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 190 H: 101
+13:24:29: Render Target 'rtt/116330968/_cegui_ogre_14' Average FPS: 0 Best FPS: 0 Worst FPS: 999
+13:24:29: Creating viewport on target 'rtt/116331232/_cegui_ogre_15', rendering from camera 'NULL', relative dimensions 8192L: 0 T: 0 W: 1 H: 1 ZOrder: 0
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 190 H: 101
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 190 H: 101
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 190 H: 101
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 212 H: 204
+13:24:29: Render Target 'rtt/116331232/_cegui_ogre_15' Average FPS: 0 Best FPS: 0 Worst FPS: 999
+13:24:29: Creating viewport on target 'rtt/116330968/_cegui_ogre_16', rendering from camera 'NULL', relative dimensions 8192L: 0 T: 0 W: 1 H: 1 ZOrder: 0
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 212 H: 204
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 212 H: 204
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 212 H: 204
+13:24:29: Creating viewport on target 'rtt/116331232/_cegui_ogre_17', rendering from camera 'NULL', relative dimensions 8192L: 0 T: 0 W: 1 H: 1 ZOrder: 0
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 128 H: 128
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 128 H: 128
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 128 H: 128
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 190 H: 101
+13:24:29: Render Target 'rtt/116331232/_cegui_ogre_17' Average FPS: 0 Best FPS: 0 Worst FPS: 999
+13:24:29: Creating viewport on target 'rtt/116331496/_cegui_ogre_18', rendering from camera 'NULL', relative dimensions 8192L: 0 T: 0 W: 1 H: 1 ZOrder: 0
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 190 H: 101
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 190 H: 101
+13:24:29: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 190 H: 101
+13:24:29: (Live Debugger Exeption) Unable to send message '(Menu circulaire n°0) Created' : Debugger not enbled 
+13:24:29: Texture: _cegui_ogre_19: Loading 1 faces(PF_A8B8G8R8,256x256x1) with 0 generated mipmaps from Image. Internal format is PF_A8R8G8B8,256x256x1.
+13:24:29: [Live Debugger] : Initialisation completed
+13:24:29: *** Main Menu Loop reached ***
+13:24:29: WARNING: Texture instance '_cegui_ogre_16' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:29: WARNING: Texture instance '_cegui_ogre_18' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:29: WARNING: Texture instance '_cegui_ogre_13' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:32: (Live Debugger Trace) : (Menu circulaire n°0) Output sent : 1
+13:24:32: Creating viewport on target 'rtt/116331760/_cegui_ogre_20', rendering from camera 'NULL', relative dimensions 8192L: 0 T: 0 W: 1 H: 1 ZOrder: 0
+13:24:32: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 128 H: 128
+13:24:32: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 128 H: 128
+13:24:32: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 128 H: 128
+13:24:32: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 190 H: 101
+13:24:32: Render Target 'rtt/116331760/_cegui_ogre_20' Average FPS: 0 Best FPS: 0 Worst FPS: 999
+13:24:32: Creating viewport on target 'rtt/116332024/_cegui_ogre_21', rendering from camera 'NULL', relative dimensions 8192L: 0 T: 0 W: 1 H: 1 ZOrder: 0
+13:24:32: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 190 H: 101
+13:24:32: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 190 H: 101
+13:24:32: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 190 H: 101
+13:24:32: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 1210 H: 698
+13:24:32: Render Target 'rtt/116332024/_cegui_ogre_21' Average FPS: 0 Best FPS: 0 Worst FPS: 999
+13:24:32: Creating viewport on target 'rtt/116331760/_cegui_ogre_22', rendering from camera 'NULL', relative dimensions 8192L: 0 T: 0 W: 1 H: 1 ZOrder: 0
+13:24:32: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 1210 H: 698
+13:24:32: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 1210 H: 698
+13:24:32: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 1210 H: 698
+13:24:32: Texture: _cegui_ogre_23: Loading 1 faces(PF_A8B8G8R8,256x256x1) with 0 generated mipmaps from Image. Internal format is PF_A8R8G8B8,256x256x1.
+13:24:32: Texture: _cegui_ogre_24: Loading 1 faces(PF_A8B8G8R8,256x256x1) with 0 generated mipmaps from Image. Internal format is PF_A8R8G8B8,256x256x1.
+13:24:32: WARNING: Texture instance '_cegui_ogre_22' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:38: Render Target 'rtt/116330968/_cegui_ogre_16' Average FPS: 204.144 Best FPS: 209.163 Worst FPS: 191.808
+13:24:38: Render Target 'rtt/116331496/_cegui_ogre_18' Average FPS: 204.144 Best FPS: 209.163 Worst FPS: 191.808
+13:24:38: Render Target 'rtt/116330704/_cegui_ogre_13' Average FPS: 204.146 Best FPS: 209.163 Worst FPS: 192.231
+13:24:38: Render Target 'rtt/116331760/_cegui_ogre_22' Average FPS: 203.484 Best FPS: 204.795 Worst FPS: 194.805
+13:24:38: (Live Debugger) : Disabled
+13:24:38: Creating viewport on target 'rtt/116331760/_cegui_ogre_25', rendering from camera 'NULL', relative dimensions 8192L: 0 T: 0 W: 1 H: 1 ZOrder: 0
+13:24:38: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 128 H: 128
+13:24:38: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 128 H: 128
+13:24:38: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 128 H: 128
+13:24:38: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 190 H: 101
+13:24:38: Render Target 'rtt/116331760/_cegui_ogre_25' Average FPS: 0 Best FPS: 0 Worst FPS: 999
+13:24:38: Creating viewport on target 'rtt/116330704/_cegui_ogre_26', rendering from camera 'NULL', relative dimensions 8192L: 0 T: 0 W: 1 H: 1 ZOrder: 0
+13:24:38: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 190 H: 101
+13:24:38: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 190 H: 101
+13:24:38: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 190 H: 101
+13:24:38: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 553 H: 223
+13:24:38: Render Target 'rtt/116330704/_cegui_ogre_26' Average FPS: 0 Best FPS: 0 Worst FPS: 999
+13:24:38: Creating viewport on target 'rtt/116331760/_cegui_ogre_27', rendering from camera 'NULL', relative dimensions 8192L: 0 T: 0 W: 1 H: 1 ZOrder: 0
+13:24:38: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 553 H: 223
+13:24:38: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 553 H: 223
+13:24:38: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 553 H: 223
+13:24:38: Creating viewport on target 'rtt/116330704/_cegui_ogre_28', rendering from camera 'NULL', relative dimensions 8192L: 0 T: 0 W: 1 H: 1 ZOrder: 0
+13:24:38: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 128 H: 128
+13:24:38: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 128 H: 128
+13:24:38: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 128 H: 128
+13:24:38: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 190 H: 101
+13:24:38: Render Target 'rtt/116330704/_cegui_ogre_28' Average FPS: 0 Best FPS: 0 Worst FPS: 999
+13:24:38: Creating viewport on target 'rtt/116331496/_cegui_ogre_29', rendering from camera 'NULL', relative dimensions 8192L: 0 T: 0 W: 1 H: 1 ZOrder: 0
+13:24:38: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 190 H: 101
+13:24:38: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 190 H: 101
+13:24:38: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 190 H: 101
+13:24:38: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 328 H: 1011
+13:24:38: Render Target 'rtt/116331496/_cegui_ogre_29' Average FPS: 0 Best FPS: 0 Worst FPS: 999
+13:24:38: Creating viewport on target 'rtt/116330704/_cegui_ogre_30', rendering from camera 'NULL', relative dimensions 8192L: 0 T: 0 W: 1 H: 1 ZOrder: 0
+13:24:38: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 328 H: 1011
+13:24:38: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 328 H: 1011
+13:24:38: Viewport for camera 'NULL', actual dimensions 8192L: 0 T: 0 W: 328 H: 1011
+13:24:38: [Live Debugger] : Initialisation completed
+13:24:38: WARNING: Texture instance '_cegui_ogre_27' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:38: WARNING: Texture instance '_cegui_ogre_30' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:38: (Live Debugger Trace) : (Map Parser Info) Parsing file : Caribean Lost Island.map
+13:24:38: (Live Debugger Trace) : (Map Parser Info) Subfile parsing requested : Layers.map
+13:24:38: (Live Debugger Trace) : (Map Parser Info) Subfile parsing active balise path : Map/
+13:24:38: (Live Debugger Trace) : (Map Parser Info) Parsing file : Layers.map
+13:24:38: (Live Debugger Trace) : (Map Parser Info) Initial Balise : Map
+13:24:38: (Live Debugger Trace) : File Layers.map sucessfully parsed (Nblines :  41)
+13:24:38: (Live Debugger Trace) : (Map Parser Info) Subfile parsing requested : Vegetation.map
+13:24:38: (Live Debugger Trace) : (Map Parser Info) Subfile parsing active balise path : Map/
+13:24:38: (Live Debugger Trace) : (Map Parser Info) Parsing file : Vegetation.map
+13:24:38: (Live Debugger Trace) : (Map Parser Info) Initial Balise : Map
+13:24:38: (Live Debugger Trace) : File Vegetation.map sucessfully parsed (Nblines :  129)
+13:24:38: (Live Debugger Trace) : File Caribean Lost Island.map sucessfully parsed (Nblines :  44)
+13:24:38: Terrain created; size=513 minBatch=5 maxBatch=129 treeDepth=3 lodLevels=8 leafLods=6
+13:24:39: Terrain::distributeVertexData processing source terrain size of 513
+13:24:39:   Assigning vertex data, resolution=513 startDepth=2 endDepth=3 splits=4
+13:24:39:   Assigning vertex data, resolution=257 startDepth=1 endDepth=2 splits=2
+13:24:39:   Assigning vertex data, resolution=129 startDepth=0 endDepth=1 splits=1
+13:24:39: Terrain::distributeVertexData finished
+13:24:39: DefaultWorkQueueBase('Root') - QUEUED(thread:main): ID=1 channel=1 requestType=1
+13:24:39: DefaultWorkQueueBase('Root') - PROCESS_REQUEST_START(main): ID=1 channel=1 requestType=1
+13:24:39: DefaultWorkQueueBase('Root') - PROCESS_REQUEST_END(main): ID=1 channel=1 requestType=1 processed=1
+13:24:39: DefaultWorkQueueBase('Root') - PROCESS_RESPONSE_START(thread:main): ID=1 success=1 messages=[] channel=1 requestType=1
+13:24:39: DefaultWorkQueueBase('Root') - PROCESS_RESPONSE_END(thread:main): ID=1 success=1 messages=[] channel=1 requestType=1
+13:24:39: DefaultWorkQueueBase('Root') - QUEUED(thread:main): ID=2 channel=1 requestType=1
+13:24:39: DefaultWorkQueueBase('Root') - PROCESS_REQUEST_START(main): ID=2 channel=1 requestType=1
+13:24:39: DefaultWorkQueueBase('Root') - PROCESS_REQUEST_END(main): ID=2 channel=1 requestType=1 processed=1
+13:24:39: DefaultWorkQueueBase('Root') - PROCESS_RESPONSE_START(thread:main): ID=2 success=1 messages=[] channel=1 requestType=1
+13:24:39: DefaultWorkQueueBase('Root') - PROCESS_RESPONSE_END(thread:main): ID=2 success=1 messages=[] channel=1 requestType=1
+13:24:39: WARNING: Texture instance 'OgreTerrain/2429762249/nm' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:39: WARNING: Texture instance 'OgreTerrain/2429762249/lm' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:39: WARNING: Texture instance 'TerrBlend1' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:39: WARNING: Texture instance 'TerrBlend2' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:39: WARNING: Texture instance 'OgreTerrain/2429762249/comp' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:39: WARNING: Texture instance 'OgreTerrain/2429762249/nm' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:39: WARNING: Texture instance 'OgreTerrain/2429762249/lm' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:39: WARNING: Texture instance 'TerrBlend1' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:39: WARNING: Texture instance 'TerrBlend2' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:39: D3D9 : Loading 2D Texture, image name : 'beach_white_sand2.dds' with 5 mip map levels
+13:24:39: D3D9 : Loading 2D Texture, image name : 'beach_white_sand_wet_frozen_ddn.dds' with 5 mip map levels
+13:24:39: D3D9 : Loading 2D Texture, image name : 'beach_sand_coarse.dds' with 5 mip map levels
+13:24:39: D3D9 : Loading 2D Texture, image name : 'beach_sand_coarse_ddn.dds' with 5 mip map levels
+13:24:39: D3D9 : Loading 2D Texture, image name : 'cliff_basalt.dds' with 5 mip map levels
+13:24:39: D3D9 : Loading 2D Texture, image name : 'cliff_basalt_ddn.dds' with 5 mip map levels
+13:24:39: WARNING: Texture instance 'OgreTerrain/2429762249/comp' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:39: Creating viewport on target 'rtt/116348920/SceneManagerInstance2/compRTT', rendering from camera 'cam', relative dimensions 8192L: 0 T: 0 W: 1 H: 1 ZOrder: 0
+13:24:39: Viewport for camera 'cam', actual dimensions 8192L: 0 T: 0 W: 1024 H: 1024
+13:24:39: (Live Debugger Trace) : (FloatFromNameExeption) Error while retriving float : No such NamedFloat.  Will return  -1. ( Requested : MaskFactor in the pool named : Layer )
+13:24:39: (Live Debugger Trace) : Terrain loaded sucessfully
+13:24:39: [Hydrax] Hydrax created.
+13:24:39: [Hydrax] Namuh.hdx loaded.
+13:24:39: Creating viewport on target 'rtt/116349184/_Hydrax_GodRays_Depth_Map', rendering from camera '_Hydrax_GodRays_Projector_Camera', relative dimensions 8192L: 0 T: 0 W: 1 H: 1 ZOrder: 0
+13:24:39: Viewport for camera '_Hydrax_GodRays_Projector_Camera', actual dimensions 8192L: 0 T: 0 W: 256 H: 256
+13:24:39: [Hydrax] ProjectedGridVertex options entry found.
+13:24:39: [Hydrax] 	Reading options...
+13:24:39: [Hydrax] 	Options readed.
+13:24:39: [Hydrax] Perlin options entry found.
+13:24:39: [Hydrax] Creating module...
+13:24:39: [Hydrax] Creating ProjectedGridVertex module.
+13:24:39: [Hydrax] ProjectedGridVertex created.
+13:24:39: [Hydrax] Module created.
+13:24:39: [Hydrax] Initializating RTT Manager...
+13:24:39: Creating viewport on target 'rtt/116349448/HydraxReflectionMap', rendering from camera 'Camera', relative dimensions 8192L: 0 T: 0 W: 1 H: 1 ZOrder: 0
+13:24:39: Viewport for camera 'Camera', actual dimensions 8192L: 0 T: 0 W: 128 H: 128
+13:24:39: Creating viewport on target 'rtt/116349712/HydraxRefractionMap', rendering from camera 'Camera', relative dimensions 8192L: 0 T: 0 W: 1 H: 1 ZOrder: 0
+13:24:39: Viewport for camera 'Camera', actual dimensions 8192L: 0 T: 0 W: 128 H: 128
+13:24:39: Creating viewport on target 'rtt/116349976/HydraxDepthMap', rendering from camera 'Camera', relative dimensions 8192L: 0 T: 0 W: 1 H: 1 ZOrder: 0
+13:24:39: Viewport for camera 'Camera', actual dimensions 8192L: 0 T: 0 W: 1904 H: 1011
+13:24:39: [Hydrax] RTT manager initialized.
+13:24:39: [Hydrax] Registring device restored listener...
+13:24:39: [Hydrax] Device restored listener registred.
+13:24:39: [Hydrax] Creating materials...
+13:24:39: [Hydrax] Creating water material...
+13:24:39: WARNING: Texture instance 'HydraxReflectionMap' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:39: WARNING: Texture instance 'HydraxRefractionMap' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:39: WARNING: Texture instance 'HydraxDepthMap' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:39: WARNING: Texture instance 'HydraxReflectionMap' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:39: WARNING: Texture instance 'HydraxRefractionMap' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:39: WARNING: Texture instance 'HydraxDepthMap' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:39: Texture: Fresnel.bmp: Loading 1 faces(PF_L8,256x1x1) with  hardware generated mipmaps from Image. Internal format is PF_L8,256x1x1.
+13:24:40: Texture: Foam.png: Loading 1 faces(PF_R8G8B8,512x512x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,512x512x1.
+13:24:40: [Hydrax] Water material created.
+13:24:40: [Hydrax] Creating depth material...
+13:24:40: Texture: Caustics_0.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_1.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_2.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_3.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_4.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_5.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_6.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_7.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_8.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_9.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_10.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_11.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_12.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_13.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_14.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_15.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_16.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_17.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_18.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_19.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_20.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_21.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_22.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_23.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_24.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_25.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_26.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_27.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_28.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_29.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_30.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: Texture: Caustics_31.bmp: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: [Hydrax] Depth material created.
+13:24:40: [Hydrax] Creating underwater material...
+13:24:40: Texture: UnderwaterDistortion.jpg: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:40: [Hydrax] Underwater material created.
+13:24:40: [Hydrax] Materials created.
+13:24:40: [Hydrax] Creating god rays...
+13:24:40: [Hydrax] Perlin destroyed.
+13:24:40: Render Target 'rtt/116349184/_Hydrax_GodRays_Depth_Map' Average FPS: 0 Best FPS: 0 Worst FPS: 999
+13:24:40: Creating viewport on target 'rtt/116349184/_Hydrax_GodRays_Depth_Map', rendering from camera '_Hydrax_GodRays_Projector_Camera', relative dimensions 8192L: 0 T: 0 W: 1 H: 1 ZOrder: 0
+13:24:40: Viewport for camera '_Hydrax_GodRays_Projector_Camera', actual dimensions 8192L: 0 T: 0 W: 256 H: 256
+13:24:40: [Hydrax] God rays created.
+13:24:40: [Hydrax] Creating water mesh...
+13:24:40: WARNING: Mesh instance 'HydraxMesh' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:40: [Hydrax] Water mesh created.
+13:24:40: WARNING: Mesh instance 'SkyXMesh' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:40: Can't assign material _NULL_ to SubEntity of SkyXMeshEnt because this Material does not exist. Have you forgotten to define it in a .material script?
+13:24:40: Texture: SkyX_Starfield.png: Loading 1 faces(PF_A8R8G8B8,512x512x1) with  hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,512x512x1.
+13:24:40: Texture: SkyX_Moon.png: Loading 1 faces(PF_A8R8G8B8,512x512x1) with  hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,512x512x1.
+13:24:40: Texture: SkyX_MoonHalo.png: Loading 1 faces(PF_A8R8G8B8,512x256x1) with  hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,512x256x1.
+13:24:40: WARNING: Texture instance '_SkyX_VolCloudsData0' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:40: WARNING: Texture instance '_SkyX_VolCloudsData1' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:40: WARNING: Mesh instance '_SkyX_VClouds_Block0' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:40: Texture: Noise.jpg: Loading 1 faces(PF_R8G8B8,1024x1024x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1024x1024x1.
+13:24:40: WARNING: Mesh instance '_SkyX_VClouds_Block1' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:40: WARNING: Mesh instance '_SkyX_VClouds_Block2' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:40: WARNING: Mesh instance '_SkyX_VClouds_Block3' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:40: WARNING: Mesh instance '_SkyX_VClouds_Block4' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:40: WARNING: Mesh instance '_SkyX_VClouds_Block5' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:40: WARNING: Mesh instance '_SkyX_VClouds_Block6' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:40: WARNING: Mesh instance '_SkyX_VClouds_Block7' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:40: WARNING: Mesh instance '_SkyX_VClouds_Block8' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:40: WARNING: Mesh instance '_SkyX_VClouds_Block9' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:40: WARNING: Mesh instance '_SkyX_VClouds_Block10' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:40: WARNING: Mesh instance '_SkyX_VClouds_Block11' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:40: [SkyX] VClouds warning: unregistered camera registered, manual unregistering is needed before camera destruction
+13:24:40: Texture: Clouds.png: Loading 1 faces(PF_A8R8G8B8,1024x1024x1) with  hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,1024x1024x1.
+13:24:41: Texture: CloudsNormal.png: Loading 1 faces(PF_A8R8G8B8,1024x1024x1) with  hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,1024x1024x1.
+13:24:41: Texture: CloudsTile.png: Loading 1 faces(PF_A8R8G8B8,1024x1024x1) with  hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,1024x1024x1.
+13:24:41: WARNING: Texture instance '_Hydrax_GodRays_Depth_Map' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:41: WARNING: Texture instance '_Hydrax_GodRays_Depth_Map' was defined as manually loaded, but no manual loader was provided. This Resource will be lost if it has to be reloaded.
+13:24:41: (Live Debugger Trace) : Atmophere manager loaded sucessfully
+13:24:42: [PhysX Manager] Fluids Initialistation reached
+13:24:42: Mesh: Loading Lance Pierre.mesh.
+13:24:42: Texture: BarkPine0012_1_M.jpg: Loading 1 faces(PF_R8G8B8,644x1600x1) with 5 generated mipmaps from Image. Internal format is PF_X8R8G8B8,644x1600x1.
+13:24:42: Texture: BarkPine0012_1_M_OCC.jpg: Loading 1 faces(PF_R8G8B8,627x1600x1) with 5 generated mipmaps from Image. Internal format is PF_X8R8G8B8,627x1600x1.
+13:24:43: Texture: BarkPine0012_1_M_SPEC.jpg: Loading 1 faces(PF_R8G8B8,627x1600x1) with 5 generated mipmaps from Image. Internal format is PF_X8R8G8B8,627x1600x1.
+13:24:43: Texture: BarkPine0012_1_M2_NRM.jpg: Loading 1 faces(PF_R8G8B8,627x1600x1) with 5 generated mipmaps from Image. Internal format is PF_X8R8G8B8,627x1600x1.
+13:24:43: Texture: Various0539_1_S.png: Loading 1 faces(PF_A8R8G8B8,1024x254x1) with 5 generated mipmaps from Image. Internal format is PF_A8R8G8B8,1024x254x1.
+13:24:43: Texture: white.png: Loading 1 faces(PF_R8G8B8,4x4x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,4x4x1.
+13:24:43: Texture: flat_n.png: Loading 1 faces(PF_R8G8B8,8x8x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,8x8x1.
+13:24:43: Mesh: Loading ArcEnBois.mesh.
+13:24:43: Texture: BarkDecidious0187_2_S.jpg: Loading 1 faces(PF_R8G8B8,350x700x1) with 5 generated mipmaps from Image. Internal format is PF_X8R8G8B8,350x700x1.
+13:24:43: Texture: BarkDecidious0187_2_S_SPEC.bmp: Loading 1 faces(PF_R8G8B8,350x700x1) with 5 generated mipmaps from Image. Internal format is PF_X8R8G8B8,350x700x1.
+13:24:43: Mesh: Loading Javelot.mesh.
+13:24:43: Texture: BarkDecidious0107_S.jpg: Loading 1 faces(PF_R8G8B8,1024x832x1) with 5 generated mipmaps from Image. Internal format is PF_X8R8G8B8,1024x832x1.
+13:24:44: Texture: BarkDecidious0107_S_DISP.bmp: Loading 1 faces(PF_R8G8B8,1024x832x1) with 5 generated mipmaps from Image. Internal format is PF_X8R8G8B8,1024x832x1.
+13:24:44: Texture: BarkDecidious0107_S_NORM.tga: Loading 1 faces(PF_R8G8B8,1024x832x1) with 5 generated mipmaps from Image. Internal format is PF_X8R8G8B8,1024x832x1.
+13:24:44: Texture: RockSmooth0076_5_XS.jpg: Loading 1 faces(PF_R8G8B8,128x128x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,128x128x1.
+13:24:44: (Live Debugger Trace) : PhysX loaded sucessfully
+13:24:44: Mesh: Loading sphere.mesh.
+13:24:44: Texture: RockLayered0034_1_L.jpg: Loading 1 faces(PF_R8G8B8,2240x1680x1) with 5 generated mipmaps from Image. Internal format is PF_X8R8G8B8,2240x1680x1.
+13:24:45: Texture: Plastic0043_2_S.png: Loading 1 faces(PF_A8R8G8B8,700x700x1) with 5 generated mipmaps from Image. Internal format is PF_A8R8G8B8,700x700x1.
+13:24:45: Mesh: Loading Rondin.mesh.
+13:24:45: Mesh: Loading rocher.mesh.
+13:24:45: Texture: Cliffs0146_11_S_COLOR2.jpg: Loading 1 faces(PF_R8G8B8,2800x2800x1) with 5 generated mipmaps from Image. Internal format is PF_X8R8G8B8,2800x2800x1.
+13:24:46: Texture: Cliffs0146_11_S_OCC.jpg: Loading 1 faces(PF_R8G8B8,700x700x1) with 5 generated mipmaps from Image. Internal format is PF_X8R8G8B8,700x700x1.
+13:24:46: Texture: Cliffs0146_11_S_SPEC.jpg: Loading 1 faces(PF_R8G8B8,700x700x1) with 5 generated mipmaps from Image. Internal format is PF_X8R8G8B8,700x700x1.
+13:24:46: Texture: Cliffs0146_11_S_NRM.jpg: Loading 1 faces(PF_R8G8B8,700x700x1) with 5 generated mipmaps from Image. Internal format is PF_X8R8G8B8,700x700x1.
+13:24:46: Mesh: Loading disk.mesh.
+13:24:47: Texture: RockMossy0001_M.jpg: Loading 1 faces(PF_R8G8B8,1600x1064x1) with 5 generated mipmaps from Image. Internal format is PF_X8R8G8B8,1600x1064x1.
+13:24:47: Texture: RockMossy0001_M_NRM.jpg: Loading 1 faces(PF_R8G8B8,1600x1064x1) with 5 generated mipmaps from Image. Internal format is PF_X8R8G8B8,1600x1064x1.
+13:24:47: Mesh: Loading Cube.mesh.
+13:24:47: Texture: WoodRough0050_3_S.jpg: Loading 1 faces(PF_R8G8B8,640x640x1) with 5 generated mipmaps from Image. Internal format is PF_X8R8G8B8,640x640x1.
+13:24:47: Texture: WoodRough0050_3_S_OCC.jpg: Loading 1 faces(PF_R8G8B8,640x640x1) with 5 generated mipmaps from Image. Internal format is PF_X8R8G8B8,640x640x1.
+13:24:47: Texture: WoodRough0050_3_S_SPEC.jpg: Loading 1 faces(PF_R8G8B8,640x640x1) with 5 generated mipmaps from Image. Internal format is PF_X8R8G8B8,640x640x1.
+13:24:47: Texture: WoodRough0050_3_S_NRM.jpg: Loading 1 faces(PF_R8G8B8,640x640x1) with 5 generated mipmaps from Image. Internal format is PF_X8R8G8B8,640x640x1.
+13:24:48: (Live Debugger Trace) : Sandbox_constructeur initialised sucessfully
+13:24:48: (Live Debugger Trace) : First part loaded sucessfully
+13:24:48: DefaultWorkQueueBase('Root') - QUEUED(thread:main): ID=3 channel=1 requestType=1
+13:24:48: DefaultWorkQueueBase('Root') - PROCESS_REQUEST_START(main): ID=3 channel=1 requestType=1
+13:24:48: DefaultWorkQueueBase('Root') - PROCESS_REQUEST_END(main): ID=3 channel=1 requestType=1 processed=1
+13:24:48: DefaultWorkQueueBase('Root') - PROCESS_RESPONSE_START(thread:main): ID=3 success=1 messages=[] channel=1 requestType=1
+13:24:48: DefaultWorkQueueBase('Root') - QUEUED(thread:main): ID=4 channel=1 requestType=1
+13:24:48: DefaultWorkQueueBase('Root') - PROCESS_REQUEST_START(main): ID=4 channel=1 requestType=1
+13:24:48: DefaultWorkQueueBase('Root') - PROCESS_REQUEST_END(main): ID=4 channel=1 requestType=1 processed=1
+13:24:48: DefaultWorkQueueBase('Root') - PROCESS_RESPONSE_START(thread:main): ID=4 success=1 messages=[] channel=1 requestType=1
+13:24:48: DefaultWorkQueueBase('Root') - QUEUED(thread:main): ID=5 channel=1 requestType=1
+13:24:48: DefaultWorkQueueBase('Root') - PROCESS_REQUEST_START(main): ID=5 channel=1 requestType=1
+13:24:48: DefaultWorkQueueBase('Root') - PROCESS_REQUEST_END(main): ID=5 channel=1 requestType=1 processed=1
+13:24:48: DefaultWorkQueueBase('Root') - PROCESS_RESPONSE_START(thread:main): ID=5 success=1 messages=[] channel=1 requestType=1
+13:24:48: DefaultWorkQueueBase('Root') - PROCESS_RESPONSE_END(thread:main): ID=5 success=1 messages=[] channel=1 requestType=1
+13:24:48: DefaultWorkQueueBase('Root') - PROCESS_RESPONSE_END(thread:main): ID=4 success=1 messages=[] channel=1 requestType=1
+13:24:48: DefaultWorkQueueBase('Root') - PROCESS_RESPONSE_END(thread:main): ID=3 success=1 messages=[] channel=1 requestType=1
+13:24:48: (Live Debugger Trace) : Initialising/spawning player ID_3
+13:24:48: (Live Debugger Trace) : Tried to intialise player n°3 ,which is already initialised. Skipping...
+13:24:48: (Live Debugger Trace) : loading Paged geometry 
+13:24:48: [Paged Manager] Initialistation reached
+13:24:48: (Live Debugger Trace) : (Paged Manager) Loading Vegetation object n°1 of 3
+13:24:48: Creating resource group Impostors
+13:24:48: Mesh: Loading Beach Palm.mesh.
+13:24:48: Texture: Floor02.jpg: Loading 1 faces(PF_R8G8B8,256x256x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,256x256x1.
+13:24:48: Texture: Palm2.png: Loading 1 faces(PF_A8R8G8B8,512x770x1) with 5 generated mipmaps from Image. Internal format is PF_A8R8G8B8,512x770x1.
+13:24:48: (Live Debugger Trace) : (FloatFromNameExeption) Error while retriving float : No such NamedFloat.  Will return  -1. ( Requested : RandomScale_MinValue in the pool named : Entity )
+13:24:48: (Live Debugger Trace) : (FloatFromNameExeption) Error while retriving float : No such NamedFloat.  Will return  -1. ( Requested : RandomScale_MinValue in the pool named : Entity )
+13:24:48: Mesh: Loading Palmier_droit.mesh.
+13:24:48: Texture: Palm.png: Loading 1 faces(PF_A8R8G8B8,512x770x1) with 5 generated mipmaps from Image. Internal format is PF_A8R8G8B8,512x770x1.
+13:24:48: Texture: Thatched0035_2_S_COLOR.jpg: Loading 1 faces(PF_R8G8B8,1024x683x1) with 5 generated mipmaps from Image. Internal format is PF_X8R8G8B8,1024x683x1.
+13:24:48: Texture: Thatched0035_2_S_NRM.jpg: Loading 1 faces(PF_R8G8B8,1024x683x1) with 5 generated mipmaps from Image. Internal format is PF_X8R8G8B8,1024x683x1.
+13:24:48: (Live Debugger Trace) : (FloatFromNameExeption) Error while retriving float : No such NamedFloat.  Will return  -1. ( Requested : RandomScale_MinValue in the pool named : Entity )
+13:24:48: (Live Debugger Trace) : (FloatFromNameExeption) Error while retriving float : No such NamedFloat.  Will return  -1. ( Requested : RandomScale_MinValue in the pool named : Entity )
+13:24:48: (Live Debugger Trace) : (Paged Manager) Loading Vegetation object n°2 of 3
+13:24:48: Mesh: Loading Objects/Falaise/Ovale/Rocher7kOvale5mX10m.mesh.
+13:24:49: Texture: RockLayered0034_1_L_AMBO.bmp: Loading 1 faces(PF_R8G8B8,2240x1680x1) with 5 generated mipmaps from Image. Internal format is PF_X8R8G8B8,2240x1680x1.
+13:24:50: Texture: RockLayered0034_1_L_SPEC.bmp: Loading 1 faces(PF_R8G8B8,2240x1680x1) with 5 generated mipmaps from Image. Internal format is PF_X8R8G8B8,2240x1680x1.
+13:24:50: Texture: RockLayered0034_1_L_NORM.tga: Loading 1 faces(PF_R8G8B8,2240x1680x1) with 5 generated mipmaps from Image. Internal format is PF_X8R8G8B8,2240x1680x1.
+13:24:51: (Live Debugger Trace) : (FloatFromNameExeption) Error while retriving float : No such NamedFloat.  Will return  -1. ( Requested : RandomScale_MinValue in the pool named : Entity )
+13:24:51: (Live Debugger Trace) : (FloatFromNameExeption) Error while retriving float : No such NamedFloat.  Will return  -1. ( Requested : RandomScale_MinValue in the pool named : Entity )
+13:24:51: (Live Debugger Trace) : (Paged Manager) Loading Vegetation object n°3 of 3
+13:24:51: (Live Debugger Trace) : (FloatFromNameExeption) Error while retriving float : No such NamedFloat.  Will return  -1. ( Requested : RandomScale_MinValue in the pool named : Entity )
+13:24:51: (Live Debugger Trace) : (FloatFromNameExeption) Error while retriving float : No such NamedFloat.  Will return  -1. ( Requested : RandomScale_MinValue in the pool named : Entity )
+13:24:51: (Live Debugger Trace) : (Paged Manager) Loading Vegetation image n°1 of 3
+13:24:51: Texture: Algues mask.png: Loading 1 faces(PF_L8,513x513x1) with 0 generated mipmaps from Image. Internal format is PF_L8,513x513x1.
+13:24:51: (Live Debugger Trace) : (Paged Manager) Loading Vegetation image n°2 of 3
+13:24:51: (Live Debugger Trace) : (Paged Manager) Loading Vegetation image n°3 of 3
+13:24:51: (Live Debugger Trace) : (Paged Manager) Updating Paged instances
+13:24:51: OGRE EXCEPTION(2:InvalidParametersException): Parameter called objSpaceLight does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreGpuProgramParams.cpp (line 1435)
+13:24:51: OGRE EXCEPTION(2:InvalidParametersException): Parameter called objSpaceLight does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreGpuProgramParams.cpp (line 1435)
+13:24:51: OGRE EXCEPTION(2:InvalidParametersException): Parameter called objSpaceLight does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreGpuProgramParams.cpp (line 1435)
+13:24:51: OGRE EXCEPTION(2:InvalidParametersException): Parameter called objSpaceLight does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreGpuProgramParams.cpp (line 1435)
+13:24:51: OGRE EXCEPTION(2:InvalidParametersException): Parameter called objSpaceLight does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreGpuProgramParams.cpp (line 1435)
+13:24:51: OGRE EXCEPTION(2:InvalidParametersException): Parameter called objSpaceLight does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreGpuProgramParams.cpp (line 1435)
+13:24:51: OGRE EXCEPTION(2:InvalidParametersException): Parameter called objSpaceLight does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreGpuProgramParams.cpp (line 1435)
+13:24:51: OGRE EXCEPTION(2:InvalidParametersException): Parameter called objSpaceLight does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreGpuProgramParams.cpp (line 1435)
+13:24:51: OGRE EXCEPTION(2:InvalidParametersException): Parameter called objSpaceLight does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreGpuProgramParams.cpp (line 1435)
+13:24:51: OGRE EXCEPTION(2:InvalidParametersException): Parameter called objSpaceLight does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreGpuProgramParams.cpp (line 1435)
+13:24:51: Creating viewport on target 'rtt/116409112/ImpostorTexture1', rendering from camera 'ImpostorCam2', relative dimensions 8192L: 0 T: 0 W: 1 H: 1 ZOrder: 0
+13:24:51: Viewport for camera 'ImpostorCam2', actual dimensions 8192L: 0 T: 0 W: 4800 H: 2400
+13:24:51: Creating resource group BinFolder
+13:24:51: Added resource location '' of type 'FileSystem' to resource group 'BinFolder'
+13:24:51: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Impostor.NSJJBWSHXZEOGRXTUUGNXXXKLXQFFQRP.600.dds in resource group Autodetect or any other group. in ResourceGroupManager::openResource at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreResourceGroupManager.cpp (line 753)
+13:24:51: Texture: Impostor.NSJJBWSHXZEOGRXTUUGNXXXKLXQFFQRP.600.png: Loading 1 faces(PF_A8R8G8B8,4800x2400x1) with 12 generated mipmaps from Image. Internal format is PF_A8R8G8B8,4800x2400x1.
+13:24:54: Render Target 'rtt/116409112/ImpostorTexture1' Average FPS: 0 Best FPS: 0 Worst FPS: 999
+13:24:54: Creating viewport on target 'rtt/116409112/ImpostorTexture35', rendering from camera 'ImpostorCam36', relative dimensions 8192L: 0 T: 0 W: 1 H: 1 ZOrder: 0
+13:24:54: Viewport for camera 'ImpostorCam36', actual dimensions 8192L: 0 T: 0 W: 4800 H: 2400
+13:24:54: Added resource location '' of type 'FileSystem' to resource group 'BinFolder'
+13:24:54: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Impostor.XHITIMACIIETFKAADJPNKDDZAUOWFLXQ.600.dds in resource group Autodetect or any other group. in ResourceGroupManager::openResource at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreResourceGroupManager.cpp (line 753)
+13:24:54: Texture: Impostor.XHITIMACIIETFKAADJPNKDDZAUOWFLXQ.600.png: Loading 1 faces(PF_A8R8G8B8,4800x2400x1) with 12 generated mipmaps from Image. Internal format is PF_A8R8G8B8,4800x2400x1.
+13:24:57: Render Target 'rtt/116409112/ImpostorTexture35' Average FPS: 0 Best FPS: 0 Worst FPS: 999
+13:24:57: OGRE EXCEPTION(2:InvalidParametersException): Parameter called objSpaceLight does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreGpuProgramParams.cpp (line 1435)
+13:24:57: OGRE EXCEPTION(2:InvalidParametersException): Parameter called objSpaceLight does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreGpuProgramParams.cpp (line 1435)
+13:24:57: OGRE EXCEPTION(2:InvalidParametersException): Parameter called objSpaceLight does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreGpuProgramParams.cpp (line 1435)
+13:24:57: OGRE EXCEPTION(2:InvalidParametersException): Parameter called objSpaceLight does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreGpuProgramParams.cpp (line 1435)
+13:24:57: OGRE EXCEPTION(2:InvalidParametersException): Parameter called objSpaceLight does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreGpuProgramParams.cpp (line 1435)
+13:24:57: OGRE EXCEPTION(2:InvalidParametersException): Parameter called objSpaceLight does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreGpuProgramParams.cpp (line 1435)
+13:24:57: OGRE EXCEPTION(2:InvalidParametersException): Parameter called objSpaceLight does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreGpuProgramParams.cpp (line 1435)
+13:24:57: OGRE EXCEPTION(2:InvalidParametersException): Parameter called objSpaceLight does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreGpuProgramParams.cpp (line 1435)
+13:24:57: OGRE EXCEPTION(2:InvalidParametersException): Parameter called objSpaceLight does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreGpuProgramParams.cpp (line 1435)
+13:24:57: OGRE EXCEPTION(2:InvalidParametersException): Parameter called objSpaceLight does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreGpuProgramParams.cpp (line 1435)
+13:24:57: OGRE EXCEPTION(2:InvalidParametersException): Parameter called objSpaceLight does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreGpuProgramParams.cpp (line 1435)
+13:24:57: OGRE EXCEPTION(2:InvalidParametersException): Parameter called objSpaceLight does not exist.  in GpuProgramParameters::_findNamedConstantDefinition at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreGpuProgramParams.cpp (line 1435)
+13:24:57: Creating viewport on target 'rtt/116417032/ImpostorTexture69', rendering from camera 'ImpostorCam70', relative dimensions 8192L: 0 T: 0 W: 1 H: 1 ZOrder: 0
+13:24:57: Viewport for camera 'ImpostorCam70', actual dimensions 8192L: 0 T: 0 W: 4800 H: 2400
+13:24:57: Added resource location '' of type 'FileSystem' to resource group 'BinFolder'
+13:24:57: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Impostor.UBMCOSOFRBBEABUVGVJJXIWIHCORPATP.600.dds in resource group Autodetect or any other group. in ResourceGroupManager::openResource at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreResourceGroupManager.cpp (line 753)
+13:24:57: Texture: Impostor.UBMCOSOFRBBEABUVGVJJXIWIHCORPATP.600.png: Loading 1 faces(PF_A8R8G8B8,4800x2400x1) with 12 generated mipmaps from Image. Internal format is PF_A8R8G8B8,4800x2400x1.
+13:25:00: Render Target 'rtt/116417032/ImpostorTexture69' Average FPS: 0 Best FPS: 0 Worst FPS: 999
+13:25:00: Texture: Underwater Plant 17.png: Loading 1 faces(PF_A8R8G8B8,640x480x1) with 5 generated mipmaps from Image. Internal format is PF_A8R8G8B8,640x480x1.
+13:25:00: Texture: Underwater Plant 10.png: Loading 1 faces(PF_A8R8G8B8,640x480x1) with 5 generated mipmaps from Image. Internal format is PF_A8R8G8B8,640x480x1.
+13:25:00: (Live Debugger Trace) : (Paged Manager) Intialisation Complete
+13:25:00: (Live Debugger Trace) : Paged geometry loaded sucessfully
+13:25:00: (Live Debugger Trace) : Loading Amnesic Faune 
+13:25:00: (Live Debugger Trace) : Amnesic Faune Loaded sucessfully
+13:25:00: (Live Debugger Trace) : Loading Faune 
+13:25:00: Mesh: Loading Fish01.mesh.
+13:25:00: Texture: PM3D_poisson_3.BMP: Loading 1 faces(PF_R8G8B8,2048x2048x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,2048x2048x1.
+13:25:01: (Live Debugger Trace) : Just popped 3152 cutes animals !
+13:25:01: (Live Debugger Trace) : Faune Loaded sucessfully
+13:25:01: (Live Debugger Trace) : Loading static geometry
+13:25:01: *** Main Game loop reached ***
+13:25:01: (Live Debugger Trace) : Tu n'es plus invincible, prout !
+13:25:01: Mesh: Loading Mamoth std.mesh.
+13:25:01: Texture: PM3D_ZSphere_1 fini_3painted crackled-TM.jpg: Loading 1 faces(PF_R8G8B8,2048x2048x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,2048x2048x1.
+13:25:01: Texture: fur.png: Loading 1 faces(PF_A8R8G8B8,512x512x1) with  hardware generated mipmaps from Image. Internal format is PF_A8R8G8B8,512x512x1.
+13:25:01: Texture: fur_background.jpg: Loading 1 faces(PF_R8G8B8,1024x1024x1) with  hardware generated mipmaps from Image. Internal format is PF_X8R8G8B8,1024x1024x1.
+13:25:05: Texture: Underwater Plant 12.png: Loading 1 faces(PF_A8R8G8B8,640x480x1) with 5 generated mipmaps from Image. Internal format is PF_A8R8G8B8,640x480x1.
+13:25:30: (Live Debugger Trace) : Contructeur :  Now using logs
+13:25:32: (Live Debugger Trace) : Creating trunk :Trunk67660
+13:25:33: (Live Debugger Trace) : (Trunk Constructor) Warning : param isn't cooked ( param.name == Trunk67660), cook it to improve constructor performance.
+13:25:33: (Live Debugger Trace) : (Trunk Constructor) TODO : Proper trunk cooking
+13:25:33: (Live Debugger Trace) : (Trunk Constructor) TODO : Proper destructor, and call it in  CstrMan::Destroy
+13:25:33: (Live Debugger Trace) : Construction64827299 root pos is now : 93.9553 36.5475 242.745
+13:25:33: (Live Debugger Trace) : (Trunk Constructor)  TODO : Correct that bug which makes the collision capsule lower on the world Y axis than the ogre visible mesh is
+13:25:35: (Live Debugger Trace) : Creating trunk :Trunk70088
+13:25:35: (Live Debugger Trace) : (Trunk Constructor) TODO : Proper destructor, and call it in  CstrMan::Destroy
+13:25:35: (Live Debugger Trace) : Container->element.size() : 1
+13:25:35: (Live Debugger Trace) : (Trunk Constructor)  TODO : Correct that bug which makes the collision capsule lower on the world Y axis than the ogre visible mesh is
+13:25:35: Mesh: Loading rope.mesh.
+13:25:35: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Various0539_2_S.png2 in resource group General or any other group. in ResourceGroupManager::openResource at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreResourceGroupManager.cpp (line 753)
+13:25:35: Error loading texture Various0539_2_S.png2. Texture layer will be blank. Loading the texture failed with the following exception: OGRE EXCEPTION(6:FileNotFoundException): Cannot locate resource Various0539_2_S.png2 in resource group General or any other group. in ResourceGroupManager::openResource at G:\OgreRoot\ogre_src_v1-7-4\OgreMain\src\OgreResourceGroupManager.cpp (line 753)
+13:25:40: (Live Debugger Trace) : Creating trunk :Trunk74716
+13:25:40: (Live Debugger Trace) : (Trunk Constructor) TODO : Proper destructor, and call it in  CstrMan::Destroy
+13:25:40: (Live Debugger Trace) : Container->element.size() : 2
+13:25:40: (Live Debugger Trace) : (Trunk Constructor)  TODO : Correct that bug which makes the collision capsule lower on the world Y axis than the ogre visible mesh is
+13:25:42: (Live Debugger Trace) : Contructeur :  Now using Hide
+13:25:42: (Live Debugger Trace) : TODO : Enable attachement (once the hide is built) to any point of the hide
+13:25:57: (Live Debugger Trace) : TODO : implement balloons (with pressure, inflated thing etc..) (can also be used with an invisible material to simulate imprisoned underwater air)
+13:25:57: (Live Debugger Trace) : (Hide Cooking) : generating a 2x5 hide
+13:25:57: Texture: hide01.png: Loading 1 faces(PF_A8R8G8B8,1308x1077x1) with 5 generated mipmaps from Image. Internal format is PF_A8R8G8B8,1308x1077x1.
+13:26:23: *** Quit command (Escape) ***
+13:26:23: (Live Debugger Trace) : Destroying Ruler
+13:26:23: (Live Debugger Trace) : Destroying Partie
+13:26:23: (Live Debugger) : Disabled
+13:26:23: (Live Debugger Exeption) Unable to send message ' Stating Paged geometry unloader ' : Debugger not enbled 
+13:26:23: Destroying resource group Impostors
+13:26:23: Unloading resource group Impostors
+13:26:23: Finished unloading resource group Impostors
+13:26:23: (Live Debugger Exeption) Unable to send message 'Faune mgr : destroying...' : Debugger not enbled 
+13:26:23: (Live Debugger Exeption) Unable to send message 'Faune mgr : destruction completed' : Debugger not enbled 
+13:26:23: (Live Debugger Exeption) Unable to send message 'Partie Destroyed' : Debugger not enbled 
+13:26:23: (Live Debugger Exeption) Unable to disable : Debugger not initialised 
+13:26:24: (Live Debugger Exeption) Unable to send message '(Menu circulaire n°1) Created' : Debugger not enbled 
+13:26:24: [Live Debugger] : Initialisation completed
+13:26:24: *** Main Menu Loop reached ***

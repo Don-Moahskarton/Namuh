@@ -1,0 +1,50 @@
+void main_vp(
+        // Vertex Inputs
+        float4 position     : POSITION,     // Vertex position in model space
+        float3 normal       : NORMAL,       // Vertex normal in model space
+        float3 tangent      : TANGENT,      // VErtex tangent in model space
+        float2 texCoord0    : TEXCOORD0,    // Texture UV set 0
+ 
+        // Outputs
+        out float4 oPosition    : POSITION,     // Transformed vertex position
+        out float2 uv0          : TEXCOORD0,    // UV0
+ 
+        // Model Level Inputs
+        uniform float furLength,            // Total lenth of the fur
+        uniform float layerIndex,           // Layer's position
+        uniform float totalLayerCount,      // Numer of rendered layers
+        uniform float4x4 worldViewProj)
+{
+    // Calculate output position
+    normal = normalize(normal);
+    oPosition = mul(    worldViewProj, 
+                        float4(     position.xyz    + normal * 0.2 * furLength * ((layerIndex / totalLayerCount) - 0.5f ),   // Extrusion, fur centered on surface
+                                                   // + normalize(position.xyz) * 2.7 * furLength * (pow((layerIndex / totalLayerCount),1.2) - 0.5f ), // blades spreads
+                                    1.0f));
+    oPosition -= float4(0,  1.4 * furLength * (pow((layerIndex / totalLayerCount),3) - 0.5f )    // Gravity effect
+                            * (0.5 +  ( 1 - abs(dot(normal, float3(0,1,0)))) * 0.5), // Gravity don't affect upper fur (so they keep the same length)
+                            0,0);     
+    // Simply copy the input vertex UV to the output
+    uv0 = float2(texCoord0.x * 1.25,texCoord0.y * 1.25); // 1.25 is the uv scale, used to ajust fur density
+}
+
+
+void main_fp(
+        // Pixel Inputs
+        float2 uv0        : TEXCOORD0,    // UV interpolated for current pixel
+ 
+        // Outputs
+        out float4 color    : COLOR,    // Output color we want to write
+ 
+        uniform float layerIndex,           // Layer's position
+        uniform float totalLayerCount,      // Numer of rendered layers
+        uniform sampler2D furTex,           // Blades's position we're giong to extrude
+        uniform sampler2D coatTex)          // Coat texture
+{
+    // Just sample texture using supplied UV with the right texture
+    if(layerIndex > 5)
+       color = tex2D(coatTex, uv0);    // coat at the base
+    else
+        color = tex2D(furTex, uv0);     // fur afterwards
+
+}

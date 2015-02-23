@@ -1,0 +1,18 @@
+import * from "general.material"
+ material Falaise3 : base_material
+{
+    // any of these maps can be left out if you don't have one
+    set_texture_alias diffuseMap cliff_basalt2.jpg
+    //set_texture_alias specMap WoodRough0050_3_S_SPEC.jpg
+    set_texture_alias normalMap cliff_basalt_ddn.dds
+    //set_texture_alias aoMap WoodRough0050_3_S_OCC.jpg
+ 
+    // diffuse colour multiplier 
+    set $diffuseCol "0.65 0.65 0.65"
+    // specular colour multiplier
+    set $specularCol "0.65 0.65 0.65"
+    // specular power (shininess) (the higher, the sharper the highlights)
+  //  set $shininess "96"
+ 
+    // once again, you can leave any of these configurables out if you don't need them
+}

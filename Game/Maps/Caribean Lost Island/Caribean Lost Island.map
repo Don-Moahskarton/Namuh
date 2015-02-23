@@ -1,0 +1,44 @@
+[Map]
+	# Caribean Map Script
+
+	Name = Caribean Lost Island  
+
+	Heightmap_File = Height.tif # Mettre "random" pour une heightmap aléatoire
+#	Heightmap_File = random
+	Heightmap_Size = 513
+	Heightmap_MaxPixelError = 8
+	World_Bach_Size_min = 5
+	World_Bach_Size_Max = 129
+
+	World_Horisontal_Size = 450
+	World_Vertical_Size = 120
+	World_Position =  225 0 225 # Formalisme du Vector3, pour représenter une position dans l'espace, les coordonnés X Y et Z sont séparés par un espace
+	World_Water_Height = 31
+	World_East_Direction = 270 # entre 0 et 360 pour caractériser un point de l'horison
+	Vegetation_Enabled = true
+
+	Time_Starting = 10.25 # dans [0;24], les minutes sont décimales, ie 12.50f <=> 12h30
+	Time_Multiplier = 0.001 # 0.003 fige casiment le temps
+	Time_Sunrise = 8.0
+	Time_Sunset = 21.0
+	
+	Weather_Cloud_Enabled = True
+	Weather_Cloud_Humidity = 0.1 # la quantité de nuages
+	Weather_Cloud_Average_Width = 1 # was 1
+	Weather_Cloud_Altitude = -1 # en m
+	Weather_Cloud_Height =  -1
+	Weather_Wind_Speed = 0
+	Weather_Wind_Direction = 80
+	Weather_Sky_Exposure = 3
+	Weather_Sky_MieMultiplier = 0.000667
+	Weather_Sky_WaveLength = 0.57f, 0.54f, 0.44f # RGB value of sky, each component in [0;1] range
+
+	Faune_Page_Min_Size = 15
+	Faune_Display_Distance = 100
+	
+	#Spawn_Position =  177 102 264 
+	Spawn_Position =  177 102 264 
+
+	<Layers.map>
+	<Vegetation.map>
+[/Map]

@@ -1,0 +1,35 @@
+[Construction]
+	Name = Construction38937011
+	[Element]
+		Diametre = 1
+		Longueur = 10
+		Position = 0 0 0
+		Type = Rondin
+		Name = Rondin40687
+		[Orientation]
+			w = 0.612248
+			x = -0.293665
+			y = -0.353768
+			z = 0.643242
+		[/Orientation]
+	[/Element]
+	[Element]
+		Diametre = 1
+		Longueur = 10
+		Position = 0.37619 -3.8147e-006 -2.57562
+		Type = Rondin
+		Name = Rondin41294
+		[Orientation]
+			w = 0.612246
+			x = -0.293661
+			y = -0.353772
+			z = 0.643244
+		[/Orientation]
+	[/Element]
+	[Link]
+		LinkName = Fixed Rondin40687 <==> Rondin41294
+		FirstBodyName = Rondin40687
+		SecondBodyName = Rondin41294
+	[/Link]
+[/Construction]
+

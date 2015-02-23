@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="TaharezLook/FrameWindow" Name="SanboxLinkCreator" >
+        <Property Name="Text" Value="Create link" />
+        <Property Name="TitlebarFont" Value="DejaVuSans-10" />
+        <Property Name="TitlebarEnabled" Value="True" />
+        <Property Name="UnifiedAreaRect" Value="{{0.315625,0},{0.290147,0},{0.684374,0},{0.846225,0}}" />
+        <Window Type="TaharezLook/Combobox" Name="SanboxLinkCreator/LinkTypeSelector" >
+            <Property Name="Text" Value="FIxed Link" />
+            <Property Name="ReadOnly" Value="True" />
+            <Property Name="ClippedByParent" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{0.00988624,0},{0.945301,0},{0.379943,0},{1.28485,0}}" />
+            <Property Name="MaxEditTextLength" Value="1073741823" />
+        </Window>
+        <Window Type="TaharezLook/StaticText" Name="SanboxLinkCreator/LinkTypeText" >
+            <Property Name="Text" Value="Link type :  TODO : implement different link type." />
+            <Property Name="HorzExtent" Value="393" />
+            <Property Name="VertExtent" Value="12.3136" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+            <Property Name="UnifiedAreaRect" Value="{{0.013559,0},{0.89317,0},{0.998024,0},{0.940982,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Property Name="VertScrollPosition" Value="0" />
+        </Window>
+        <Window Type="TaharezLook/Button" Name="SanboxLinkCreator/OkBttn" >
+            <Property Name="Text" Value="Create Link" />
+            <Property Name="UnifiedAreaRect" Value="{{0.726555,0},{0.949029,0},{0.986441,0},{0.990844,0}}" />
+        </Window>
+        <Window Type="TaharezLook/Button" Name="SanboxLinkCreator/CancelBttn" >
+            <Property Name="Text" Value="Cancel" />
+            <Property Name="UnifiedAreaRect" Value="{{0.469209,0},{0.947144,0},{0.714971,0},{0.989528,0}}" />
+        </Window>
+        <Window Type="TaharezLook/Listbox" Name="SanboxLinkCreator/FirstObjLst" >
+            <Property Name="UnifiedAreaRect" Value="{{0.001694,0},{0.044721,0},{0.44096,0},{0.823421,0}}" />
+        </Window>
+        <Window Type="TaharezLook/Listbox" Name="SanboxLinkCreator/SecondObjLst" >
+            <Property Name="UnifiedAreaRect" Value="{{0.56017,0},{0.044721,0},{0.999436,0},{0.823421,0}}" />
+        </Window>
+        <Window Type="TaharezLook/StaticText" Name="SanboxLinkCreator/FistObjLstTxt" >
+            <Property Name="Text" Value=" Select first object :" />
+            <Property Name="HorzExtent" Value="156" />
+            <Property Name="VertExtent" Value="12.3136" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+            <Property Name="UnifiedAreaRect" Value="{{-0.001413,0},{0.001649,0},{0.388419,0},{0.044702,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Property Name="VertScrollPosition" Value="0" />
+        </Window>
+        <Window Type="TaharezLook/StaticText" Name="SanboxLinkCreator/SecondObjLstTxt" >
+            <Property Name="Text" Value=" Select second object :" />
+            <Property Name="HorzExtent" Value="182" />
+            <Property Name="VertExtent" Value="12.3136" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+            <Property Name="UnifiedAreaRect" Value="{{0.558475,0},{0.001649,0},{0.948307,0},{0.044702,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Property Name="VertScrollPosition" Value="0" />
+        </Window>
+        <Window Type="TaharezLook/StaticText" Name="SanboxLinkCreator/ArrowTxt" >
+            <Property Name="Text" Value="&lt;==&gt;" />
+            <Property Name="HorzExtent" Value="54" />
+            <Property Name="VertExtent" Value="12.3136" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+            <Property Name="UnifiedAreaRect" Value="{{0.457345,0},{0.421114,0},{0.549155,0},{0.493431,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Property Name="VertScrollPosition" Value="0" />
+        </Window>
+        <Window Type="TaharezLook/Button" Name="SanboxLinkCreator/PickFrstObjBttn" >
+            <Property Name="Text" Value="Pick it graphicaly" />
+            <Property Name="UnifiedAreaRect" Value="{{0.0672304,0},{0.831263,0},{0.36384,0},{0.877417,0}}" />
+        </Window>
+        <Window Type="TaharezLook/Button" Name="SanboxLinkCreator/PickSecondObjBttn" >
+            <Property Name="Text" Value="Pick it graphicaly" />
+            <Property Name="UnifiedAreaRect" Value="{{0.630508,0},{0.831357,0},{0.927117,0},{0.877512,0}}" />
+        </Window>
+    </Window>
+</GUILayout>

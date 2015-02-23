@@ -1,0 +1,62 @@
+import * from "general.material"
+material Sapiens02 : base_material
+{
+    // any of these maps can be left out if you don't have one
+    set_texture_alias diffuseMap Sapiens02baseman_basic-TM.jpg
+    set_texture_alias specMap Sapiens02baseman_basic-AO.jpg
+    set_texture_alias normalMap Sapiens02baseman_basic-NM.jpg
+    set_texture_alias aoMap Sapiens02baseman_basic-AO.jpg
+ 
+    // diffuse colour multiplier 
+    set $diffuseCol "0.8 0.8 0.8"
+    // specular colour multiplier
+    set $specularCol "0.7 0.7 0.7"
+    // specular power (shininess) (the higher, the sharper the highlights)
+    set $shininess "255"
+ 
+    // once again, you can leave any of these configurables out if you don't need them
+}
+
+material FUr_SApiens02
+{
+	technique
+	{
+		pass
+		{
+			cull_hardware none 
+			cull_software none
+			depth_write off
+			scene_blend alpha_blend
+			texture_unit
+			{
+				texture Fur.png
+			}
+		}
+
+	}
+
+}
+
+
+
+material FUr_SApiens03
+{
+	technique
+	{
+		pass
+		{
+			cull_hardware none 
+			cull_software none
+			depth_write off
+			scene_blend alpha_blend
+			texture_unit
+			{
+				texture "TEntative hair.png"
+			}
+		}
+
+	}
+
+}
+
+

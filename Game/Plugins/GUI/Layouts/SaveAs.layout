@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="GlossySerpent/FrameWindow" Name="SaveAsFrameWin" >
+        <Property Name="Font" Value="DejaVuSans-10" />
+        <Property Name="Text" Value="Save as..." />
+        <Property Name="TitlebarFont" Value="DejaVuSans-10" />
+        <Property Name="RollUpEnabled" Value="False" />
+        <Property Name="TitlebarEnabled" Value="True" />
+        <Property Name="UnifiedAreaRect" Value="{{0.309376,0},{0.438994,0},{0.690098,0},{0.565107,0}}" />
+        <Property Name="EWSizingCursorImage" Value="set:WindowsLook image:MouseEsWeCursor" />
+        <Property Name="NSSizingCursorImage" Value="set:WindowsLook image:MouseNoSoCursor" />
+        <Property Name="NESWSizingCursorImage" Value="set:WindowsLook image:MouseNeSwCursor" />
+        <Property Name="NWSESizingCursorImage" Value="set:WindowsLook image:MouseNwSeCursor" />
+        <Window Type="GlossySerpent/Editbox" Name="SaveAsFrameWin/EditBox" >
+            <Property Name="Font" Value="DejaVuSans-10" />
+            <Property Name="Text" Value="Untitled" />
+            <Property Name="MaxTextLength" Value="1073741823" />
+            <Property Name="UnifiedAreaRect" Value="{{0.023011,0},{0.083752,0},{0.985161,0},{0.481001,0}}" />
+            <Property Name="MouseCursorImage" Value="set:WindowsLook image:MouseTextBar" />
+            <Property Name="TextParsingEnabled" Value="False" />
+        </Window>
+        <Window Type="GlossySerpent/Button" Name="SaveAsFrameWin/CancelButton" >
+            <Property Name="Font" Value="DejaVuSans-10" />
+            <Property Name="Text" Value="Cancel" />
+            <Property Name="UnifiedAreaRect" Value="{{0.394664,0},{0.5651,0},{0.673394,0},{0.934441,0}}" />
+        </Window>
+        <Window Type="GlossySerpent/Button" Name="SaveAsFrameWin/OkButton" >
+            <Property Name="Font" Value="DejaVuSans-10" />
+            <Property Name="Text" Value="Save" />
+            <Property Name="UnifiedAreaRect" Value="{{0.707525,0},{0.567864,0},{0.980782,0},{0.945685,0}}" />
+        </Window>
+        <Window Type="TaharezLook/StaticText" Name="SaveAsFrameWin/TODO" >
+            <Property Name="Text" Value="TODO : A true file explorer" />
+            <Property Name="HorzExtent" Value="212" />
+            <Property Name="VertExtent" Value="12.3682" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{0.0263999,0},{0.53488,0},{0.38584,0},{0.955701,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Property Name="VertScrollPosition" Value="0" />
+        </Window>
+    </Window>
+</GUILayout>

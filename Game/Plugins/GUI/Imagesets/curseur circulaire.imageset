@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<Imageset Name="curseur-circulaire" Imagefile="curseur circulaire.png" NativeHorzRes="200" NativeVertRes="200" AutoScaled="true">
+	<Image Name="curseur" XPos="0" YPos="0" Width="200" Height="200" />
+</Imageset>

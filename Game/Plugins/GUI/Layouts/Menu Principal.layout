@@ -1,0 +1,14 @@
+<?xml version="1.0" ?>
+<GUILayout>
+    <Window Type="DefaultWindow" Name="root">
+
+        <Window Type="TaharezLook/StaticText" Name="Live_debugger" >
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+            <Property Name="VertFormatting" Value="TopAligned" />
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{0.277083,0},{0.977564,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Property Name="VertScrollPosition" Value="0" />
+        </Window>
+    </Window>
+</GUILayout>

@@ -1,0 +1,40 @@
+
+	[Layer]
+		#Diffuse = Grass0091_M.jpg
+		Diffuse =  SoilMud0004_6_S.jpg
+		Normal = Flat_n.png
+		Size = 1
+	[/Layer]
+
+	[Layer]
+		Diffuse = SoilMud0019_5_S.jpg
+		Normal = Flat_n.png
+		Mask =  Chutes Bresiliennes_Grassmask3.bmp
+		MaskFactor = 0.6
+		Size = 10
+	[/Layer]
+
+	[Layer]
+		Diffuse = SoilMud0019_5_S.jpg
+		Normal = Flat_n.png
+		Mask =  Chutes Bresiliennes_Grassmask3.bmp
+		Size = 2
+	[/Layer]
+
+	[Layer]
+		Diffuse = Moss0165_2_S.jpg
+		Normal = Moss0165_2_S_NRM.jpg
+		Mask =  Chutes Bresiliennes_Rockmask.bmp
+		MaskFactor = 0.5
+		Size = 200
+	[/Layer]
+
+	[Layer]
+		#Diffuse = Tex.png
+		Diffuse = Moss0165_2_S.jpg
+		Normal = Moss0165_2_S_NRM.jpg
+		Mask =  Chutes Bresiliennes_Rockmask.bmp
+		MaskFactor = 0.5
+		#Size = 2000
+		Size = 5
+	[/Layer]

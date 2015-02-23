@@ -1,0 +1,80 @@
+//----------------------------
+// Distortion effects
+//----------------------------
+
+vertex_program Examples/FresnelRefractReflectVP cg
+{
+	source Example_Fresnel.cg
+	entry_point main_vp
+	profiles vs_1_1 arbvp1
+}
+
+fragment_program Examples/FresnelRefractReflectFP cg
+{
+	source Example_Fresnel.cg
+	entry_point main_fp
+	// sorry, ps_1_1 and fp20 can't do this
+	profiles ps_2_0 arbfp1
+}
+material FresnelReflectionRefraction
+{
+	// ps_2_0 / arbfp1
+	technique
+	{
+		pass 
+		{
+			
+			vertex_program_ref Examples/FresnelRefractReflectVP
+			{
+				param_named_auto worldViewProjMatrix worldviewproj_matrix
+				param_named_auto eyePosition camera_position_object_space
+				//param_named_auto timeVal time 0.05
+				param_named timeVal time 0
+				param_named scroll float 1  
+				param_named scale float 1
+				param_named noise float 0.01
+				// scroll and noisePos will need updating per frame
+			}
+			fragment_program_ref Examples/FresnelRefractReflectFP
+			{
+				param_named fresnelBias float -0.1 
+				param_named fresnelScale float 1.8 
+				param_named fresnelPower float 8  
+				param_named tintColour float4 0.0 0.0 0.0 1
+				param_named noiseScale float 0.1 
+			}
+			// Noise
+			texture_unit
+			{
+				// Perlin noise volume
+				//texture 9420-normal.jpg
+				//texture waves3.dds
+				texture waves2.dds
+				// min / mag filtering, no mip
+				filtering linear linear none
+			}
+			// Reflection
+			texture_unit
+			{
+				// Will be filled in at runtime
+				texture refraction
+				tex_address_mode clamp
+			}
+			// Refraction
+			texture_unit
+			{
+				// Will be filled in at runtime
+				texture refraction
+				tex_address_mode clamp
+			}
+		}
+		
+			
+	}
+
+
+}
+
+
+
+

@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="GlossySerpent/FrameWindow" Name="FirstProfileNameInput" >
+        <Property Name="Font" Value="DejaVuSans-10" />
+        <Property Name="Text" Value="Let&apos;s create your brand new profile name !                      Don&apos;t try this button ==&gt;" />
+        <Property Name="TitlebarFont" Value="DejaVuSans-10" />
+        <Property Name="SizingEnabled" Value="False" />
+        <Property Name="TitlebarEnabled" Value="True" />
+        <Property Name="UnifiedAreaRect" Value="{{0.301562,0},{0.403354,0},{0.703123,0},{0.547432,0}}" />
+        <Property Name="EWSizingCursorImage" Value="set:TaharezLook image:MouseEsWeCursor" />
+        <Property Name="NSSizingCursorImage" Value="set:TaharezLook image:MouseNoSoCursor" />
+        <Property Name="NESWSizingCursorImage" Value="set:TaharezLook image:MouseNeSwCursor" />
+        <Property Name="NWSESizingCursorImage" Value="set:TaharezLook image:MouseNwSeCursor" />
+        <Window Type="TaharezLook/StaticText" Name="FirstProfileNameInput/WelcomeTExt" >
+            <Property Name="Text" >We&apos;re about to start ! Just write down a nice name for yoursef over there.
+Between us, our relationship will never be the same. So pick a nice one !
+(Your profile&apos;s name lenth must be inferiror to ram capacity)</Property>
+            <Property Name="HorzExtent" Value="585" />
+            <Property Name="VertExtent" Value="37.1045" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{0.0121898,0},{0.0253434,0},{0.982037,0},{0.51185,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Property Name="VertScrollPosition" Value="0" />
+        </Window>
+        <Window Type="GlossySerpent/Editbox" Name="FirstProfileNameInput/ProfileName" >
+            <Property Name="Font" Value="DejaVuSans-10" />
+            <Property Name="Text" Value="Marie-Gertrude-du86" />
+            <Property Name="MaxTextLength" Value="1073741823" />
+            <Property Name="UnifiedAreaRect" Value="{{0.0239923,0},{0.582168,0},{0.687743,0},{0.87849,0}}" />
+            <Property Name="MouseCursorImage" Value="set:TaharezLook image:MouseTextBar" />
+            <Property Name="TextParsingEnabled" Value="False" />
+        </Window>
+        <Window Type="GlossySerpent/Button" Name="FirstProfileNameInput/OkBttn" >
+            <Property Name="Font" Value="DejaVuSans-10" />
+            <Property Name="Text" Value="Here we go !" />
+            <Property Name="UnifiedAreaRect" Value="{{0.727888,0},{0.636214,0},{0.981779,0},{0.886214,0}}" />
+        </Window>
+    </Window>
+</GUILayout>

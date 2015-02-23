@@ -1,0 +1,63 @@
+[Construction]
+	name = Construction51508783
+	[Menhir]
+		linkedBodiesCount = 2
+		volume = 0
+		position = 225.104 52.2698 201.146
+		name = Menhir53160
+		materialName = 
+		linkedBody0 = Menhir55067
+		linkedBody1 = Trunk64295
+		[orientation]
+			w = 0.14189
+			x = 0.303195
+			y = 0.0465512
+			z = 0.941155
+		[/orientation]
+	[/Menhir]
+	[Menhir]
+		linkedBodiesCount = 0
+		volume = 0
+		position = 221.005 51.0125 202.049
+		name = Menhir55067
+		materialName = 
+		[orientation]
+			w = 0.925546
+			x = 0.115474
+			y = 0.0216752
+			z = 0.359948
+		[/orientation]
+	[/Menhir]
+	[Trunk]
+		linkedBodiesCount = 1
+		radius = 0.25
+		length = 6.31108
+		volume = 1.23918
+		position = 222.482 51.5901 199.575
+		name = Trunk64295
+		materialName = 
+		linkedBody0 = Trunk67542
+		[orientation]
+			w = 0.845632
+			x = 0.445395
+			y = 0.207725
+			z = -0.208277
+		[/orientation]
+	[/Trunk]
+	[Trunk]
+		linkedBodiesCount = 0
+		radius = 0.25
+		length = 7.35887
+		volume = 1.44491
+		position = 224.616 51.2509 196.62
+		name = Trunk67542
+		materialName = 
+		[orientation]
+			w = 0.633092
+			x = 0.610167
+			y = -0.334545
+			z = 0.339073
+		[/orientation]
+	[/Trunk]
+[/Construction]
+

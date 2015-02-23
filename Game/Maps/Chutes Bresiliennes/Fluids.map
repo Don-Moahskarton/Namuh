@@ -1,0 +1,23 @@
+	[Fluid]
+		RenderQueueGroupOffset = 1
+
+		MaxParticles = 3500
+		KernelRadiusMultiplier = 2.0
+		RestParticlesPerMetre = 6.0
+		MotionLimitMultiplier = 12.0
+		PacketSizeMultiplier = 8
+		CollisionDistanceMultiplier = 4.0
+		Stiffness = 50.0
+		Viscosity = 1.0
+		RestDensity = 1000.0
+		ParticleLifetime = 5.5
+		Rate = 50
+		FluidSpeed = 2.4
+		ReplusionCoefficient = 0.7
+
+		ParticleSize = 15
+		EmmiterSize = 55 0.5 0 # Le composant Z n'est pas utilisé Oo
+		Position = 1062 140 128
+
+		Material = FresnelReflectionRefraction
+	[/Fluid]

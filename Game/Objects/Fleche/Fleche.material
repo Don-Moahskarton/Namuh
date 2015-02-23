@@ -1,0 +1,56 @@
+
+material Corp_fleche
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture WoodRough0023_2_XS.jpg
+			}
+		}
+
+	}
+
+}
+
+
+
+material Pointe_fleche
+{
+	technique
+	{
+		pass
+		{
+			texture_unit
+			{
+				texture RockSmooth0076_5_XS.jpg
+			}
+		}
+
+	}
+
+}
+
+
+
+material aileron_fleche
+{
+	technique
+	{
+		pass
+		{
+			cull_hardware none 
+			alpha_rejection greater_equal 197
+			texture_unit
+			{
+				texture Feathers0008_1_S.png
+			}
+		}
+
+	}
+
+}
+
+

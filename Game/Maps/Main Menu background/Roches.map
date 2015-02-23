@@ -1,0 +1,73 @@
+[Vegetation object pager]
+	Page_Size = 30
+	[Entity]
+		Visual_FileName = Long_vert.mesh
+		PhysX_FileName = Objects/Falaise/Long/long.nxs
+		RandomScale_MaxValue = 1
+		windFactorX = 0
+		windFactorY = 0
+	[/Entity]
+
+	Object_Count = 100
+	Baches_Distance = 185.5
+	Baches_FadingDistance = 0
+	Impostor_Resolution = 192
+	Impostor_Distance = 500
+	Impostor_FadingDistance = 0
+
+	# Les object pagers tirent au hasard leur position
+	RandomPosition_Y_minDelta = 100 # Attn ! Here, squared delta !
+	RandomPosition_Y_MaxDelta = 90000 # Attn ! Here, squared delta !
+	RandomPosition_Y_UpperBound = 300
+	RandomPosition_Y_LowerBound = -1
+[/Vegetation object pager]
+
+[Vegetation object pager]
+	Page_Size = 80
+	[Entity]
+		Visual_FileName = Long_vert.mesh
+		PhysX_FileName = Objects/Falaise/Long/long.nxs
+		RandomScale_MaxValue = 1
+		windFactorX = 0
+		windFactorY = 0
+	[/Entity]
+
+	Object_Count = 120
+	Baches_Distance = 225.5
+	Baches_FadingDistance = 0
+	Impostor_Resolution = 192
+	Impostor_Distance = 800
+	Impostor_FadingDistance = 0
+
+	# Les object pagers tirent au hasard leur position
+	RandomPosition_Y_minDelta = 100 # Attn ! Here, squared delta !
+	RandomPosition_Y_MaxDelta = 90000 # Attn ! Here, squared delta !
+	RandomPosition_Y_UpperBound = 300
+	RandomPosition_Y_LowerBound = -1
+[/Vegetation object pager]
+
+[Vegetation object pager]
+	Page_Size = 30
+	[Entity]
+		Visual_FileName = Haut2.mesh
+		PhysX_FileName = Objects/Falaise/Haut/Falaise_haut.nxs
+		RandomScale_MaxValue = 1
+		windFactorX = 0
+		windFactorY = 0
+	[/Entity]
+
+	Object_Count = 60
+	Baches_Distance = 255.5
+	Impostor_Distance = 3000
+
+
+	Baches_FadingDistance = 0
+	Impostor_Resolution = 192
+	Impostor_FadingDistance = 0
+
+	# Les object pagers tirent au hasard leur position
+	RandomPosition_Y_minDelta = 60 # Attn ! Here, squared delta !
+	RandomPosition_Y_MaxDelta = 18000 # Attn ! Here, squared delta !
+	RandomPosition_Y_UpperBound = 300
+	RandomPosition_Y_LowerBound = 10
+[/Vegetation object pager]

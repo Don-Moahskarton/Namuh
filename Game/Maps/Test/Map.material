@@ -1,0 +1,24 @@
+// Map Material
+
+material Map
+{
+   technique
+   {
+      pass
+	 {
+
+         texture_unit
+         {
+            texture Tex.png
+            //tex_coord_set 1
+         }
+		 texture_unit
+         {
+            texture ground_ps_is_97.dds
+            tex_coord_set 1
+			filtering trilinear
+         }
+
+      }
+   }
+}

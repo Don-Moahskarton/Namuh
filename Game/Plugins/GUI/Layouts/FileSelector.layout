@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="GlossySerpent/FrameWindow" Name="FileSelector" >
+        <Property Name="Font" Value="DejaVuSans-10" />
+        <Property Name="Text" Value="Select File" />
+        <Property Name="TitlebarFont" Value="DejaVuSans-10" />
+        <Property Name="TitlebarEnabled" Value="True" />
+        <Property Name="UnifiedAreaRect" Value="{{0.396355,0},{0.260797,0},{0.611978,0},{0.746645,0}}" />
+        <Property Name="EWSizingCursorImage" Value="set:TaharezLook image:MouseEsWeCursor" />
+        <Property Name="NSSizingCursorImage" Value="set:TaharezLook image:MouseNoSoCursor" />
+        <Property Name="NESWSizingCursorImage" Value="set:TaharezLook image:MouseNeSwCursor" />
+        <Property Name="NWSESizingCursorImage" Value="set:TaharezLook image:MouseNwSeCursor" />
+        <Window Type="GlossySerpent/Listbox" Name="FileSelector/Filelist" >
+            <Property Name="Font" Value="DejaVuSans-10" />
+            <Property Name="UnifiedAreaRect" Value="{{-0.000966029,0},{0.00517752,0},{0.997826,0},{0.919729,0}}" />
+        </Window>
+        <Window Type="GlossySerpent/Button" Name="FileSelector/OkButton" >
+            <Property Name="Font" Value="DejaVuSans-10" />
+            <Property Name="Text" Value="Ok" />
+            <Property Name="UnifiedAreaRect" Value="{{0.577295,0},{0.942289,0},{0.986717,0},{0.991641,0}}" />
+        </Window>
+        <Window Type="GlossySerpent/Button" Name="FileSelector/CancelButton" >
+            <Property Name="Font" Value="DejaVuSans-10" />
+            <Property Name="Text" Value="Cancel" />
+            <Property Name="UnifiedAreaRect" Value="{{0.016424,0},{0.942182,0},{0.404106,0},{0.991534,0}}" />
+        </Window>
+    </Window>
+</GUILayout>

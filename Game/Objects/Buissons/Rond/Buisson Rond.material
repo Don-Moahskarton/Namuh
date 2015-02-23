@@ -1,0 +1,20 @@
+
+material buisson_1
+{
+	technique
+	{
+		pass
+		{
+			cull_hardware none 
+			alpha_rejection greater_equal 197
+			texture_unit
+			{
+				texture Feuillage.png
+			}
+		}
+
+	}
+
+}
+
+

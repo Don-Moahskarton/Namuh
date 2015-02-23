@@ -1,0 +1,20 @@
+import * from "general.material"
+
+
+ material GrotteMainMenuBackground_Rock : base_material
+{
+    // any of these maps can be left out if you don't have one
+    set_texture_alias diffuseMap  RockLayered0027_M.jpg
+    set_texture_alias specMap RockLayered0027_M_SPEC.bmp
+    set_texture_alias normalMap RockLayered0027_M_NORM.tga
+    set_texture_alias aoMap RockLayered0027_M_AMBO.bmp
+ 
+    // diffuse colour multiplier 
+    set $diffuseCol "1 1 1"
+    // specular colour multiplier
+    set $specularCol "0.2 0.2 0.2"
+    // specular power (shininess) (the higher, the sharper the highlights)
+    set $shininess "10"
+ 
+    // once again, you can leave any of these configurables out if you don't need them
+}

@@ -1,0 +1,6 @@
+
+	[Layer]
+		Diffuse =  FlatGrass.jpg
+		Normal = Flat_n.png
+		Size = 1
+	[/Layer]

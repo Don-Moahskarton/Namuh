@@ -1,0 +1,18 @@
+material Fish01
+{
+	technique
+	{
+		pass
+		{
+			//ambient 0 0 0 1
+
+			texture_unit
+			{
+				texture PM3D_poisson_3.BMP
+				transform -1 -8.74228e-008 0 1 8.74228e-008 -1 0 1 0 0 1 0 0 0 0 1
+			}
+		}
+
+	}
+
+}

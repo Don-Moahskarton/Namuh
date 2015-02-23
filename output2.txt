@@ -1,0 +1,3097 @@
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_AMNESIC_FAUNE_MANAGER// Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_AMNESIC_FAUNE_MANAGER
+
+#include "Namuh_Main_H.h"
+#include <OgreVector3.h>
+
+
+class Amnesic_Faune_mgr // Majuscule obligatoire pour éviter les conflits avec les biblio standards
+{
+// l'algo part d'une bonne idée, mais a été entouré de mécanismes assez cochons...
+	public:
+
+		bool initialised;
+
+		std::vector<std::vector<Amnesic_Faune_Entity>> Amnesic_Entities;
+		uint	DisplayFakeDistance,
+				MaxEntities,
+				ActualEntityCount;
+	
+    Amnesic_Faune_mgr(void);
+    ~Amnesic_Faune_mgr(void);
+    void initialise(void);
+	void update(float, Ogre::Vector2);
+    void destroy(void);
+	void GenerateNewAnimals(Ogre::Vector2);
+};
+
+extern Amnesic_Faune_mgr Amnesic_Faune_man;
+
+#endif // CLASS_PERSO
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_ARCENBOIS	// Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_ARCENBOIS
+
+#include "Namuh_Main_H.h"
+
+class Arc_En_Bois : public Carried_Weapon // Majuscule obligatoire pour éviter les conflits avec les biblio standards
+{ // Cette classe ne décrit qu'une arme détenue par un joueru, pas un pickup
+	public:
+		Critter::BodyDescription FlecheDescription;
+		int NextProjectileID;
+
+    Arc_En_Bois(void);
+    ~Arc_En_Bois(void);
+	void initialise(RakNet::RakNetGUID);
+	void fire();
+	//void SetAmmo(int);
+};
+
+#endif // CLASS_PERSO
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_ATMOSPHERE_MANAGER// Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_ATMOSPHERE_MANAGER
+
+#include "Namuh_Main_H.h"
+#include <OgreVector3.h>
+
+class Atm_mgr // Majuscule obligatoire pour éviter les conflits avec les biblio standards
+{
+
+	
+	public:
+	SkyX::SkyX* mSkyX;
+	SkyX::ColorGradient mWaterGradient,mAmbientGradient,mSunGradient;
+	SkyX::AtmosphereManager::Options Options;
+	SkyX::BasicController mControler;
+
+	bool	initialised,
+			first_ini;
+
+	Vector3 lightDir,
+			lightAmb,
+			sunCol,
+			sunPos;
+	float requested_hour,lastrequested_hour,
+		Eastdir,
+		Sunsethour,
+		Sunrisehour;
+	
+    Atm_mgr(void);
+    ~Atm_mgr(void);
+    void initialise(void);
+	void update(float);
+    void destroy(void);
+};
+
+// Déclaration du joueur local
+extern Atm_mgr Atm_man;
+
+#endif // CLASS_PERSO
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_CARRIED_WEAPON	// Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_CARRIED_WEAPON
+
+#include "Namuh_Main_H.h"
+
+enum Weapon
+{
+	LancePierre = 1,
+	ArcEnBois = 2,
+	Javelot_ = 3
+};
+
+class Carried_Weapon // Classe abstaite ne pouvant etre instanciée
+{ // Cette classe ne décrit qu'une arme détenue par un joueru, pas un pickup
+	public:
+		Perso*	Owner;
+		int		MaxAmmo, // FAire des énumérations sur les valeurs négatives, gnres pour des munition infinies
+				AmmoCount, // Nombre de Balles en réserve
+				Cooldown; // Temps mini en ms entre chaque tir
+		ulong	LastfiredTimer;  // Timer du dernier tir
+
+		Ogre::Entity *WeaponMesh; // Maillage de l'arme
+		SceneNode *WeaponNode; // Neud du Maillage de l'arme
+
+		std::vector<Projectile> ProjectileList;
+		virtual void fire() =0; // Polymorphisme : Les pointeurs de type Carried_Weapon pointant par example sur un Lance pierre pourront appeller des redéfinitions de fire (Alors que le type du pointeur ne le laissait pas supposer)
+};
+
+#endif // CLASS_PERSO
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_CONSTRUCTION_MANAGER // Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_CONSTRUCTION_MANAGER
+
+#include "Namuh_Main_H.h"
+
+class CstrMan
+{
+
+	private:
+		friend void PhysX_mgr::initialise(void);
+		std::vector<ParserBalise*> Syntax;
+
+	public:
+
+		NxOgre::Mesh* RocherMesh;
+		std::vector<Construction*> LoadedConstructions;
+
+
+		CstrMan(void);
+		~CstrMan(void);
+		
+		Construction* CreateNew();
+		Construction* Load(string File, Ogre::Vector3 Position, Ogre::Quaternion Orientation = Ogre::Quaternion::IDENTITY);
+		void SaveAs(Construction* Cstr, string FileName);
+		void Destroy(Construction*);
+
+		void Create_rondin(	Construction* Container, 
+							Ogre::Vector3 Position, 
+							Ogre::Quaternion Orientation, 
+							float diametre, 
+							float longueur, 
+							string name = "");
+
+		void Create_rocher(	Construction* Container, 
+							Ogre::Vector3 Position, 
+							Ogre::Quaternion Orientation, 
+							string name = "");
+
+		
+		void Create_triangle(	Construction* Container, 
+								Ogre::Vector3 Position, 
+								Ogre::Quaternion Orientation, 
+								float diametre, 
+								float longueur, 
+								string name = "");
+};
+extern CstrMan CstrMgr;
+
+#endif // CLASS_PERSO
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_SANDBOX_CONSTRUCTION // Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_SANDBOX_CONSTRUCTION
+
+struct NxOgre_NamedJoint
+{
+	string name;
+	NxOgre::Joint* joint;
+};
+
+class Construction
+{
+public:
+
+	Construction(void); 
+	~Construction(void); 
+	Critter::Body* root; // TODO : Gestion de ce node dans la sandbox
+	std::vector<Critter::Body*> element;
+	std::vector<NxOgre_NamedJoint> joint;
+	string name;
+
+	void CreateFixedLink(NxOgre::RigidBody* FirstBody, NxOgre::RigidBody* SecondBody, string name = "");
+	//void CreateRevoluteLink(NxOgre::RigidBody* FirstBody, NxOgre::RigidBody* SecondBody, string name = "");
+
+	void DestroyJoint(NxOgre::Joint* Joint);
+
+	// Mecanic funstions
+	void Rotate(Ogre::Quaternion NewRelativeOrentation);
+	void setOrientation(Ogre::Quaternion NewAbsoluteOrentation);
+
+	void Move(Ogre::Vector3 NewRelativePosition);
+	void setPosition(Ogre::Vector3 NewAbsolutePosition);
+};
+
+#endif/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_DEATHMATCH_RULES	// Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_DEATHMATCH_RULES
+
+#include "Namuh_Main_H.h"
+
+class DeathMatchRules // Majuscule obligatoire pour éviter les conflits avec les biblio standards
+{
+	public:
+		std::map<RakNet::RakNetGUID, float> PointList;
+		bool EndOfGame;
+
+	void initialise(void);
+	void destroy(void);
+	void update(void);
+	void NoticeFrag(RakNet::RakNetGUID Victim,RakNet::RakNetGUID Criminal);
+	void NoticeScuicide(RakNet::RakNetGUID Noob);
+	DeathMatchRules(void);
+    ~DeathMatchRules(void);
+};
+
+extern DeathMatchRules Ruler;
+#endif // CLASS_PERSO
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_FAUNE_ENTITY// Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_FAUNE_ENTITY
+
+#include "Namuh_Main_H.h"
+#include <OgreVector3.h>
+
+class Faune_Page;
+
+class Faune_Entity // Majuscule obligatoire pour éviter les conflits avec les biblio standards
+{	
+	public:
+		Ogre::Vector3	position,
+						linearVelocity;
+		std::list<Ogre::Vector3> linearVelocityHistory;
+		Ogre::Entity* AnimalEntity;
+		Ogre::SceneNode* AnimalNode;
+		Faune_Page* Container;
+
+		
+
+
+
+		Faune_Entity(void);
+		~Faune_Entity(void);
+		void initialise(Faune_Page* Container, Ogre::Vector3 position);
+		void update(float);
+		void destroy(void);
+};
+
+class Amnesic_Faune_Entity // Majuscule obligatoire pour éviter les conflits avec les biblio standards
+{
+	public:
+		Ogre::Vector3 position;
+		Ogre::Entity* AnimalEntity;
+		Ogre::SceneNode* AnimalNode;
+
+		Amnesic_Faune_Entity(void);
+		~Amnesic_Faune_Entity(void);
+		void initialise(Ogre::Vector2);
+		void update(float);
+		void destroy(void);
+};
+#endif // CLASS_PERSO
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_FAUNE_MANAGER// Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_FAUNE_MANAGER
+
+#include "Namuh_Main_H.h"
+#include <OgreVector3.h>
+
+class Faune_Page // Majuscule obligatoire pour éviter les conflits avec les biblio standards
+{	
+	public:
+
+		bool isVisible;
+		Ogre::Vector3 Center;
+		std::vector<Faune_Page*> SubPages;
+		std::vector<Faune_Entity*> ContainedEntities;
+		int		MinXBorder, 
+				MaxXBorder,
+				MinZBorder,
+				MaxZBorder,
+				size;
+		//Parent Page
+		Faune_Page*		Parent;
+
+		// Chainage octuple
+		Faune_Page		*Right,
+						*TopRight,
+						*Top,
+						*TopLeft,
+						*Left,
+						*BottomLeft,
+						*Bottom,
+						*BottomRight;
+	
+		
+		Ogre::Entity* FlagEntity;
+		Ogre::SceneNode* FlagNode;
+
+		Faune_Page(void);
+		~Faune_Page(void);
+		void initialise(int MinXBorder,int MaxXBorder ,int MinZBorder ,int MaxZBorder);
+		void update(float);
+		void setVisible(bool);
+		void destroy(void);
+};
+
+class Faune_mgr // Majuscule obligatoire pour éviter les conflits avec les biblio standards
+{
+	public:
+
+		Ogre::uint debugInfoTimestamp; // Timestamp when last debug info was thrown
+
+
+		float DisplayDistance;
+		Faune_Page RootPage;
+		Faune_Page *GuessedPlayerPage;
+		std::vector<Faune_Page*> UpdateList;
+		char posID;
+		bool initialised;
+	
+    Faune_mgr(void);
+    ~Faune_mgr(void);
+    void initialise(void);
+	void update(float TimeEllapsed, Ogre::Vector3 CenterOfUpdate);
+	Faune_Page* LocatePlayer(Ogre::Vector3 PositionToLocalise);
+    void ChainageOctupleFirstPass(Faune_Page*);
+    void ChainageOctupleSecondPass(Faune_Page*);
+	int getIndexInParentSubPages(Faune_Page*);
+    void destroy(void);
+};
+
+extern Faune_mgr Faune_man;
+
+
+#endif // CLASS_PERSO
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_FILE_SERIALISER // Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_FILE_SERIALISER
+
+#include "Namuh_Main_H.h"
+
+class FileSerialiser
+{
+	public:
+
+		FileSerialiser(void);
+		~FileSerialiser(void);
+
+		void WriteFile(std::vector<NamedDataPool*> Data, string FileName);
+
+	private:
+		inline std::string getOpenBaliseStr(string BaliseName);
+		inline std::string getCloseBaliseStr(string BaliseName);
+		inline std::string getAffectStr(string DataName);
+		inline std::string SerialisePool(NamedDataPool* Pool, string lineprefix = "");
+
+};
+extern FileSerialiser File_Serialiser;
+
+#endif // CLASS_PERSO
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_LDBGGRAPH // Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_LDBGGRAPH
+
+#include "Namuh_Main_H.h"
+#include <OgreVector3.h>
+
+class LdbgGraph
+{
+	public:
+
+		bool	automatic_update,
+				draw_cursors;
+		float	sizeX,
+				sizeY;
+		float	posX,
+				posY;
+
+		HardwarePixelBufferSharedPtr PixelBuffer;
+		TexturePtr Texture;
+		Ogre::OverlayContainer* panel;
+
+		std::map<string, LdbgGraphAxis > XDatas;
+		std::map<string, LdbgGraphAxis > YDatas;
+		
+		std::map<string, string > XFlowConnexions;
+		std::map<string, string > YFlowConnexions;
+		std::set<string> XTimeConnexions;
+		std::set<string> YTimeConnextions;
+		std::map<string, string > XValueCountConnexions;
+		std::map<string, string > YValueCountConnexions;
+
+		Ogre::ColourValue BackgroundColor;
+		
+		LdbgGraph();
+		void FeedAxes();
+		void Draw();
+		void Update();
+		~LdbgGraph();
+
+
+		void ConnectFlowToXAxis(string AxisName, string FlowName);
+		void ConnectFlowToYAxis(string AxisName, string FlowName);
+
+
+		void ConnectTimeToXAxis(string AxisName);
+		void ConnectTimeToYAxis(string AxisName);
+
+		void ConnectValueCountToXAxis(string AxisName, string FlowName);
+		void ConnectValueCountToYAxis(string AxisName, string FlowName);
+
+		void AddValue(string AxisName, float value);
+};
+#endif // CLASS_PERSO
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_LDBGGRAPHAXIS // Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_LDBGGRAPHAXIS
+
+#include "Namuh_Main_H.h"
+#include <OgreVector3.h>
+
+class LdbgGraphAxis
+{
+	public:
+
+		LdbgGraphAxis();
+		~LdbgGraphAxis();
+		void update();
+
+		float	origin,
+				max,
+				min,
+				RulerInterval,
+				GridInterval,
+				AutoFollowRange;
+
+		Ogre::uint	MaxRuler,
+					Rulersize;
+
+		Ogre::ColourValue DataColour;
+		Ogre::ColourValue GridColour;
+		Ogre::ColourValue RulerColour;
+		Ogre::ColourValue TextColour;
+
+		Ogre::TextAreaOverlayElement* CursorValue;
+
+		std::vector<std::pair<float, Ogre::TextAreaOverlayElement*>> RulerValue;
+		std::vector<float> Datas;
+
+		bool	AutoFollowLastValue,
+				AutoCenterLastValue,
+				AutoKeepAllInRange,
+				AutoKeepOrigin;
+				
+		// Pre-Made range tweaks
+		void setRange_CenterLastValue(bool followlastvalue = true, float range = 10);
+		void setRange_FollowLastValue(bool followlastvalue = true, float range = 10);
+		void setRange_KeepAllInRange(bool keepallinrange = true, bool keeporigin = false);
+};
+
+#endif // CLASS_PERSO
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.* 
+=====================================================================================**/
+#ifndef CLASS_GUI // Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_GUI
+
+#include "Namuh_Main_H.h"
+#include <OgreVector3.h>
+
+enum MsgBoxType
+{
+	BttnOk,
+	BttnOkCancel
+};
+
+class Gui_manager : public OIS::KeyListener, public OIS::MouseListener
+{
+	public:
+		static CEGUI::OgreRenderer* mRenderer;
+		static CEGUI::System* sys;
+		static CEGUI::WindowManager* winMgr;
+
+		CEGUI::Window* layout;
+		float		  mouseX,
+					  mouseY,
+					  mouseZ;
+		
+   // Gui_manager(void); //Constructeur
+    ~Gui_manager(void); //Destructeur
+	void initialise_CEGUI(void);
+	bool keyPressed( const OIS::KeyEvent &e );
+    bool keyReleased( const OIS::KeyEvent &e ); 
+    bool mouseMoved( const OIS::MouseEvent &e );
+    bool mousePressed( const OIS::MouseEvent &e, OIS::MouseButtonID id );
+    bool mouseReleased( const OIS::MouseEvent &e, OIS::MouseButtonID id );
+	void Update(float);
+
+	void CreateMsgBox(MsgBoxType type, string msg);
+		bool HandleDeleteMsgBox(const CEGUI::EventArgs&);
+
+
+};
+
+// Déclaration du gestionnaire d'interface
+//extern Gui_manager GuiMan; Non : on déclare juste les gestionnaire hérités (Car spécialisés dans chaque Layout)
+
+#endif // CLASS_GUI
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_FPS_GUI // Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_FPS_GUI
+
+#include "Namuh_Main_H.h"
+#include <OgreVector3.h>
+#include "GUI.h"
+
+class Gui_FPS_manager : public Gui_manager
+{
+	public:
+		bool	last_firekeyA,
+				last_firekeyB;
+		Menuci  menucirc_armesA,
+				menucirc_armesE,
+				menucirc_cstr;
+		
+		Vie_Hud Affichage_vie;
+
+
+	
+		CEGUI::Window	*WinEndGame,
+						*WinEndGameText,
+						*WinStats;
+
+		void Initialise(void);
+		void Destroy(void);
+		void UpdateFPS_UI(float);
+		void UpdateStats(void);
+		void MakeCstr(Ogre::uint FavIndex = 0);
+
+};
+
+
+
+#endif // CLASS_GUI
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS__MAINMENU_GUI // Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS__MAINMENU_GUI
+
+#include "Namuh_Main_H.h"
+#include <OgreVector3.h>
+#include "GUI.h"
+#include "GUI_MainMenu_Datafield.h"
+#include "GUI_MainMenu_CEGUI_windows.h"
+
+
+enum NetPartieStatus
+{
+	Partie_Locale		= 1,
+	Partie_Server		= 2,
+	Partie_Client		= 3
+
+};
+
+enum Submenu
+{
+	Submenu_Other,
+	Submenu_Main,
+	Submenu_Network,
+	Submenu_EscMenu,
+	Submenu_PlayerProfile,
+	Submenu_PlayerProfileEditFavoritesConstructions
+};
+
+class PartieArg
+{
+	public:
+		string Mapfile;
+		bool isSandbox;
+		NetPartieStatus Net_Status;
+		string IPofSrv;
+		PartieArg(): Mapfile(""), isSandbox(true), Net_Status(Partie_Locale), IPofSrv(""){};
+};
+
+struct MainMenuUpdaterOutput
+{
+	bool LancerPartie;
+	PartieArg Param;
+};
+
+class Gui_MainMenu_manager : public Gui_manager
+{
+	public:
+
+		Gui_MainMenu_manager();
+
+		Menuci	Main,
+				Network,
+				EscMenu;
+		MainMenu_Datafields Data;
+		MainMenu_CEGUI_windows Window;
+		Submenu		Current_Submenu,
+					EscMenu_Previous_Submenu;
+		MainMenuUpdaterOutput MenuOutData;
+		bool lastEscKey;
+		bool IsBackGroundInitialised;
+
+		void Initialise(void);
+		void SetupBackground(void);
+		void UpdateBackground(void);
+		void DestroyBackground(void);
+
+		MainMenuUpdaterOutput UpdateMainMenu(void);
+		void ConstructSubmenu(Submenu);
+		void DestructSubmenu(Submenu);
+
+		void ConstructEscmenu(void);
+		bool DestructEscmenu(const CEGUI::EventArgs& = *(new CEGUI::EventArgs));
+
+		void ConstructPlayerProfilemenu(void);
+
+		void ConstructLoadingScreen(void);
+
+
+
+
+		bool HandleFirstProfileNamePromtOk(const CEGUI::EventArgs&);	
+
+
+		bool HandlePlayerProfileClose(const CEGUI::EventArgs&);	
+		bool HandlePlayerProfileEditFavoriteConstruction(const CEGUI::EventArgs&);	
+		bool HandlePlayerProfileEditFavoriteConstructionClose(const CEGUI::EventArgs&);	
+		bool HandlePlayerProfileEditFavoriteConstructionSaveAndClose(const CEGUI::EventArgs&);
+		bool HandlePlayerProfileEditFavoriteConstructionSave(const CEGUI::EventArgs&);
+		bool HandlePlayerProfileEditFavoriteConstructionAddBttn(const CEGUI::EventArgs&);	
+		bool HandlePlayerProfileEditFavoriteConstructionEditBttn(const CEGUI::EventArgs&);	
+		bool HandlePlayerProfileEditFavoriteConstructionDelBttn(const CEGUI::EventArgs&);	
+		
+			
+		
+		
+};
+
+// Déclaration du gestionnaire d'interface
+extern Gui_MainMenu_manager GuiMainMenuMan;
+
+
+#endif // CLASS_GUI
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#include "Namuh_Main_H.h"
+#pragma once
+
+struct NetworkMenu_CEGUI_windows
+{
+	CEGUI::Window	*IPEditBox;					
+};
+
+
+struct MainMenu_CEGUI_windows
+{
+	CEGUI::Window *EntryNameBox;
+
+	NetworkMenu_CEGUI_windows Network;
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#include "Namuh_Main_H.h"
+
+#pragma once
+
+struct NetworkMenu_Datafields
+{
+	string	IP,
+			Defaut_IP;
+};
+
+struct MainMenu_Datafields
+{
+	NetworkMenu_Datafields Network;
+
+};
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS__SANDBOX_GUI // Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS__SANDBOX_GUI
+
+#include "Namuh_Main_H.h"
+#include <OgreVector3.h>
+#include "GUI.h"
+
+class Gui_sandbox_manager : public Gui_manager
+{
+	public:
+		bool camctrl,
+			 cameravolanteswitch;
+		float	Watch_PagedGeometry,
+				Watch_PhysX,
+				Watch_UI,
+				Watch_Hydrax,
+				Watch_Atm,
+				Watch_Terrain,
+				Watch_Sys;
+		bool last_spacekey,
+			 last_ctrlkey;
+		Menuci  menucirc_armesA,
+				menucirc_armesE;
+		
+		Vie_Hud Affichage_vie;
+
+		string lastFileNameSaved;
+
+
+	
+		CEGUI::Window* Info_Text;
+
+		void Initialise(void);
+		void Destroy(void);
+		void Suscribe(void);
+		void UpdateSandbox(float);
+		void UpdateDebugtext(void);
+
+		
+		// =============== Handlers ================
+
+		bool HandleSaveConstruction(const CEGUI::EventArgs&);
+
+		bool HandleSaveConstructionAs(const CEGUI::EventArgs&);
+			bool HandleSaveConstructionAsOk(const CEGUI::EventArgs&);
+			bool HandleSaveConstructionAsCancel(const CEGUI::EventArgs&);
+
+		bool HandleLoadConstruction(const CEGUI::EventArgs&);
+			bool HandleLoadConstructionOk(const CEGUI::EventArgs&);
+			bool HandleLoadConstructionCancel(const CEGUI::EventArgs&);
+
+		bool Handlecameravolanteswitch(const CEGUI::EventArgs&);
+
+		bool HandleSandboxRocher(const CEGUI::EventArgs&);
+
+		bool HandleSandboxRondin(const CEGUI::EventArgs&);
+			bool HandleSandboxRondinOrientation(const CEGUI::EventArgs&);
+			bool HandleSandboxRondinLength(const CEGUI::EventArgs&);
+			bool HandleSandboxRondinRadius(const CEGUI::EventArgs&);
+			
+		bool HandleSandboxDisk(const CEGUI::EventArgs&);
+			bool HandleSandboxDiskOrientation(const CEGUI::EventArgs&);
+			bool HandleSandboxDiskThichness(const CEGUI::EventArgs&);
+			bool HandleSandboxDiskRadius(const CEGUI::EventArgs&);
+
+		bool HandleSandboxTriangle(const CEGUI::EventArgs&);
+			bool HandleSandboxTriangleOrientation(const CEGUI::EventArgs&);
+			bool HandleSandboxTriangleDirection(const CEGUI::EventArgs&);
+			bool HandleSandboxTriangleLength(const CEGUI::EventArgs&);
+			bool HandleSandboxTriangleRadius(const CEGUI::EventArgs&);
+
+		bool HandleSwitchConstruction(const CEGUI::EventArgs&);
+
+		bool HandleDelObj(const CEGUI::EventArgs&);	
+
+		bool HandleNewLnk(const CEGUI::EventArgs&);	
+			bool HandleNewLnkOk(const CEGUI::EventArgs&);
+			bool HandleNewLnkCancel(const CEGUI::EventArgs&);	
+			bool HandleNewLnkPickFrstObjBttn(const CEGUI::EventArgs&);	
+			bool HandleNewLnkPickSecondObjBttn(const CEGUI::EventArgs&);
+
+		bool HandleDelLnk(const CEGUI::EventArgs&);	
+
+			
+
+};
+
+// Déclaration du gestionnaire d'interface
+extern Gui_sandbox_manager GuiSandboxMan;
+
+#endif // CLASS_GUI
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+
+#ifndef CLASS_HDR // Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_HDR
+
+#include "Namuh_Main_H.h"
+
+class ListenerFactoryLogic : public Ogre::CompositorLogic
+{
+public:
+	/** @copydoc CompositorLogic::compositorInstanceCreated */
+	virtual void compositorInstanceCreated(Ogre::CompositorInstance* newInstance) 
+	{
+		Ogre::CompositorInstance::Listener* listener = createListener(newInstance);
+		newInstance->addListener(listener);
+		mListeners[newInstance] = listener;
+	}
+	
+	/** @copydoc CompositorLogic::compositorInstanceDestroyed */
+	virtual void compositorInstanceDestroyed(Ogre::CompositorInstance* destroyedInstance)
+	{
+		delete mListeners[destroyedInstance];
+		mListeners.erase(destroyedInstance);
+	}
+
+protected:
+	//This is the method that implementations will need to override
+	virtual Ogre::CompositorInstance::Listener* createListener(Ogre::CompositorInstance* instance) = 0;
+private:
+	typedef std::map<Ogre::CompositorInstance*, Ogre::CompositorInstance::Listener*> ListenerMap;
+	ListenerMap mListeners;
+
+};
+
+//The compositor logic for the hdr compositor
+class HDRLogic : public ListenerFactoryLogic
+{
+protected:
+	/** @copydoc ListenerFactoryLogic::createListener */
+	virtual Ogre::CompositorInstance::Listener* createListener(Ogre::CompositorInstance* instance);
+};
+
+#endif//This provides functions that can be used to easily get the height of Ogre's terrain at any x/z point.
+//Simply call HeightFunction::initialize(), then use HeightFunction::getTerrainHeight() as needed.
+
+//This file is used by the PagedGeometry examples to place trees on the terrain.
+#include "Namuh_Main_H.h"
+#ifndef HeightFunction // Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define HeightFunction
+
+
+ using namespace Ogre;
+
+namespace HeightFunction
+{
+	class MyRaySceneQueryListener: public RaySceneQueryListener
+	{
+	public:
+		inline bool queryResult(SceneQuery::WorldFragment *fragment, Real distance)
+		{
+			resultDistance = distance;
+			return false;
+		}
+		inline bool queryResult(MovableObject *obj, Real distance)
+		{
+			resultDistance = distance;
+			return false;
+		}
+
+		float resultDistance;
+	};
+
+	bool initialized = false;
+	RaySceneQuery* raySceneQuery;
+	Ray updateRay;
+	MyRaySceneQueryListener *raySceneQueryListener;
+
+	//Initializes the height function. Call this before calling getTerrainHeight()
+	void initialize(SceneManager *sceneMgr){
+		if (!initialized){
+			initialized = true;
+			updateRay.setOrigin(Vector3::ZERO);
+			updateRay.setDirection(Vector3::NEGATIVE_UNIT_Y);
+			raySceneQuery = sceneMgr->createRayQuery(updateRay);
+			raySceneQuery->setQueryTypeMask(Ogre::SceneManager::WORLD_GEOMETRY_TYPE_MASK);
+			raySceneQuery->setWorldFragmentType(Ogre::SceneQuery::WFT_SINGLE_INTERSECTION);
+			raySceneQueryListener = new MyRaySceneQueryListener;
+		}
+	}
+
+	//Gets the height of the terrain at the specified x/z coordinate
+	//The userData parameter isn't used in this implementation of a height function, since
+	//there's no need for extra data other than the x/z coordinates.
+	inline float getTerrainHeight(const float x, const float z, void *userData = NULL){
+		updateRay.setOrigin(Vector3(x, 0.0f, z));
+		updateRay.setDirection(Vector3::UNIT_Y);
+		raySceneQuery->setRay(updateRay);
+		raySceneQuery->execute(raySceneQueryListener);
+
+		return raySceneQueryListener->resultDistance;
+	}
+}
+#endif/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_HYDRAX_MANAGER// Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_HYDRAX_MANAGER
+
+#include "Namuh_Main_H.h"
+#include <OgreVector3.h>
+
+class Hydrax_mgr // Majuscule obligatoire pour éviter les conflits avec les biblio standards
+{
+
+	
+	public:
+	Hydrax::Hydrax* mHydrax;
+	Hydrax::Module::ProjectedGrid *mModule;
+	float sea_level;
+	bool	first_ini,
+			initialised;
+	
+
+    Hydrax_mgr(void);
+    ~Hydrax_mgr(void);
+    void initialise(void);
+	void update(float);
+	void destroy(void);
+};
+
+// Déclaration du joueur local
+extern Hydrax_mgr Hydrax_man;
+
+
+
+// Hydrax Rtt Listener class
+class HydraxRttListener : public Hydrax::RttManager::RttListener
+{public:
+	void preRenderTargetUpdate(const Hydrax::RttManager::RttType& Rtt)
+	{	// If needed in any case...
+		bool underwater = Hydrax_man.mHydrax->_isCurrentFrameUnderwater();
+		switch (Rtt)
+		{	case Hydrax::RttManager::RTT_REFLECTION:
+			{	// No stars in the reflection map
+				Atm_man.mSkyX->setStarfieldEnabled(false);
+			}break;
+			case Hydrax::RttManager::RTT_REFRACTION:{}break;
+			case Hydrax::RttManager::RTT_DEPTH: case Hydrax::RttManager::RTT_DEPTH_REFLECTION:
+			{	// Hide SkyX components in depth maps
+				Atm_man.mSkyX->getMeshManager()->getEntity()->setVisible(false);
+				Atm_man.mSkyX->getMoonManager()->getMoonBillboard()->setVisible(false);
+			}break;
+		}
+	}
+	void postRenderTargetUpdate(const Hydrax::RttManager::RttType& Rtt)
+	{	bool underwater = Hydrax_man.mHydrax->_isCurrentFrameUnderwater();
+		switch (Rtt)
+		{	case Hydrax::RttManager::RTT_REFLECTION:
+			{Atm_man.mSkyX->setStarfieldEnabled(true);
+			}break;
+			case Hydrax::RttManager::RTT_REFRACTION:{}break;
+			case Hydrax::RttManager::RTT_DEPTH: case Hydrax::RttManager::RTT_DEPTH_REFLECTION:
+			{	Atm_man.mSkyX->getMeshManager()->getEntity()->setVisible(true);
+				Atm_man.mSkyX->getMoonManager()->getMoonBillboard()->setVisible(true);
+			}break;
+		}
+	}
+};
+
+#endif // CLASS_PERSO
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_JAVELOT	// Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_JAVELOT
+
+#include "Namuh_Main_H.h"
+
+class Javelot : public Carried_Weapon // Majuscule obligatoire pour éviter les conflits avec les biblio standards
+{ // Cette classe ne décrit qu'une arme détenue par un joueru, pas un pickup
+	public:
+		Critter::BodyDescription JavelotDescription;
+		int NextProjectileID;
+
+    Javelot(void);
+    ~Javelot(void);
+	void initialise(RakNet::RakNetGUID);
+	void fire();
+	//void SetAmmo(int);
+};
+
+#endif // CLASS_PERSO
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_LANCE_PIERRE	// Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_LANCE_PIERRE
+
+#include "Namuh_Main_H.h"
+
+class Lance_Pierre : public Carried_Weapon // Majuscule obligatoire pour éviter les conflits avec les biblio standards
+{ // Cette classe ne décrit qu'une arme détenue par un joueru, pas un pickup
+	public:
+		Critter::BodyDescription PierreDescription;
+		int NextProjectileID;
+
+    Lance_Pierre(void);
+    ~Lance_Pierre(void);
+	void initialise(RakNet::RakNetGUID);
+	void fire();
+	//void SetAmmo(int);
+};
+
+#endif // CLASS_PERSO
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_LIVE_DEBUGGER// Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_LIVE_DEBUGGER
+
+#include "Namuh_Main_H.h"
+#include <OgreVector3.h>
+
+class LiveDebugger // Majuscule obligatoire pour éviter les conflits avec les biblio standards
+{
+	public:
+		CEGUI::Window *window;
+		bool initialised;
+		Ogre::Overlay* overlay;
+
+		std::map<std::string, LdbgGraph> Graphs;
+		std::map<std::string, float*> Flows;
+		
+		void graph(string Name, string YFlowName);
+		void UpdateGrantedGraphes();
+		
+		LiveDebugger(void);
+		~LiveDebugger(void);
+		void enable(void);
+		void send(string message,bool immediate_render = true);
+		void disable(void);
+};
+	extern LiveDebugger ldbg;
+#endif // CLASS_PERSO
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_MAP_LOADER// Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_MAP_LOADER
+
+#include "Namuh_Main_H.h"
+#include <OgreVector3.h>
+
+class Map_loader // Majuscule obligatoire pour éviter les conflits avec les biblio standards
+{
+	private:
+		Ogre::uchar* PerlinNoise(Ogre::uint sizeXY, unsigned char octaves, float persistence = 0.45);
+		Ogre::uchar* Derivation2D(Ogre::uint sizeXY, Ogre::uchar*);		
+
+	public:
+		TerrainGlobalOptions* terrainGlobals;
+		Ogre::Terrain *terrain;
+		Image img;
+		Light* l;
+
+		NamedDataPool MapDataPool;
+		std::vector<ParserBalise*> MapSyntax;
+
+		Map_loader(void);
+		~Map_loader(void);
+		void load(string);
+		void unload(void);
+};
+
+// Déclaration de la map
+extern Map_loader Map;
+
+
+#endif // CLASS_PERSO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_MAP_PARSER// Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_MAP_PARSER
+
+#include "Namuh_Main_H.h"
+#include <OgreVector3.h>
+
+struct ParserBalise
+{
+	string Name;
+
+	std::vector<string> BoolKeywords,
+						IntKeywords,
+						FloatKeywords,
+						Vector3Keywords,
+						StringKeywords;
+
+	std::vector<ParserBalise> SousBalises;
+};
+int FindBaliseIndexFromName(std::vector<ParserBalise*> SearchScope, string Name); //Fournit l'index de la dernière Balise ayant le nom demandé dans le tableau de Balises donné
+int FindBaliseIndexFromName(std::vector<ParserBalise> SearchScope, string Name); //Fournit l'index de la dernière Balise ayant le nom demandé dans le tableau de Balises donné
+
+struct NamedBool	{string Name;	bool data;};
+struct NamedInt		{string Name;	int data;};
+struct NamedFloat	{string Name;	float data;};
+struct NamedVector3	{string Name;	Ogre::Vector3 data;};
+struct NamedString	{string Name,	data;};
+
+struct NamedDataPool
+{
+	string Name;
+	NamedDataPool* ParentPool;
+
+	std::vector<NamedBool> Bool_Data;
+	std::vector<NamedInt> Int_Data;
+	std::vector<NamedFloat> Float_Data; //private
+	std::vector<NamedVector3> Vector3_Data;
+	std::vector<NamedString> String_Data;
+//public
+	std::vector<NamedDataPool> SubPool;
+};
+
+//fonctions d'acces a la hiérarchie de sortie du parser
+	// Attention, ces fonctions de recherches de valeurs parsés via leur noms ne chercherons pas dans les SubPools du SearchScope
+
+//Ces fonctions fournissent la donnée ayant le nom demandé
+bool BoolFromName(NamedDataPool SearchScope, string Name);
+int IntFromName(NamedDataPool SearchScope, string Name);
+float FloatFromName(NamedDataPool SearchScope, string Name); // faire qu'elles ne prennent en arg qu'un string donnant un chemin d'acces dans la hiérarchie avec la fin le nom de la variable, exemple : Map/Layer/Diffuse
+Ogre::Vector3 Vector3FromName(NamedDataPool SearchScope, string Name);
+string StringFromName(NamedDataPool SearchScope, string Name);
+
+std::vector<int> SubPoolsIndexesFromName(NamedDataPool SearchScope, string Name); //Fournit le tabeau d'index des SubPools ayant le nom demandé // a mettre en fct memeblre
+int FindPoolIndexFromName(std::vector<NamedDataPool> SearchScope, string Name); //Fournit l'index de la dernière pool ayant le nom demandé dans le tableau de Pools donné
+
+class MapParser
+{
+  public:
+	
+    MapParser(void);
+    ~MapParser(void);
+    void initialise(void);
+	std::vector<NamedDataPool> ParseFile(std::vector<ParserBalise*> FileSyntax, string FileName, std::vector<string> ExcludedInclusions = std::vector<string>(0),string StartingBalise = "");
+	void destroy(void);
+};
+extern MapParser Map_Parser;
+
+#endif // CLASS_PERSO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_MENU_CIRC_MANAGER// Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_MENU_CIRC_MANAGER
+
+#include "Namuh_Main_H.h"
+#include <OgreVector3.h>
+
+enum Menuci_Type
+{
+ Menuci_Type_Two		= 0,
+ Menuci_Type_Three		= 1,
+ Menuci_Type_Four       = 2,
+ Menuci_Type_Five		= 3,
+ Menuci_Type_Six        = 4,
+ Menuci_Type_Seven		= 5,
+ Menuci_Type_Heigt		= 6,
+ Menuci_Type_MainMenu	= 100
+};
+
+class Menuci // Majuscule obligatoire pour éviter les conflits avec les biblio standards
+{
+	
+	CEGUI::Window *curseur,
+				  *highlight,
+				  *Menu,
+				  *ParentWin;
+	public:
+	static int next_id;
+	int id,
+		output,
+		posX,
+		posY,
+		Current_highlighted;
+	bool isVisible;
+	static bool isthereOneVisible;
+	Menuci_Type type;
+	
+    Menuci(void);
+    ~Menuci(void);
+    void create(Menuci_Type, int requested_posX = sys0.vp->getActualWidth()/2, int requested_posY = sys0.vp->getActualHeight()/2, string ParentWindow = "root");
+	void setAllwaysOnTop(bool AllwaysOnTop = true);
+	void update(void);
+};
+
+#endif // CLASS_PERSO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef FILE_MESH_GENERATOR// Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define FILE_MESH_GENERATOR
+
+#include "Namuh_Main_H.h"
+#include <OgreVector3.h>
+
+void createSphere(const std::string& strName, const float r, const int nRings = 16, const int nSegments = 16); // Build a sphere
+#endif // FILE_MESH_GENERATOR
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+
+class NewClass : public HeritedClass
+{
+public:
+
+static int x; //Shared Value
+int y;
+    NewClass() //Constructeur
+    {
+    }
+    ~NewClass() //Destructeur
+    {
+    }
+
+    NewFunctionMember() //Fonctin Membre
+    {
+
+    }
+}
+
+NewClass newobject;
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test main Header File -------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef MainH // Pour éviter la redondance des includes (ce fichier est a inclure dans las classes
+#define MainH
+
+/// Includes Système immuables
+	#define WIN32_LEAN_AND_MEAN
+	#include <windows.h>
+	#include <tchar.h>
+	#include <stdio.h>
+	#include <sstream>
+	#include <string>
+    #include <deque>
+    #include <math.h>
+
+    #include "Ogre\Ogre.h"       //Ogre
+	#include "Ogre\OgreCompositorLogic.h"
+	#include "Ogre\OgreCompositorInstance.h"
+	#include "Ogre\Terrain\OgreTerrain.h" // La gestion des terrains
+	#include "Ogre\Terrain\OgreTerrainMaterialGeneratorA.h" // La gestion des terrains v(bis)
+	#include <Ogre\OgreTextAreaOverlayElement.h>
+
+    #include <OIS\OIS.h>    //le systeme de gestion du clavier et de la souris
+
+	#include "NxOgre\NxOgre.h" // Plugin PhysX
+	#include "NxOgre\critter.h" // Plugin PhysX (bis)
+
+	#include <CEGUI/CEGUI.h> // Interface de fenètres
+	#include <CEGUI/RendererModules/Ogre/CEGUIOgreRenderer.h> // Interface de fenètres (bis)
+	#include "CEGUI/ScriptingModules/LuaScriptModule/CEGUILua.h"
+
+	#include "Hydrax/Hydrax.h"
+	#include "Hydrax/Noise/FFT/FFT.h"
+	#include "Hydrax/Noise/Perlin/Perlin.h"
+	#include "Hydrax/Noise/Real/Real.h"
+	#include "Hydrax/Modules/ProjectedGrid/ProjectedGrid.h"
+	#include "Hydrax/Modules/RadialGrid/RadialGrid.h"
+	#include "Hydrax/Modules/SimpleGrid/SimpleGrid.h"
+	
+	#include <SkyX/SkyX.h> // Plugin Ciel
+
+	#include "PagedGeometry/PagedGeometry.h" // Plugin végétation
+	#include "PagedGeometry/BatchPage.h" // Plugin végétation
+	#include "PagedGeometry/WindBatchPage.h" // Plugin végétation
+	#include "PagedGeometry/TreeLoader3D.h" // Plugin végétation
+	#include "PagedGeometry/TreeLoader2D.h" // Plugin végétation
+	#include "PagedGeometry/ImpostorPage.h" // Plugin végétation
+	#include "PagedGeometry/GrassLoader.h" // Plugin végétation
+
+	#include "RakNet/RakPeerInterface.h" // Réseau
+	#include "RakNet/MessageIdentifiers.h" // Réseau
+	#include "RakNet/BitStream.h" // Réseau
+	#include "RakNet/RakNetTypes.h"  // MessageID  // Réseau
+	#include "Raknet\Itoa.h"
+	#include "Raknet\miniupnpc.h"
+	#include "Raknet\upnpcommands.h"
+	#include "Raknet\upnperrors.h"
+
+
+    // Ca c'est pour activer les definitions d'Ogre et du C++ standard
+    using namespace std;
+    using namespace Ogre;
+	using namespace Forests;
+    class ExitListener:public FrameListener{OIS::Keyboard *mKeyboard;};// Ca c'est la classe qui permet le rendu (oui, je l'ai un peu résumé)
+	
+	#define toOgStr Ogre::StringConverter::toString
+
+	/// Nos Includes a nous !
+	// (on n'utilise pas de using namepace dans un vrais .h (c'est a dire pas un comme celui la qui ne fait qu'en regrouper d'autres))
+	class Perso;
+	extern Perso local_player;
+
+	extern Ogre::String Debug_Text;
+	#include "Raknet Server.h"
+	#include "Raknet Client.h"
+	#include "Raknet Manager.h"
+	extern raknet_mgr raknet_man;
+	extern std::map<RakNet::RakNetGUID, KeyState> KeyPlayer;
+	extern std::map<RakNet::RakNetGUID, ushort> PlayerPing;
+	#include "SmartMath.h"
+	#include "PhysX Manager.h"
+	#include "PhysX_raft.h"
+	extern PhysX_Raft PhysXfloater;
+	#include "PhysX_Waterfall.h"
+	#include "Ogre initialisation.h"    //sys0
+	extern Ogre_ini sys0;
+	#include "Mesh Generator.h"
+	#include "Map Parser.h"
+	extern MapParser Map_Parser;
+	#include "File_Serialiser.h"
+	extern FileSerialiser File_Serialiser;
+	#include "Map Loader.h"
+	extern Map_loader Map;
+	#include "Atmosphere manager.h"
+	#include "Hydrax Manager.h"
+	extern Hydrax_mgr Hydrax_man;
+	extern PhysX_mgr PhysX_man;
+	extern Atm_mgr Atm_man;
+	#include "GUI.h"
+	#include "GraphAxis.h"
+	#include "Graph.h"
+	#include "Live Debugger.h"
+	extern LiveDebugger ldbg;
+	#include "Menu circulaire.h"
+	#include "Vie HUD.h"
+	#include "Player Profile Manager.h"
+	extern PlayerProfileManager ProfileMgr;
+	#include "GUI_MainMenu.h"
+	#include "GUI_FPS.h"
+	#include "GUI_Sandbox.h"
+	extern Gui_sandbox_manager GuiSandboxMan;
+	#include "HDR.h"
+	#include "System.h"                 //sys1
+	#include "Projectile.h"
+	#include "Carried Weapon.h"
+	#include "Lance Pierre.h"
+	#include "ArcEnBois.h"
+	#include "Javelot.h"
+	#include "Personnage.h"
+	extern Perso local_player;
+	#include "Faune Entity.h"
+	#include "Amnesic Faune manager.h"
+	#include "Faune manager.h"
+	#include "Projectile CallBacks.h"
+	extern std::vector<ProjCallback> ProjCallbackList;
+	extern std::map<RakNet::RakNetGUID, Perso*> PlayerList;
+	#include "DeathMatchRules.h"
+	extern DeathMatchRules Ruler; 
+	#include "Construction.h"
+	#include "Construction Manager.h"
+	extern CstrMan CstrMgr;
+	#include "Sandbox_Constructeur.h"
+	#include "Paged geometry Manager.h"
+	#include "Partie.h"
+
+
+
+	float terrain_height(float,float, void *);
+	void SkyXupdate(Ogre::Real);
+	void loadTerrainGeometry(const Ogre::String&, float* , Ogre::uint16, Ogre::Real, Ogre::Real , Ogre::Real , const Ogre::Vector3&);
+	uint FakeDistance2D (int,int,int,int);
+	BOOL DeleteDirectory(const TCHAR* sPath);
+
+
+#endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test PhysX Header File -------- v alpha1 -----------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef PhysX_H 
+#define PhysX_H
+
+#endif
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#include "Namuh_Main_H.h"
+#ifndef OgreIni // Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define OgreIni
+
+class Ogre_ini
+{
+public:
+    static Root *mRoot;
+    static OIS::Keyboard *mKeyboard;
+    static OIS::Mouse *mMouse;
+    static OIS::InputManager *mInputManager;
+    static ExitListener *mListener;
+    static string secName, typeName, archName;
+    static ConfigFile cf;
+    static Ogre::RenderSystem *rs;
+    static SceneManager *mgr;
+    static Camera* cam;
+    static Viewport* vp;
+    static size_t windowHnd;
+    static std::ostringstream windowHndStr;
+    static OIS::ParamList pl;
+    static RenderWindow *win;
+	static const OIS::MouseState* ms;
+	static ShadowCameraSetupPtr mPSSMSetup;
+	static Ogre::Timer timer;
+	static Ogre::RenderTarget* RefractionRenderTarget;
+	static string windowName;
+
+	static float ScreenSizeRatio;
+	static bool last_mousebouttons_state[8];
+
+    Ogre_ini(void);
+	void update_SmartMouse();
+	bool ms_pressing(char);
+	bool ms_releasing(char);
+};
+
+extern Ogre_ini sys0;
+#endif
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_PAGED_GEOMETRY_MANAGER// Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_PAGED_GEOMETRY_MANAGER
+
+#include "Namuh_Main_H.h"
+#include <OgreVector3.h>
+
+class Paged_geometry_mgr // Majuscule obligatoire pour éviter les conflits avec les biblio standards
+{
+	PagedGeometry *trees, *grass,*grass2,*grass3, *rocks_paged;
+	std::vector<PagedGeometry*> Geom_Pager;
+
+	Radian yaw;
+	Real scale;
+	GrassLoader *Vegetation_image_loader;
+	TreeLoader2D *Vegetation_object_loader;
+	GrassLayer *l;
+	Vector3 position;
+
+	std::vector<std::vector<Ogre::Entity*>> Entity_list;
+	std::vector<std::vector<NxOgre::Mesh*>> PhysX_Mesh_list;
+
+	public:
+
+		bool initialised;
+
+
+		Paged_geometry_mgr(void);
+		~Paged_geometry_mgr(void);
+		void initialise(bool PhysX = true);
+		void update(void);
+		void destroy(void);
+};
+
+// Déclaration du joueur local
+extern Paged_geometry_mgr Paged_man;
+
+#endif // CLASS_PERSO
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_PARTIE// Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_PARTIE
+
+#include "Namuh_Main_H.h"
+#include <OgreVector3.h>
+class Partie // Majuscule obligatoire pour éviter les conflits avec les biblio standards
+{
+	public:
+		long double gametime;
+		int bouclecount;
+		ulong lastDebugTextUpdateTimeStamp;
+		ulong lastHydraxUpdateTimeStamp;
+		ulong lastHydraxRTTUpdateTimeStamp;
+		Ogre::FrameEvent e;
+		float inv_FPS;
+		bool	isSandBox;
+		NetPartieStatus Net_Partie_Status;
+		Gui_FPS_manager GuiFPSMan;
+		Amnesic_Faune_mgr Amnesic_Faune_man;
+
+		Partie(PartieArg);
+		~Partie(void);
+		void update(void);
+		void updatePlayers(void);
+};
+
+#endif // CLASS_PERSO
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_PERSO // Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_PERSO
+
+#include "Namuh_Main_H.h"
+#include <OgreVector3.h>
+
+enum Perso_Mvt_flag
+{
+	Mvt_Normal				= 0,
+	Mvt_DisableFallDamage	= 1,
+	Mvt_Fly					= 2
+
+};
+
+class Perso // Majuscule obligatoire pour éviter les conflits avec les biblio standards
+{
+public:
+
+	Ogre::Entity *mesh; // Maillage du perso
+	Critter::Node *Node; // Neud du Maillage
+	SceneNode *Mesh_n, //Neud du maillage du perso
+			  *CamNode;//Neud de la caméra
+	Carried_Weapon *Current_Weapon;
+
+
+	std::vector<Carried_Weapon*> Inventory; //Liste des Armes portés par le joueur
+	Lance_Pierre Lance_Pierre_Actuel;
+	Arc_En_Bois Arc_En_Bois_Actuel;
+	Javelot Javelot_Actuel;
+
+	NxOgre::CharacterController* CharCtrl; //Controleur du personage
+	Critter::AnimatedCharacter* character; // Gestionnaire physique du personnage
+	Critter::AnimatedCharacterDescription PhysXDescription; // Description physique du personnage
+	Critter::CharacterInputHelper* InputHelper; // Structure d'entrée des commandes clavier/souris
+
+	bool initialised;
+    RakNet::RakNetGUID id; // identificateur du perso
+	int vie; // santé du perso
+	ulong Spawning_invicinbility_time;// Temps dinvincibilité au respawn, en milisec
+	unsigned long	Last_movetime; // horlorge lors du dernier appel de move
+	unsigned long	Last_rotatetime; // horlorge lors du dernier appel de move
+	RakNet::RakNetGUID Last_Damage_Owner_id;
+	bool invincible; // God mode
+    static RakNet::RakNetGUID cam_sync; // perso que la camera doit suivre
+    Ogre::Vector3	pos,//Position, rotation(somme des vecteurs de rotations) et echelle
+					rot_vect,
+					last_rot_vect,
+					rotative_velocity,
+					scl,
+					lastpos,
+					LinearVelocity,
+					LastLinearVelocity,
+					Acceleration,
+					OrientationInput;
+	Ogre::Vector4	MotionInput;
+	bool			JumpInput,
+					FireInput;
+	Ogre::Real		movespeed;
+	bool			UpdateOrientationOrPosition;
+
+	Ogre::Quaternion rot,rot_proj_hori; //rotation
+
+    Perso(RakNet::RakNetGUID RakNetID);
+    ~Perso(void);
+	void initialise();
+	void spawn(Vector3 = Vector3FromName(Map.MapDataPool,"Spawn_Position"), bool MustBeTeleportedImmediately = false);
+	void update(float time,Perso_Mvt_flag MovingMode = Mvt_Normal, bool ManualFire = false);
+	void move(Ogre::Vector4 KeysWeights, bool Jump = false, Perso_Mvt_flag MovingMode = Mvt_Normal);
+	void setpos(Ogre::Vector3 temp);
+    void rotate(Ogre::Vector3 temp);
+    void setOrientation(Ogre::Vector3 temp);
+	void sethealth(int);
+	void damage(int);
+	void fire();
+	void destroy();
+	void SwichWeapon(uchar NewWeaponIndex,bool NoticeNewtork = false);
+};
+extern Perso local_player;
+extern std::map<RakNet::RakNetGUID, Perso*> PlayerList;
+
+#endif // CLASS_PERSO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_PHYSX_MANAGER// Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_PHYSX_MANAGER
+
+#include "Namuh_Main_H.h"
+#include <OgreVector3.h>
+
+class PhysX_mgr // Majuscule obligatoire pour éviter les conflits avec les biblio standards
+{
+	public:
+
+		bool initialised;
+		
+		NxOgre::Scene* mScene;
+		Critter::RenderSystem* mRenderSystem;
+		NxOgre::World* mWorld;
+		NxOgre::SceneDescription scndesc;
+		Critter::Body*	mCube;
+		Critter::Body*	mCube2;
+		Critter::Body*	mCube3;
+		Critter::Body* Quille;
+		Critter::BodyDescription Menhirdescription;
+		NxOgre::Mesh* Cailloux;
+
+		
+		AnimationState* mLightAnimState;
+
+		
+		PhysX_mgr(void);
+		~PhysX_mgr(void);
+		void initialise(void);
+		void update(float);
+		void destroy(void);
+};
+
+// Déclaration du joueur local
+extern PhysX_mgr PhysX_man;
+
+#endif // CLASS_PERSO
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_PHYSXRAFT // Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_PHYSXRAFT
+
+#include "Namuh_Main_H.h"
+#include <OgreVector3.h>
+
+class PhysX_Raft // Majuscule obligatoire pour éviter les conflits avec les biblio standards
+{
+public:
+
+	int last_mesh,waterheight;
+
+	Critter::Body* list[5000];
+
+    PhysX_Raft(void);
+    ~PhysX_Raft(void);
+    void add(Critter::Body* new_raft);
+	void remove(Critter::Body* raft);
+	void flush(void);
+	void update(float);
+};
+
+extern PhysX_Raft PhysXfloater;
+
+#endif // CLASS_Raft
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_PHYSXWATERFALL // Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_PHYSXWATERFALL
+
+#include "Namuh_Main_H.h"
+#include <OgreVector3.h>
+
+class PhysX_Waterfall // Majuscule obligatoire pour éviter les conflits avec les biblio standards
+{
+public:
+
+	//int last_mesh,waterheight;
+
+	//Critter::Body* list[5000];
+
+    PhysX_Waterfall(void);
+    ~PhysX_Waterfall(void);
+    void make(void);  //(Critter::Body* new_raft);
+	//void remove(Critter::Body* raft);
+	//void update(int deltatime,Hydrax::Hydrax* mHydrax);
+};
+/*
+class PhysX_Waterfall_Desc // Majuscule obligatoire pour éviter les conflits avec les biblio standards
+{
+public:
+
+	//int last_mesh,waterheight;
+
+	//Critter::Body* list[5000];
+	NxOgre::FluidDescription Fluid_desc;
+	NxOgre::FluidEmitterDescription Emiter_desc;
+
+	PhysX_Waterfall_Desc(void);
+    ~PhysX_Waterfall_Desc(void);
+    void make(void);  //(Critter::Body* new_raft);
+	//void remove(Critter::Body* raft);
+	//void update(int deltatime,Hydrax::Hydrax* mHydrax);
+};
+*/
+// Déclaration du joueur local
+extern PhysX_Waterfall PhysX_Waterfall_man;
+
+#endif // CLASS_PHYSXWATERFALL
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_PLAYER_PROFILE_MANAGER // Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_PLAYER_PROFILE_MANAGER
+
+#include "Namuh_Main_H.h"
+
+class PlayerProfile
+{
+	public:
+
+		PlayerProfile(void);
+		~PlayerProfile(void);
+
+		string	Name;
+		std::vector<string> FavoritesConstructions;
+		string Default_IP;
+
+		// Add all stats datas to be recorded here
+};
+
+
+class PlayerProfileManager
+{
+	public:
+
+		std::vector<ParserBalise*> ProfileFileSyntax;
+		string ProfilePath;
+		bool isCurrentProfileValid;
+
+		PlayerProfileManager(void);
+		~PlayerProfileManager(void);
+
+		std::vector<PlayerProfile*> LoadedProfiles;
+		
+		PlayerProfile* getCurrent(void);
+		void setCurrent(PlayerProfile* NewProfile);
+		void deleteCurrent(void);
+		void CreateNew(string Name);
+		PlayerProfile* Load(string ProfileFile);
+		void SaveAs(string FileName, PlayerProfile* ProfileObject  = NULL);
+
+	private:
+		PlayerProfile* CurrentProfile;
+
+
+};
+extern PlayerProfileManager ProfileMgr;
+
+#endif // CLASS_PERSO
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_PROJECTILE_CALLBACKS	// Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_PROJECTILE_CALLBACKS
+
+#include "Namuh_Main_H.h"
+
+class ProjCallback : public NxOgre::Callback
+{
+	public:
+	RakNet::RakNetGUID	TargetID,
+						AgressorID;
+	int	ProjectileID;
+	Weapon type;
+
+ void onContact(const NxOgre::ContactPair& pair)
+ {
+	 switch(type)
+	 {
+		case LancePierre:
+		 {
+
+			 if(PlayerList[AgressorID]->Inventory[0]->ProjectileList[ProjectileID].CanDamage)
+			 {
+				 PlayerList[TargetID]->damage(80);
+				 PlayerList[TargetID]->Last_Damage_Owner_id = AgressorID;
+				 ldbg.send("id " + raknet_man.GUIDtoString(AgressorID) + " Damaged avec un Lance Pierre id" + raknet_man.GUIDtoString(TargetID) + ", with is now on  "+ StringConverter::toString(PlayerList[TargetID]->vie) +"hp" );
+
+				 Ogre::SceneNode *projectNode = PlayerList[AgressorID]->Inventory[0]->ProjectileList[ProjectileID].body->getNode()->getSceneNode();
+				 PhysX_man.mRenderSystem->destroyBody(PlayerList[AgressorID]->Inventory[0]->ProjectileList[ProjectileID].body);
+				 sys0.mgr->destroySceneNode(projectNode);
+				 PlayerList[AgressorID]->Inventory[0]->ProjectileList[ProjectileID].CanDamage = false;
+			 }
+		 }
+		break;
+		case ArcEnBois:
+		 {
+
+			 if(PlayerList[AgressorID]->Inventory[1]->ProjectileList[ProjectileID].CanDamage)
+			 {
+				 PlayerList[TargetID]->damage(50);
+				 PlayerList[TargetID]->Last_Damage_Owner_id = AgressorID;
+				 ldbg.send("id "+raknet_man.GUIDtoString(AgressorID)+" Damaged avec un arc id"+raknet_man.GUIDtoString(TargetID)+", with is now on  "+ StringConverter::toString(PlayerList[TargetID]->vie) +"hp" );
+
+				 Ogre::SceneNode *projectNode = PlayerList[AgressorID]->Inventory[1]->ProjectileList[ProjectileID].body->getNode()->getSceneNode();
+				 PhysX_man.mRenderSystem->destroyBody(PlayerList[AgressorID]->Inventory[1]->ProjectileList[ProjectileID].body);
+				 sys0.mgr->destroySceneNode(projectNode);
+				 PlayerList[AgressorID]->Inventory[1]->ProjectileList[ProjectileID].CanDamage = false;
+			 }
+		 }
+		break;
+		case Javelot_:
+		 {
+
+			 if(PlayerList[AgressorID]->Inventory[2]->ProjectileList[ProjectileID].CanDamage)
+			 {
+				 PlayerList[TargetID]->damage(70);
+				 PlayerList[TargetID]->Last_Damage_Owner_id = AgressorID;
+				 // if(raknet_man.isServer)
+				 ldbg.send(" id "+raknet_man.GUIDtoString(AgressorID)+" Damaged avec un Javelot id"+raknet_man.GUIDtoString(TargetID)+", with is now on  "+ StringConverter::toString(PlayerList[TargetID]->vie) +"hp" );
+
+				 Ogre::SceneNode *projectNode = PlayerList[AgressorID]->Inventory[2]->ProjectileList[ProjectileID].body->getNode()->getSceneNode();
+				 PhysX_man.mRenderSystem->destroyBody(PlayerList[AgressorID]->Inventory[2]->ProjectileList[ProjectileID].body);
+				 sys0.mgr->destroySceneNode(projectNode);
+				 PlayerList[AgressorID]->Inventory[2]->ProjectileList[ProjectileID].CanDamage = false;
+			 }
+		 }
+		break;
+	 }
+ }
+
+};
+
+extern std::vector<ProjCallback> ProjCallbackList;
+
+#endif // CLASS_PERSO
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_PROJECTILE	// Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_PROJECTILE
+
+#include "Namuh_Main_H.h"
+
+
+class Perso; // Déclaration des perso en avant garde
+
+class Projectile // Majuscule obligatoire pour éviter les conflits avec les biblio standards
+{
+	public:
+		Perso *Owner;
+		Critter::Body *body;
+		bool CanDamage;
+		unsigned long	Date_Fired; 
+
+    Projectile(Perso*); // Constructeur additionel pour avoir directement l'owner d'attribué
+	Projectile(void);
+    ~Projectile(void);
+};
+
+#endif // CLASS_PERSO
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_RAKNET_CLIENT	// Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_RAKNET_CLIENT
+
+#include "Namuh_Main_H.h"
+
+class Perso;
+class raknet_mgr;
+enum raknet_msg_identifier;
+class KeyState;
+extern std::map<RakNet::RakNetGUID, KeyState> KeyPlayer;
+
+// CtS : Client to Server
+// StC : Server to Client
+
+class raknet_Client // Majuscule obligatoire pour éviter les conflits avec les biblio standards
+{
+	void SendDatas(void);
+	void ProcessPacket_MapName(RakNet::Packet* Datas);
+	void ProcessPacket_SetID(RakNet::Packet* Datas);
+	void ProcessPacket_PlayerPosition(RakNet::Packet* Datas);
+	void ProcessPacket_PlayerOrientation(RakNet::Packet* Datas);
+	void ProcessPacket_PlayerHealth(RakNet::Packet* Datas);
+	void ProcessPacket_Tir(RakNet::Packet* Datas);
+	void ProcessPacket_WeaponSwitch(RakNet::Packet* Datas);
+	void ProcessPacket_PlayerPts(RakNet::Packet* Datas);
+	void ProcessPacket_Ping(RakNet::Packet* Datas);
+	void ProcessPacket_SyncClock(RakNet::Packet* Datas);
+
+
+
+	public:
+		RakNet::RakPeerInterface *peer;
+		bool initialised,connected,needupdate;
+		RakNet::Packet *packet;
+
+		void Initialise(string IpToConnect,int port = 1993);
+		void destroy(void);
+		void update(void);
+		
+		raknet_Client(void);
+		~raknet_Client(void);
+};
+#endif // CLASS_PERSO
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_RAKNET_MANAGER	// Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_RAKNET_MANAGER
+
+#include "Namuh_Main_H.h"
+
+class Perso;
+class raknet_Server ;
+class raknet_Client;
+
+// CtS : Client to Server
+// StC : Server to Client
+
+enum raknet_msg_identifier
+{
+	ID_REMOTE_DEBUG_MESSAGE				= ID_USER_PACKET_ENUM+1,
+
+	// Server to CLient Packet ID :
+	StC_GAME_MAP						= ID_USER_PACKET_ENUM+2,
+	StC_SET_ID							= ID_USER_PACKET_ENUM+3,
+	StC_PLAYER_POS						= ID_USER_PACKET_ENUM+4,
+	StC_PLAYER_ROT						= ID_USER_PACKET_ENUM+5,
+	StC_HEALTH							= ID_USER_PACKET_ENUM+6,
+	StC_TIR								= ID_USER_PACKET_ENUM+7,
+	StC_WEAPONSWITCH					= ID_USER_PACKET_ENUM+8,
+	StC_PLAYER_PTS						= ID_USER_PACKET_ENUM+9,
+	StC_GAME_END						= ID_USER_PACKET_ENUM+10,
+	StC_SYNC_SET_TIME					= ID_USER_PACKET_ENUM+11,
+	StC_PING							= ID_USER_PACKET_ENUM+12,
+
+	// Client to Server Packet ID :
+	CtS_UPDATE_REQUEST					= ID_USER_PACKET_ENUM+13,
+	CtS_KEYSTATE						= ID_USER_PACKET_ENUM+14,
+	CtS_ORIENTATION						= ID_USER_PACKET_ENUM+15,
+	CtS_WEAPONSWITCH					= ID_USER_PACKET_ENUM+16,
+	CtS_SYNC_TIMESTAMP					= ID_USER_PACKET_ENUM+17,
+	CtS_PING							= ID_USER_PACKET_ENUM+18
+
+};
+
+// Classe représentante d'un clavier
+class KeyState
+{
+	public :
+		bool	up,
+				down,
+				left,
+				right,
+				jump,
+				fire;
+		long double timestamp;
+		KeyState(void)
+		{
+			up = down = left = right = jump = fire = false;
+			timestamp = 0;
+		};
+};
+
+extern std::map<RakNet::RakNetGUID, KeyState> KeyPlayer;
+
+class raknet_mgr // Majuscule obligatoire pour éviter les conflits avec les biblio standards
+{
+	public:
+		long double* gametime;
+		RakNet::RakPeerInterface *peer;
+		bool isServer,initialised;
+		RakNet::Packet *packet;
+		std::vector<RakNet::SystemAddress> AdPlayer;
+		raknet_Server mServer;
+		raknet_Client mClient;
+		string map;
+		RakNet::RakNetGUID local_GUID;
+
+	void InitialiseAsServer(long double* gametime, int port = 1993, int Maxplayer = 128);
+	void InitialiseAsClient(long double* gametime, string  IpToConnect, int port = 1993);
+	void destroy(void);
+	void update(float);
+	void ProcessPacket_RemoteDebuggerMsg(RakNet::Packet* Datas);
+	string StringIDfromSystemAddress(RakNet::SystemAddress);
+	string GUIDtoString(RakNet::RakNetGUID);
+	raknet_mgr(void);
+    ~raknet_mgr(void);
+};
+
+extern raknet_mgr raknet_man;
+#endif // CLASS_PERSO
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_RAKNET_SERVER	// Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_RAKNET_SERVER
+
+#include "Namuh_Main_H.h"
+
+class Perso;
+class raknet_mgr;
+enum raknet_msg_identifier;
+class KeyState;
+extern std::map<RakNet::RakNetGUID, KeyState> KeyPlayer;
+extern std::map<RakNet::RakNetGUID, ushort> PlayerPing;
+
+// CtS : Client to Server
+// StC : Server to Client
+
+class raknet_Server 
+{
+	void ProcessPacket_NewClient(RakNet::Packet* Datas);
+	void SendUpdate(RakNet::RakNetGUID ClientID);
+
+	void ProcessPacket_NewKeystate(RakNet::Packet* Datas);
+	void ProcessPacket_NewOrientation(RakNet::Packet* Datas);
+	void ProcessPacket_ChangeWeapon(RakNet::Packet* Datas);
+	void ProcessPacket_Ping(RakNet::Packet* Datas);
+	void ProcessPacket_SyncClock(RakNet::Packet* Datas);
+
+	uint pingflag;
+
+	public:
+		bool initialised;
+		RakNet::RakPeerInterface *peer;
+		RakNet::Packet* packet;
+
+	void Initialise(int = 1993, int = 128);
+	void destroy(void);
+	void update(void);
+	
+	raknet_Server(void);
+    ~raknet_Server(void);
+};
+#endif // CLASS_PERSO
+
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS__SANDBOX_CONSTRUCTEUR // Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS__SANDBOX_CONSTRUCTEUR
+
+enum Construction_mode
+{
+	NONE	= 0,
+	DELOBJ,
+	RONDIN,
+	ROCHER,
+	DISK,
+	TRIANGLE,
+	CREATE_LINK_PICK_FIRST,
+	CREATE_LINK_PICK_SECOND,
+};
+
+enum Cursor3DType
+{
+	INVALID			= 0,
+	CAST_TERRAIN	= 1,
+	CAST_OBJECT		= 2
+};
+
+class Sandbox_Constructeur
+{
+	private:
+
+		Construction_mode CurrentBuildTool;
+		int		Construction_num;
+
+	public:
+
+		bool	mouseflag,
+				kc_left_flag,
+				kc_right_flag;
+
+		Cursor3DType	Cursor3D_Type;
+
+		Entity		*RondinCursor,
+					*RocherCursor,
+					*DiskCursor;
+		SceneNode	*RondinCursor_n,
+					*RocherCursor_n,
+					*DiskCursor_n,
+					*TriangleCursor_n;
+
+		Vector3 pos;
+
+		float	orientation_rondin,
+				diametre_rondin,
+				longeur_rondin,
+				diskOrientation,
+				diskLength,
+				diskRadius,
+				triangleOrientation,
+				triangleDirection,
+				triangleLength,
+				triangleRadius,
+				zcursor;
+
+
+		NxOgre::RigidBody* ClickedBody;
+
+		std::vector<Construction*> BuiltCstr;
+
+
+
+		Sandbox_Constructeur(void); //Constructeur
+	   ~Sandbox_Constructeur(void); //Destructeur
+
+		void intitalise(void);
+		void update(void);
+		void UpdateConstructeur(void);
+		void UpdateBuildUI(void);
+		void UpdateDeleteUI(void);
+		void UpdateCreateLinkPickFirstUI(void);
+		void UpdateCreateLinkPickSecondUI(void);
+
+		void setConstructionMode(Construction_mode NewMode);
+		Construction_mode getConstructionMode(void);
+
+		void setConstruction_num(int Construction_num);
+		int getConstruction_num(void);
+
+		void refreshLinkLst(void);
+		
+		Ogre::Vector3 ComputeCursor3DPos(void);
+		void NewConstruction(void);
+		void destroy(void);
+
+	   //   void create_new_contruction(void);
+	   //	void switch_to_construction(unsigned int);
+
+};
+extern Sandbox_Constructeur Constructeur;
+
+#endif
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef SMARTMATH // Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define SMARTMATH 
+
+#include "Namuh_Main_H.h"
+
+// FakeDistance2D = abs(dx) + abs(dy)
+
+
+
+#endif
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef System1 // Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define System1 // Ne pas mettre System tout court, sinon CEGUI bug
+
+#include "Namuh_Main_H.h"
+class namuh_system
+{
+	public:
+
+		bool	escQuit;
+		bool	MustQuit;
+		bool	last_esc;
+		float	MoyFPS,
+				FPS,
+				BestFPS,
+				WorstFPS;
+		long	Watch_PagedGeometry,
+				Watch_PhysX,
+				Watch_UI,
+				Watch_Hydrax,
+				Watch_Atm,
+				Watch_Terrain,
+				Watch_Sys1;
+		ulong	Watch_LoopStart,
+				Watch_LoopEnd;
+		int Polycount;
+		char hour;
+		char min;
+		std::vector<ParserBalise*> MainConfigFileSyntax;
+
+		namuh_system(void); //Constructeur
+		~namuh_system(void); //Destructeur
+		void render(bool force_full_render = true);
+		void update(float ellapsedTime, bool force_full_render = true);
+		void update_wo_render(void);
+		void logmsg(string msg);
+		void resetMustQuit(void);
+		void giveWaches(void);
+
+};
+
+extern namuh_system sys1;
+#endif
+
+/**=====================================================================================
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+---------------------------- Namuh Test Child Header File ------- v alpha1 ------------
+*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*.*
+=====================================================================================**/
+#ifndef CLASS_VIE_HUD // Pour éviter la redondance des déclarations de cette classe (on l'inclus plusieurs fois)
+#define CLASS_VIE_HUD
+
+#include "Namuh_Main_H.h"
+#include <OgreVector3.h>
+
+class Vie_Hud // Majuscule obligatoire pour éviter les conflits avec les biblio standards
+{
+	public:
+
+	HardwarePixelBufferSharedPtr PixelBuffer;
+	TexturePtr Texture;
+	Ogre::OverlayContainer* panel;
+	Ogre::Overlay* overlay;
+
+	int vie;
+	bool initialised;
+	
+    Vie_Hud(void);
+    ~Vie_Hud(void);
+    void initialise(void);
+	void set(int);
+};
+	extern Vie_Hud Affichage_vie;
+#endif // CLASS_PERSO
+
+

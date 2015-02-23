@@ -1,0 +1,247 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="DefaultWindow" Name="root" >
+        <Property Name="Font" Value="The-Lost-Paintings10" />
+        <Property Name="UnifiedAreaRect" Value="{{-0.000216195,0},{0.000672508,0},{0.999775,0},{0.993487,0}}" />
+        <Window Type="GlossySerpent/Menubar" Name="Sandbox_interface/Menubar" >
+            <Property Name="Font" Value="The-Lost-Paintings10" />
+            <Property Name="ItemSpacing" Value="10" />
+            <Property Name="UnifiedAreaRect" Value="{{0.00156251,0},{0,0},{1.20156,0},{0.025,0}}" />
+            <Window Type="GlossySerpent/MenuItem" Name="Sandbox_interface/Menubar/FileButton" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="File" />
+                <Property Name="UnifiedAreaRect" Value="{{0,10},{0,0},{0,42},{0,27}}" />
+                <Property Name="VerticalAlignment" Value="Centre" />
+                <Window Type="GlossySerpent/PopupMenu" Name="Sandbox_interface/Menubar/FileButton/FileMenu" >
+                    <Property Name="Font" Value="The-Lost-Paintings10" />
+                    <Property Name="Visible" Value="False" />
+                    <Property Name="FadeInTime" Value="0" />
+                    <Property Name="FadeOutTime" Value="0" />
+                    <Property Name="ItemSpacing" Value="2" />
+                    <Property Name="ClippedByParent" Value="False" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0,19},{0,172},{0,113.075}}" />
+                    <Property Name="AutoResizeEnabled" Value="True" />
+                    <Window Type="GlossySerpent/MenuItem" Name="Sandbox_interface/Menubar/FileButton/FileMenu/Load" >
+                        <Property Name="Font" Value="The-Lost-Paintings10" />
+                        <Property Name="Text" Value="Load Construction..." />
+                        <Property Name="Tooltip" Value="Load Construction" />
+                        <Property Name="UnifiedAreaRect" Value="{{0,5},{0,3},{0,162},{0,30}}" />
+                    </Window>
+                    <Window Type="GlossySerpent/MenuItem" Name="Sandbox_interface/Menubar/FileButton/FileMenu/Save" >
+                        <Property Name="Font" Value="The-Lost-Paintings10" />
+                        <Property Name="Text" Value="Save Construction" />
+                        <Property Name="Tooltip" Value="Save Construction" />
+                        <Property Name="Disabled" Value="True" />
+                        <Property Name="UnifiedAreaRect" Value="{{0,5},{0,32},{0,162},{0,59}}" />
+                    </Window>
+                    <Window Type="GlossySerpent/MenuItem" Name="Sandbox_interface/Menubar/FileButton/FileMenu/SaveAs" >
+                        <Property Name="Font" Value="The-Lost-Paintings10" />
+                        <Property Name="Text" Value="Save Construction as..." />
+                        <Property Name="Tooltip" Value="Save Construction as..." />
+                        <Property Name="UnifiedAreaRect" Value="{{0,5},{0,61},{0,162},{0,88}}" />
+                    </Window>
+                </Window>
+            </Window>
+        </Window>
+        <Window Type="GlossySerpent/FrameWindow" Name="Sandbox_interface/System_info" >
+            <Property Name="Font" Value="The-Lost-Paintings10" />
+            <Property Name="Text" Value="Namuh system informations" />
+            <Property Name="TitlebarFont" Value="The-Lost-Paintings10" />
+            <Property Name="TitlebarEnabled" Value="True" />
+            <Property Name="UnifiedAreaRect" Value="{{0.0553235,0},{0.023419,0},{0.345739,0},{0.245779,0}}" />
+            <Property Name="CloseButtonEnabled" Value="False" />
+            <Property Name="EWSizingCursorImage" Value="set:TaharezLook image:MouseEsWeCursor" />
+            <Property Name="NSSizingCursorImage" Value="set:TaharezLook image:MouseNoSoCursor" />
+            <Property Name="NESWSizingCursorImage" Value="set:TaharezLook image:MouseNeSwCursor" />
+            <Property Name="NWSESizingCursorImage" Value="set:TaharezLook image:MouseNwSeCursor" />
+            <Window Type="GlossySerpent/StaticText" Name="Sandbox_interface/System_info/Info_text" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{0.75,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="VertScrollPosition" Value="0" />
+            </Window>
+            <Window Type="GlossySerpent/Checkbox" Name="Sandbox_interface/System_info/Camera_volante" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="GRound clipping" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.0161408,0},{0.738818,0},{0.983859,0},{1.03812,0}}" />
+            </Window>
+        </Window>
+        <Window Type="GlossySerpent/StaticText" Name="Live_debugger" >
+            <Property Name="Font" Value="The-Lost-Paintings10" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+            <Property Name="VertFormatting" Value="TopAligned" />
+            <Property Name="UnifiedAreaRect" Value="{{0.00469325,0},{0.398418,0},{0.510181,0},{0.979665,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Property Name="VertScrollPosition" Value="0" />
+        </Window>
+        <Window Type="GlossySerpent/FrameWindow" Name="Sandbox_interface/Sandbox" >
+            <Property Name="Font" Value="The-Lost-Paintings10" />
+            <Property Name="Text" Value="Control panel" />
+            <Property Name="Alpha" Value="0" />
+            <Property Name="TitlebarFont" Value="DejaVuSans-10" />
+            <Property Name="InheritsAlpha" Value="False" />
+            <Property Name="RollUpEnabled" Value="False" />
+            <Property Name="TitlebarEnabled" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{0.836444,0},{0.00137708,0},{1.00884,0},{1.0098,0}}" />
+            <Property Name="DragMovingEnabled" Value="False" />
+            <Property Name="EWSizingCursorImage" Value="set:TaharezLook image:MouseEsWeCursor" />
+            <Property Name="NSSizingCursorImage" Value="set:TaharezLook image:MouseNoSoCursor" />
+            <Property Name="NESWSizingCursorImage" Value="set:TaharezLook image:MouseNeSwCursor" />
+            <Property Name="NWSESizingCursorImage" Value="set:TaharezLook image:MouseNwSeCursor" />
+            <Window Type="GlossySerpent/Button" Name="Sandbox_interface/Sandbox/Log/Bttn" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="Trunk" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.0149654,0},{0.00229422,0},{0.985034,0},{0.028176,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/Button" Name="Sandbox_interface/Sandbox/Rocher/Bttn" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="Menhir" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.020783,0},{0.0504261,0},{0.979217,0},{0.0754397,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/StaticText" Name="Sandbox_interface/Sandbox/Liste_liaisons_Label" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="Links :" />
+                <Property Name="HorzExtent" Value="41" />
+                <Property Name="VertExtent" Value="17.3068" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.0157251,0},{0.524062,0},{0.995148,0},{0.544062,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="VertScrollPosition" Value="0" />
+            </Window>
+            <Window Type="GlossySerpent/Listbox" Name="Sandbox_interface/Sandbox/Liste_liaisons" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{0.00223334,0},{0.557099,0},{1.00948,0},{0.819304,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/StaticText" Name="Sandbox_interface/Sandbox/Liste_constructions_Label" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="Loaded constructions :" />
+                <Property Name="HorzExtent" Value="143" />
+                <Property Name="VertExtent" Value="17.3068" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{0.00466967,0},{0.855292,0},{1.01192,0},{0.87527,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="VertScrollPosition" Value="0" />
+            </Window>
+            <Window Type="GlossySerpent/Listbox" Name="Sandbox_interface/Sandbox/Liste_constructions" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{0.0107566,0},{0.876067,0},{1.018,0},{1.00374,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/Button" Name="Sandbox_interface/Sandbox/DelLnkBttn" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="Delete attachement" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{0.0142868,0},{0.817006,0},{0.989373,0},{0.831678,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/Button" Name="Sandbox_interface/Sandbox/NewLnkBttn" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="Attach..." />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{0.00811796,0},{0.836019,0},{0.983204,0},{0.850955,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/Button" Name="Sandbox_interface/Sandbox/DelObjBttn" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="Delete an bject..." />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.021568,0},{0.475852,0},{0.96959,0},{0.502085,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/Button" Name="Sandbox_interface/Sandbox/Disk/Bttn" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="Disk" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.0202349,0},{0.0964535,0},{0.979761,0},{0.122486,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/Button" Name="Sandbox_interface/Sandbox/Triangle/Bttn" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="Triangle" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.0211314,0},{0.148922,0},{0.978872,0},{0.172841,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/Button" Name="Sandbox_interface/Sandbox/Hide/Bttn" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="Hide" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.0176431,0},{0.201648,0},{0.98236,0},{0.220348,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/Checkbox" Name="Sandbox_interface/Sandbox/Hide/CheckWing" >
+                <Property Name="Text" Value="Wing" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.0285733,0},{0.232712,0},{0.53704,0},{0.302941,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/Checkbox" Name="Sandbox_interface/Sandbox/Hide/CheckBounce" >
+                <Property Name="Text" Value="Bounce" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{0.435431,0},{0.236921,0},{1.09075,0},{0.305548,0}}" />
+            </Window>
+        </Window>
+        <Window Type="GlossySerpent/StaticText" Name="Sandbox_interface/StatusBar" >
+            <Property Name="Font" Value="The-Lost-Paintings10" />
+            <Property Name="Text" Value="Status bar" />
+            <Property Name="HorzExtent" Value="68" />
+            <Property Name="VertExtent" Value="17.3068" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="VertFormatting" Value="TopAligned" />
+            <Property Name="ClippedByParent" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{-0.000309513,0},{0.98355,0},{1.20119,0},{1.1,0}}" />
+            <Property Name="VertScrollPosition" Value="0" />
+        </Window>
+        <Window Type="GlossySerpent/StaticText" Name="Sandbox_interface/Toaster" >
+            <Property Name="Font" Value="The-Lost-Paintings10" />
+            <Property Name="Text" Value="Sample Toast" />
+            <Property Name="Visible" Value="False" />
+            <Property Name="Disabled" Value="True" />
+            <Property Name="HorzExtent" Value="85" />
+            <Property Name="VertExtent" Value="17.3068" />
+            <Property Name="AlwaysOnTop" Value="True" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="UnifiedAreaRect" Value="{{-0.00572971,0},{0.907775,0},{0.480209,0},{0.962728,0}}" />
+            <Property Name="VertScrollPosition" Value="0" />
+            <Property Name="HorizontalAlignment" Value="Centre" />
+        </Window>
+        <Window Type="GlossySerpent/SimpleTransparentPanel" Name="Sandbox_interface/ToolBox" >
+            <Property Name="UnifiedAreaRect" Value="{{0.00521394,0},{0.0249462,0},{0.0600119,0},{0.466332,0}}" />
+            <Window Type="GlossySerpent/StaticText" Name="Sandbox_interface/ToolBox/Label1" >
+                <Property Name="Text" Value="Tools : " />
+                <Property Name="HorzExtent" Value="58" />
+                <Property Name="VertExtent" Value="12.3682" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="UnifiedAreaRect" Value="{{0.0564875,0},{-0.000543014,0},{0.892319,0},{0.123006,0}}" />
+                <Property Name="VertScrollPosition" Value="0" />
+            </Window>
+            <Window Type="GlossySerpent/Button32_4C" Name="Sandbox_interface/ToolBox/MoveBttn1" >
+                <Property Name="Text" Value="Move" />
+                <Property Name="UnifiedAreaRect" Value="{{0.189883,0},{0.120234,0},{0.780859,0},{0.297811,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/Button32_4C" Name="Sandbox_interface/ToolBox/RotateBttn1" >
+                <Property Name="Text" Value="Rotate" />
+                <Property Name="UnifiedAreaRect" Value="{{0.154362,0},{0.302307,0},{0.794128,0},{0.488916,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/Button32_4C" Name="Sandbox_interface/ToolBox/SelectBttn" >
+                <Property Name="Text" Value="Select" />
+                <Property Name="UnifiedAreaRect" Value="{{0.192002,0},{0.776949,0},{0.845465,0},{0.945652,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/Button32_4C" Name="Sandbox_interface/ToolBox/ScaleBttn11" >
+                <Property Name="Text" Value="Scale" />
+                <Property Name="UnifiedAreaRect" Value="{{0.15646,0},{0.500269,0},{0.809923,0},{0.668972,0}}" />
+            </Window>
+        </Window>
+        <Window Type="GlossySerpent/SimpleTransparentPanel" Name="root/SandboxSeparator" >
+            <Property Name="UnifiedAreaRect" Value="{{0.806149,0},{0.0202587,0},{0.835065,0},{0.984362,0}}" />
+        </Window>
+    </Window>
+</GUILayout>

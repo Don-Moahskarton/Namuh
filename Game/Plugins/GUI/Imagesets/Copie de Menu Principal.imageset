@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<Imageset Name="Menu-principal-higtlight" Imagefile="Menu Principal.png" NativeHorzRes="600" NativeVertRes="600" AutoScaled="true">
+	<Image Name="menu" XPos="0" YPos="0" Width="600" Height="600" />
+</Imageset>

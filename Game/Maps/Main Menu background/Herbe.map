@@ -1,0 +1,220 @@
+
+# =================================================== Fleurs, avec lod ==============================================
+
+	[Vegetation image pager]
+		Material_Name = fleur_violette_profil
+		Page_Size = 80
+		Distance = 30
+		FadeDistance = 26.5
+		Size_min = 0.31
+		Size_Max = 0.35
+		Sway_Distribution = 7.0
+		Sway_Length = 0.1
+		Sway_Speed = 0.7 
+		Density = 0.1
+		RenderTechnique = 0
+		ColorMap = None
+		DensityMap = Chutes Bresiliennes_Flowermask1.bmp
+	[/Vegetation image pager]
+
+	[Vegetation image pager]
+		Material_Name = fleur_violette_profil
+		Page_Size = 80
+		Distance = 30
+		FadeDistance = 26.5
+		Size_min = 0.31
+		Size_Max = 0.35
+		Sway_Distribution = 7.0
+		Sway_Length = 0.1
+		Sway_Speed = 0.7 
+		Density = 0.06
+		RenderTechnique = 0
+		ColorMap = None
+		DensityMap = Chutes Bresiliennes_Flowermask1.bmp
+	[/Vegetation image pager]
+
+
+	[Vegetation image pager]
+		Material_Name = fleur_violette_profil
+		Page_Size = 80
+		Distance = 30
+		FadeDistance = 26.5
+		Size_min = 0.31
+		Size_Max = 0.35
+		Sway_Distribution = 7.0
+		Sway_Length = 0.1
+		Sway_Speed = 0.7 
+		Density = 1.5
+		RenderTechnique = 0
+		ColorMap = None
+		DensityMap = Chutes Bresiliennes_Flowermask2.bmp
+	[/Vegetation image pager]
+
+	[Vegetation image pager]
+		Material_Name = fleur_jaune_profil
+		Page_Size = 80
+		Distance = 30
+		FadeDistance = 26.5
+		Size_min = 0.31
+		Size_Max = 0.35
+		Sway_Distribution = 7.0
+		Sway_Length = 0.1
+		Sway_Speed = 0.7 
+		Density = 1.5
+		RenderTechnique = 0
+		ColorMap = None
+		DensityMap = Chutes Bresiliennes_Flowermask3.bmp
+	[/Vegetation image pager]
+
+
+	[Vegetation image pager]
+		Material_Name = fleur_jaune_profil
+		Page_Size = 80
+		Distance = 30
+		FadeDistance = 26.5
+		Size_min = 0.31
+		Size_Max = 0.35
+		Sway_Distribution = 7.0
+		Sway_Length = 0.1
+		Sway_Speed = 0.7 
+		Density = 0.03
+		RenderTechnique = 0
+		ColorMap = None
+		DensityMap = Chutes Bresiliennes_Grassmask.bmp
+	[/Vegetation image pager]
+
+	[Vegetation image pager]
+		Material_Name = gramine01
+		Page_Size = 150
+		Distance = 40
+		FadeDistance = 26.5
+		Size_min = 1.1
+		Size_Max = 1.4
+		Sway_Distribution = 7.0
+		Sway_Length = 0.1
+		Sway_Speed = 0.7 
+		Density = 0.12
+		RenderTechnique = 0
+		ColorMap = None
+		DensityMap = Chutes Bresiliennes_Grassmask.bmp
+	[/Vegetation image pager]
+
+# =================================================== Herbe, avec lod ==============================================
+
+
+	[Vegetation image pager]
+		Material_Name = grass4
+		Page_Size = 80
+		Distance = 5
+		FadeDistance = 6.5
+		Size_min = 4.61
+		Size_Max = 6.7
+		Sway_Distribution = 7.0
+		Sway_Length = 0.1
+		Sway_Speed = 0.7 
+		Density = 2.7
+		RenderTechnique = 0
+		ColorMap = None
+		DensityMap = Chutes Bresiliennes_Grassmask.bmp
+	[/Vegetation image pager]
+
+	[Vegetation image pager]
+		Material_Name = grass4
+		Page_Size = 80
+		Distance = 70
+		FadeDistance = 5
+		Size_min = 4.61
+		Size_Max = 6.7
+		Sway_Distribution = 7.0
+		Sway_Length = 0.1
+		Sway_Speed = 0.7 
+		Density = 0.31
+		RenderTechnique = 0
+		ColorMap = Chutes Bresiliennes_Grasscolor.bmp
+		DensityMap = Chutes Bresiliennes_Grassmask.bmp
+	[/Vegetation image pager]
+
+	[Vegetation image pager]
+		Material_Name = grass4
+		Page_Size = 150
+		Distance = 40
+		FadeDistance = 26.5
+		Size_min = 4.61
+		Size_Max = 6.7
+		Sway_Distribution = 7.0
+		Sway_Length = 0.1
+		Sway_Speed = 0.7 
+		Density = 0.22
+		RenderTechnique = 0
+		ColorMap = None
+		DensityMap = Chutes Bresiliennes_Grassmask.bmp
+	[/Vegetation image pager]
+
+	[Vegetation image pager]
+		Material_Name = grass4
+		Page_Size = 200
+		Distance = 400
+		FadeDistance = 126.5
+		Size_min = 4.61
+		Size_Max = 6.7
+		Sway_Distribution = 7.0
+		Sway_Length = 0.1
+		Sway_Speed = 0.7 
+		Density = 0.12
+		RenderTechnique = 0
+		ColorMap = Chutes Bresiliennes_Grasscolor.bmp
+		DensityMap = Chutes Bresiliennes_Grassmask.bmp
+	[/Vegetation image pager]
+
+# =================================================== Algues, sans lod ==============================================
+
+
+	[Vegetation image pager]
+		Material_Name = Underwater_plant17
+		Page_Size = 80
+		Distance = 70
+		FadeDistance = 6.5
+		Size_min = 1.61
+		Size_Max = 1.7
+		Sway_Distribution = 7.0
+		Sway_Length = 0.3
+		Sway_Speed = 0.7 
+		Density = 0.7
+		RenderTechnique = 2
+		ColorMap = None
+		DensityMap = Chutes Bresiliennes_Alguemask.bmp
+	[/Vegetation image pager]
+
+	[Vegetation image pager]
+		Material_Name = Underwater_plant10
+		Page_Size = 40
+		Distance = 45
+		FadeDistance = 6.5
+		Size_min = 1.11
+		Size_Max = 0.7
+		Sway_Distribution = 7.0
+		Sway_Length = 0.3
+		Sway_Speed = 0.7 
+		Density = 1.1
+		RenderTechnique = 2
+		ColorMap = None
+		DensityMap = Chutes Bresiliennes_Alguemask.bmp
+	[/Vegetation image pager]
+
+	[Vegetation image pager]
+		Material_Name = Underwater_plant12
+		Page_Size = 80
+		Distance = 20
+		FadeDistance = 6.5
+		Size_min = 1.11
+		Size_Max = 1.3
+		Sway_Distribution = 7.0
+		Sway_Length = 0.3
+		Sway_Speed = 0.7 
+		Density = 2.4
+		RenderTechnique = 2
+		ColorMap = None
+		DensityMap = Chutes Bresiliennes_Alguemask.bmp
+	[/Vegetation image pager]
+	
+# RenderTechnique : 2 <=> GRASSTECH_SPRITE

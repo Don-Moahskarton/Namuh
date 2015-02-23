@@ -1,0 +1,4 @@
+<?xml version="1.0" ?>
+<Imageset Name="Menu-circulaire-hightlight" Imagefile="Menu circulaire4_select.png" NativeHorzRes="500" NativeVertRes="500" AutoScaled="true">
+	<Image Name="quatre" XPos="0" YPos="0" Width="500" Height="500" />
+</Imageset>

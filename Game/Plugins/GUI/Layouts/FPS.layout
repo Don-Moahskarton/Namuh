@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="DefaultWindow" Name="root" >
+        <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{1,0}}" />
+        <Window Type="TaharezLook/StaticText" Name="FPS_interface/Stats" >
+            <Property Name="FrameColours" Value="tl:00000000 tr:00000000 bl:00000000 br:00000000" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="InheritsAlpha" Value="False" />
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+            <Property Name="VertFormatting" Value="TopAligned" />
+            <Property Name="UnifiedAreaRect" Value="{{0.812501,0},{0.00677778,0},{0.994791,0},{0.407127,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Property Name="VertScrollPosition" Value="0" />
+        </Window>
+        <Window Type="TaharezLook/FrameWindow" Name="FPS_interface/EndGameBoxFrameWindow" >
+            <Property Name="Text" Value="End Game Informations" />
+            <Property Name="Alpha" Value="0" />
+            <Property Name="Disabled" Value="True" />
+            <Property Name="AlwaysOnTop" Value="True" />
+            <Property Name="TitlebarFont" Value="DejaVuSans-10" />
+            <Property Name="TitlebarEnabled" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{0.5,-500},{0.5,-300},{0.5,500},{0.5,300}}" />
+            <Property Name="CloseButtonEnabled" Value="False" />
+            <Window Type="TaharezLook/StaticText" Name="FPS_interface/EndGameTitle" >
+                <Property Name="Text" Value="Fin de la partie !" />
+                <Property Name="HorzExtent" Value="115" />
+                <Property Name="VertExtent" Value="11.9862" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{0.5,0}}" />
+                <Property Name="VertScrollPosition" Value="0" />
+            </Window>
+            <Window Type="TaharezLook/StaticText" Name="FPS_interface/EndGameBox" >
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{0.3,0},{0.5,0},{0.7,0},{1,0}}" />
+                <Property Name="VertScrollPosition" Value="0" />
+            </Window>
+        </Window>
+        <Window Type="TaharezLook/StaticText" Name="Live_debugger" >
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="VertScrollbar" Value="True" />
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+            <Property Name="VertFormatting" Value="TopAligned" />
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{0.645832,0},{0.9,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Property Name="VertScrollPosition" Value="0" />
+        </Window>
+    </Window>
+</GUILayout>

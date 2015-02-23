@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="GlossySerpent/FrameWindow" Name="EscMenuWin" >
+        <Property Name="Font" Value="DejaVuSans-10" />
+        <Property Name="Text" Value="Namuh Main menu" />
+        <Property Name="TitlebarFont" Value="DejaVuSans-10" />
+        <Property Name="SizingEnabled" Value="False" />
+        <Property Name="TitlebarEnabled" Value="True" />
+        <Property Name="UnifiedAreaRect" Value="{{0.355208,0},{0.232495,0},{0.651049,0},{0.765516,0}}" />
+        <Property Name="DragMovingEnabled" Value="False" />
+        <Property Name="CloseButtonEnabled" Value="False" />
+        <Property Name="EWSizingCursorImage" Value="set:TaharezLook image:MouseEsWeCursor" />
+        <Property Name="NSSizingCursorImage" Value="set:TaharezLook image:MouseNoSoCursor" />
+        <Property Name="NESWSizingCursorImage" Value="set:TaharezLook image:MouseNeSwCursor" />
+        <Property Name="NWSESizingCursorImage" Value="set:TaharezLook image:MouseNwSeCursor" />
+        <Window Type="GlossySerpent/StaticText" Name="EscMenuWin/Infotext" >
+            <Property Name="Font" Value="DejaVuSans-10" />
+            <Property Name="UnifiedAreaRect" Value="{{0.285567,0},{0.0243562,0},{0.725703,0},{0.0973651,0}}" />
+            <Property Name="VertScrollPosition" Value="0" />
+        </Window>
+    </Window>
+</GUILayout>

@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="DefaultWindow" Name="root" >
+        <Property Name="UnifiedAreaRect" Value="{{0.00208333,0},{-1.97906e-009,0},{1.00208,0},{1,0}}" />
+        <Window Type="TaharezLook/Menubar" Name="Sandbox_interface/Menubar" >
+            <Property Name="ItemSpacing" Value="10" />
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1.2,0},{0.025,0}}" />
+            <Window Type="TaharezLook/MenuItem" Name="Sandbox_interface/Menubar/FileButton" >
+                <Property Name="Text" Value="File" />
+                <Property Name="UnifiedAreaRect" Value="{{0,10},{0,0},{0,52},{0,20}}" />
+                <Property Name="VerticalAlignment" Value="Centre" />
+                <Window Type="TaharezLook/PopupMenu" Name="Sandbox_interface/Menubar/FileButton/FileMenu" >
+                    <Property Name="Visible" Value="False" />
+                    <Property Name="FadeInTime" Value="0" />
+                    <Property Name="FadeOutTime" Value="0" />
+                    <Property Name="ItemSpacing" Value="2" />
+                    <Property Name="ClippedByParent" Value="False" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0,22},{0,210},{0,95.9438}}" />
+                    <Property Name="AutoResizeEnabled" Value="True" />
+                    <Window Type="TaharezLook/MenuItem" Name="Sandbox_interface/Menubar/FileButton/FileMenu/Load" >
+                        <Property Name="Text" Value="Load Construction..." />
+                        <Property Name="Tooltip" Value="Load Construction" />
+                        <Property Name="UnifiedAreaRect" Value="{{0,5},{0,3},{0,200},{0,23}}" />
+                    </Window>
+                    <Window Type="TaharezLook/MenuItem" Name="Sandbox_interface/Menubar/FileButton/FileMenu/Save" >
+                        <Property Name="Text" Value="Save Construction" />
+                        <Property Name="Tooltip" Value="Save Construction" />
+                        <Property Name="Disabled" Value="True" />
+                        <Property Name="UnifiedAreaRect" Value="{{0,5},{0,25},{0,200},{0,45}}" />
+                    </Window>
+                    <Window Type="TaharezLook/MenuItem" Name="Sandbox_interface/Menubar/FileButton/FileMenu/SaveAs" >
+                        <Property Name="Text" Value="Save Construction as..." />
+                        <Property Name="Tooltip" Value="Save Construction as..." />
+                        <Property Name="UnifiedAreaRect" Value="{{0,5},{0,47},{0,200},{0,67}}" />
+                    </Window>
+                </Window>
+            </Window>
+        </Window>
+        <Window Type="TaharezLook/FrameWindow" Name="Sandbox_interface/System_info" >
+            <Property Name="Text" Value="Namuh system informations" />
+            <Property Name="TitlebarFont" Value="DejaVuSans-10" />
+            <Property Name="TitlebarEnabled" Value="True" />
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{0.0218553,0},{0.28,0},{0.114518,0}}" />
+            <Property Name="CloseButtonEnabled" Value="False" />
+            <Window Type="TaharezLook/StaticText" Name="Sandbox_interface/System_info/Info_text" >
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{0.75,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="VertScrollPosition" Value="0" />
+            </Window>
+            <Window Type="TaharezLook/Checkbox" Name="Sandbox_interface/System_info/Camera_volante" >
+                <Property Name="Text" Value="Camera volante" />
+                <Property Name="Selected" Value="True" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{0,0},{0.75,0},{1,0},{1,0}}" />
+            </Window>
+        </Window>
+        <Window Type="TaharezLook/StaticText" Name="Live_debugger" >
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+            <Property Name="VertFormatting" Value="TopAligned" />
+            <Property Name="UnifiedAreaRect" Value="{{0,0},{0.124759,0},{0.277083,0},{0.977564,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Property Name="VertScrollPosition" Value="0" />
+        </Window>
+        <Window Type="TaharezLook/FrameWindow" Name="Sandbox_interface/Sandbox" >
+            <Property Name="Text" Value="Control panel" />
+            <Property Name="Alpha" Value="0" />
+            <Property Name="TitlebarFont" Value="DejaVuSans-10" />
+            <Property Name="InheritsAlpha" Value="False" />
+            <Property Name="RollUpEnabled" Value="False" />
+            <Property Name="TitlebarEnabled" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{0.849999,0},{0.0208072,0},{1.00625,0},{0.989518,0}}" />
+            <Property Name="DragMovingEnabled" Value="False" />
+            <Window Type="TaharezLook/Button" Name="Sandbox_interface/Sandbox/Rondin_de_bois" >
+                <Property Name="Text" Value="Rondin" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.00829871,0},{0.00218305,0},{0.991701,0},{0.0358102,0}}" />
+            </Window>
+            <Window Type="TaharezLook/StaticText" Name="Sandbox_interface/Sandbox/Scrollbar_01_name" >
+                <Property Name="Text" Value="Orientation du Rondin : 0" />
+                <Property Name="HorzExtent" Value="202" />
+                <Property Name="VertExtent" Value="12.3136" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.00309697,0},{0.0381695,0},{1.00415,0},{0.0581695,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="VertScrollPosition" Value="0" />
+            </Window>
+            <Window Type="TaharezLook/HorizontalScrollbar" Name="Sandbox_interface/Sandbox/Scrollbar_01" >
+                <Property Name="PageSize" Value="0" />
+                <Property Name="StepSize" Value="5" />
+                <Property Name="OverlapSize" Value="0" />
+                <Property Name="DocumentSize" Value="90" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="ScrollPosition" Value="1" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.0165974,0},{0.0559864,0},{0.983403,0},{0.0659865,0}}" />
+            </Window>
+            <Window Type="TaharezLook/StaticText" Name="Sandbox_interface/Sandbox/Scrollbar_02_name" >
+                <Property Name="Text" Value="Longeur du Rondin : 10m" />
+                <Property Name="HorzExtent" Value="203" />
+                <Property Name="VertExtent" Value="12.3136" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.00724633,0},{0.0727119,0},{1,0},{0.0927119,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="VertScrollPosition" Value="0" />
+            </Window>
+            <Window Type="TaharezLook/HorizontalScrollbar" Name="Sandbox_interface/Sandbox/Scrollbar_02" >
+                <Property Name="PageSize" Value="0" />
+                <Property Name="StepSize" Value="5" />
+                <Property Name="OverlapSize" Value="0" />
+                <Property Name="DocumentSize" Value="45" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="ScrollPosition" Value="1" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.0124481,0},{0.0905288,0},{0.987552,0},{0.100529,0}}" />
+            </Window>
+            <Window Type="TaharezLook/StaticText" Name="Sandbox_interface/Sandbox/Scrollbar_03_name" >
+                <Property Name="Text" Value="Diame:tre du Rondin : 1m" />
+                <Property Name="HorzExtent" Value="207" />
+                <Property Name="VertExtent" Value="12.3136" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.00309697,0},{0.11162,0},{1.00415,0},{0.13162,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="VertScrollPosition" Value="0" />
+            </Window>
+            <Window Type="TaharezLook/HorizontalScrollbar" Name="Sandbox_interface/Sandbox/Scrollbar_03" >
+                <Property Name="PageSize" Value="0" />
+                <Property Name="StepSize" Value="5" />
+                <Property Name="OverlapSize" Value="0" />
+                <Property Name="DocumentSize" Value="3" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="ScrollPosition" Value="1" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.00414936,0},{0.130529,0},{0.995851,0},{0.140529,0}}" />
+            </Window>
+            <Window Type="TaharezLook/Button" Name="Sandbox_interface/Sandbox/Rocher" >
+                <Property Name="Text" Value="Rocher" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.00414936,0},{0.157078,0},{0.995851,0},{0.189614,0}}" />
+            </Window>
+            <Window Type="TaharezLook/StaticText" Name="Sandbox_interface/Sandbox/Liste_liaisons_name" >
+                <Property Name="Text" Value="Liaisons :" />
+                <Property Name="HorzExtent" Value="75" />
+                <Property Name="VertExtent" Value="12.3136" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.0103433,0},{0.469798,0},{1.00053,0},{0.489798,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="VertScrollPosition" Value="0" />
+            </Window>
+            <Window Type="TaharezLook/Listbox" Name="Sandbox_interface/Sandbox/Liste_liaisons" >
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.00309697,0},{0.489858,0},{1.00415,0},{0.730687,0}}" />
+            </Window>
+            <Window Type="TaharezLook/StaticText" Name="Sandbox_interface/Sandbox/Liste_constructions_name" >
+                <Property Name="Text" Value="Constructions réalisés :" />
+                <Property Name="HorzExtent" Value="186" />
+                <Property Name="VertExtent" Value="12.3136" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{9.77889e-009,0},{0.812711,0},{1.00725,0},{0.832689,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="VertScrollPosition" Value="0" />
+            </Window>
+            <Window Type="TaharezLook/Listbox" Name="Sandbox_interface/Sandbox/Liste_constructions" >
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.00724634,0},{0.840322,0},{1,0},{0.998589,0}}" />
+            </Window>
+            <Window Type="TaharezLook/Button" Name="Sandbox_interface/Sandbox/DelLnkBttn" >
+                <Property Name="Text" Value="Delete Link" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.000382864,0},{0.730954,0},{0.974703,0},{0.762205,0}}" />
+            </Window>
+            <Window Type="TaharezLook/Button" Name="Sandbox_interface/Sandbox/NewLnkBttn" >
+                <Property Name="Text" Value="New link..." />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{0.0034483,0},{0.76546,0},{0.978534,0},{0.796976,0}}" />
+            </Window>
+            <Window Type="TaharezLook/Button" Name="Sandbox_interface/Sandbox/DelObjBttn" >
+                <Property Name="Text" Value="Delete Object" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.00411647,0},{0.429136,0},{0.987041,0},{0.463928,0}}" />
+            </Window>
+        </Window>
+        <Window Type="TaharezLook/StaticText" Name="StatusBar" >
+            <Property Name="Text" Value="Status bar : TODO : Makes it says something interesting" />
+            <Property Name="HorzExtent" Value="444" />
+            <Property Name="VertExtent" Value="12.3136" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="VertFormatting" Value="TopAligned" />
+            <Property Name="ClippedByParent" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{-0.0015,0},{0.985723,0},{1.2,0},{1.1,0}}" />
+            <Property Name="VertScrollPosition" Value="0" />
+        </Window>
+        <Window Type="TaharezLook/StaticText" Name="Sandbox_interface/Toaster" >
+            <Property Name="Text" Value="Sample Toast" />
+            <Property Name="Visible" Value="False" />
+            <Property Name="Disabled" Value="True" />
+            <Property Name="HorzExtent" Value="109" />
+            <Property Name="VertExtent" Value="12.3136" />
+            <Property Name="AlwaysOnTop" Value="True" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="UnifiedAreaRect" Value="{{-0.00572971,0},{0.847169,0},{0.480209,0},{0.877044,0}}" />
+            <Property Name="VertScrollPosition" Value="0" />
+            <Property Name="HorizontalAlignment" Value="Centre" />
+        </Window>
+    </Window>
+</GUILayout>

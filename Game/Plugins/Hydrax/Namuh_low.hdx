@@ -1,0 +1,79 @@
+#Hydrax cfg file.
+
+#Hydrax version field
+HydraxVersion=0.5.4
+
+#Main options field
+<vector3>Position=0x-4x0
+<float>PlanesError=2.5
+#Shader mode: 0=HLSL, 1=CG, 2=GLSL
+<int>ShaderMode=0
+<float>FullReflectionDistance=1e+011
+<float>GlobalTransparency=0.7
+<float>NormalDistortion=0.075
+<vector3>WaterColor=0.0398721x0.124018x0.164179
+
+#Components field     |Depth
+Components=Sun|Foam|Smooth|Caustics|Underwater|UnderwaterReflections|UnderwaterGodRays
+
+#Sun parameters
+<vector3>SunPosition=0x10000x0
+<float>SunStrength=1.75
+<float>SunArea=300
+<vector3>SunColor=1x0.9x0.6
+
+#Foam parameters
+<float>FoamMaxDistance=7.5e+006
+<float>FoamScale=0.0075
+<float>FoamStart=0
+<float>FoamTransparency=1
+
+#Depth parameters
+<float>DepthLimit=40000
+<float>DistLimit=80
+
+#Smooth transitions parameters
+<float>SmoothPower=8
+
+#Caustics parameters
+<float>CausticsScale=3.5
+<float>CausticsPower=2
+<float>CausticsEnd=0.04
+
+#God rays parameters
+<vector3>GodRaysExposure=0.36x2.65x2.39
+<float>GodRaysIntensity=0.25
+<float>GodRaysSpeed=5
+<int>GodRaysNumberOfRays=100
+<float>GodRaysRaysSize=0.03
+<bool>GodRaysIntersections=false
+
+#Rtt quality field(0x0 = Auto)
+<size>Rtt_Quality_Reflection=512x512
+<size>Rtt_Quality_Refraction=512x512
+<size>Rtt_Quality_Depth=512x512
+<size>Rtt_Quality_URDepth=512x512
+<size>Rtt_Quality_GPUNormalMap=512x512
+
+#Module options
+Module=ProjectedGridVertex
+
+<float>PG_ChoopyStrength=200.05
+<bool>PG_ChoppyWaves=false
+<int>PG_Complexity=100
+<float>PG_Elevation=50
+<bool>PG_ForceRecalculateGeometry=false
+<bool>PG_Smooth=true
+<float>PG_Strength=2.235
+
+#Noise options
+Noise=Perlin
+
+<int>Perlin_Octaves=6
+<float>Perlin_Scale=8.191
+<float>Perlin_Falloff=0.39
+<float>Perlin_Animspeed=1.8
+<float>Perlin_Timemulti=1.27
+<float>Perlin_GPU_Strength=2
+<vector3>Perlin_GPU_LODParameters=0.5x50x150000
+

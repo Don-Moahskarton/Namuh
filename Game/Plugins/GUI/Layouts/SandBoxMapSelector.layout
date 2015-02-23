@@ -1,0 +1,129 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="GlossySerpent/FrameWindow" Name="SandboxMapSelector" >
+        <Property Name="Font" Value="The-Lost-Paintings18" />
+        <Property Name="Text" Value="Sandbox Map Selection" />
+        <Property Name="TitlebarFont" Value="DejaVuSans-10" />
+        <Property Name="SizingEnabled" Value="False" />
+        <Property Name="TitlebarEnabled" Value="True" />
+        <Property Name="UnifiedAreaRect" Value="{{0.0170294,0},{0.120224,0},{0.652576,0},{0.810913,0}}" />
+        <Property Name="DragMovingEnabled" Value="False" />
+        <Property Name="EWSizingCursorImage" Value="set:TaharezLook image:MouseEsWeCursor" />
+        <Property Name="NSSizingCursorImage" Value="set:TaharezLook image:MouseNoSoCursor" />
+        <Property Name="NESWSizingCursorImage" Value="set:TaharezLook image:MouseNeSwCursor" />
+        <Property Name="NWSESizingCursorImage" Value="set:TaharezLook image:MouseNwSeCursor" />
+        <Window Type="GlossySerpent/StaticImage" Name="SandboxMapSelector/MapPreview" >
+            <Property Name="Font" Value="DejaVuSans-10" />
+            <Property Name="UnifiedAreaRect" Value="{{0.210041,0},{0.135253,0},{0.669912,0},{0.988728,0}}" />
+            <Window Type="GlossySerpent/StaticImage" Name="SandboxMapSelector/MapPreview/Image" >
+                <Property Name="UnifiedAreaRect" Value="{{-0.00179216,0},{0.00339028,0},{0.998224,0},{1.00136,0}}" />
+            </Window>
+        </Window>
+        <Window Type="GlossySerpent/Listbox" Name="SandboxMapSelector/MapLst" >
+            <Property Name="Font" Value="DejaVuSans-10" />
+            <Property Name="UnifiedAreaRect" Value="{{0.00150955,0},{0.0278423,0},{0.196548,0},{0.995806,0}}" />
+        </Window>
+        <Window Type="GlossySerpent/Button" Name="SandboxMapSelector/LaunchBttn" >
+            <Property Name="Font" Value="DejaVuSans-10" />
+            <Property Name="Text" Value="Launch" />
+            <Property Name="UnifiedAreaRect" Value="{{0.871495,0},{0.95771,0},{0.996338,0},{0.996718,0}}" />
+        </Window>
+        <Window Type="GlossySerpent/Button" Name="SandboxMapSelector/CancelBttn" >
+            <Property Name="Font" Value="DejaVuSans-10" />
+            <Property Name="Text" Value="Cancel" />
+            <Property Name="UnifiedAreaRect" Value="{{0.727607,0},{0.95771,0},{0.856243,0},{0.996718,0}}" />
+        </Window>
+        <Window Type="TaharezLook/StaticText" Name="SandboxMapSelector/DescriptionText" >
+            <Property Name="Text" Value="Axe des odonnées :" />
+            <Property Name="HorzExtent" Value="156" />
+            <Property Name="VertExtent" Value="12.3682" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+            <Property Name="VertFormatting" Value="TopAligned" />
+            <Property Name="UnifiedAreaRect" Value="{{0.671652,0},{0.170366,0},{0.996358,0},{0.299842,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Property Name="VertScrollPosition" Value="0" />
+        </Window>
+        <Window Type="TaharezLook/StaticText" Name="SandboxMapSelector/MapName" >
+            <Property Name="Font" Value="The-Lost-Paintings18" />
+            <Property Name="Text" Value=" ================= Map Name here =======================" />
+            <Property Name="HorzExtent" Value="832" />
+            <Property Name="VertExtent" Value="31.1458" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{0.266509,0},{0.00931291,0},{0.991273,0},{0.0963334,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Property Name="VertScrollPosition" Value="0" />
+        </Window>
+        <Window Type="TaharezLook/StaticText" Name="SandboxMapSelector/Text23" >
+            <Property Name="Text" Value="Avariable Maps :" />
+            <Property Name="HorzExtent" Value="133" />
+            <Property Name="VertExtent" Value="12.3682" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{0.000555427,0},{0.00620865,0},{0.113389,0},{0.0224737,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Property Name="VertScrollPosition" Value="0" />
+        </Window>
+        <Window Type="TaharezLook/StaticText" Name="SandboxMapSelector/Text24" >
+            <Property Name="Text" Value="Screenshot ;" />
+            <Property Name="HorzExtent" Value="99" />
+            <Property Name="VertExtent" Value="12.3682" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{0.216676,0},{0.106825,0},{0.329509,0},{0.12309,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Property Name="VertScrollPosition" Value="0" />
+        </Window>
+        <Window Type="TaharezLook/StaticText" Name="SandboxMapSelector/WildLifeText" >
+            <Property Name="Text" Value="Todo : place something interesting here" />
+            <Property Name="HorzExtent" Value="320" />
+            <Property Name="VertExtent" Value="12.3682" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+            <Property Name="VertFormatting" Value="TopAligned" />
+            <Property Name="UnifiedAreaRect" Value="{{0.670372,0},{0.525058,0},{0.997938,0},{0.690699,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Property Name="VertScrollPosition" Value="0" />
+        </Window>
+        <Window Type="GlossySerpent/Titlebar" Name="SandboxMapSelector/Header" >
+            <Property Name="Font" Value="The-Lost-Paintings10" />
+            <Property Name="Text" Value="Wildlife :" />
+            <Property Name="AlwaysOnTop" Value="True" />
+            <Property Name="UnifiedAreaRect" Value="{{0.65521,0},{0.44654,0},{0.986509,0},{0.525153,0}}" />
+        </Window>
+        <Window Type="GlossySerpent/Titlebar" Name="SandboxMapSelector/HeaderSize" >
+            <Property Name="Font" Value="The-Lost-Paintings10" />
+            <Property Name="Text" Value="Map Size :" />
+            <Property Name="AlwaysOnTop" Value="True" />
+            <Property Name="UnifiedAreaRect" Value="{{0.655115,0},{0.372324,0},{0.986414,0},{0.450937,0}}" />
+        </Window>
+        <Window Type="GlossySerpent/Titlebar" Name="SandboxMapSelector/Header2" >
+            <Property Name="Font" Value="The-Lost-Paintings10" />
+            <Property Name="Text" Value="Plant Life :" />
+            <Property Name="AlwaysOnTop" Value="True" />
+            <Property Name="UnifiedAreaRect" Value="{{0.655936,0},{0.674216,0},{0.987233,0},{0.75283,0}}" />
+        </Window>
+        <Window Type="GlossySerpent/Titlebar" Name="SandboxMapSelector/HeaderWater" >
+            <Property Name="Font" Value="The-Lost-Paintings10" />
+            <Property Name="Text" Value="Has Water :" />
+            <Property Name="AlwaysOnTop" Value="True" />
+            <Property Name="UnifiedAreaRect" Value="{{0.655021,0},{0.301253,0},{0.986318,0},{0.379866,0}}" />
+        </Window>
+        <Window Type="GlossySerpent/Titlebar" Name="SandboxMapSelector/Header111" >
+            <Property Name="Font" Value="The-Lost-Paintings10" />
+            <Property Name="Text" Value="Description" />
+            <Property Name="AlwaysOnTop" Value="True" />
+            <Property Name="UnifiedAreaRect" Value="{{0.650821,0},{0.12169,0},{0.982117,0},{0.200303,0}}" />
+        </Window>
+        <Window Type="TaharezLook/StaticText" Name="SandboxMapSelector/PlantLifeText" >
+            <Property Name="Text" Value="Axe des odonnées :" />
+            <Property Name="HorzExtent" Value="156" />
+            <Property Name="VertExtent" Value="12.3682" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+            <Property Name="VertFormatting" Value="TopAligned" />
+            <Property Name="UnifiedAreaRect" Value="{{0.674021,0},{0.773835,0},{0.998725,0},{0.945764,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Property Name="VertScrollPosition" Value="0" />
+        </Window>
+    </Window>
+</GUILayout>

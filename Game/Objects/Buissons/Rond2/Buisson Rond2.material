@@ -1,0 +1,18 @@
+material buisson_3
+{
+	technique
+	{
+		pass
+		{
+			alpha_rejection greater_equal 197
+			cull_hardware none
+			scene_blend alpha_blend
+
+			texture_unit OgreMaxTextureUnit2
+			{
+				texture Branch_Summer2.png 
+			}
+		}
+
+	}
+}

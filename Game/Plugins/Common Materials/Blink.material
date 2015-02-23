@@ -1,0 +1,43 @@
+ vertex_program blinkVP cg
+ {
+     source blink.cg
+     entry_point main_vp
+     profiles vs_1_1
+ 
+     default_params
+     {
+         param_named_auto worldViewProj worldviewproj_matrix
+     }
+ }
+ 
+ fragment_program blinkFP cg
+ {
+     source blink.cg
+     entry_point main_fp
+     profiles ps_2_x
+ }
+ 
+
+ material blink
+ {
+     technique
+     {
+         pass
+         {
+            scene_blend alpha_blend
+            vertex_program_ref blinkVP
+             {
+
+             }
+            fragment_program_ref blinkFP
+             {
+                       param_named_auto Time time
+             }
+            texture_unit
+            {
+                 texture Plastic0043_2_S.png 2d
+                 tex_address_mode wrap
+            }
+         }
+     }
+ }

@@ -1,0 +1,155 @@
+
+# =================================================== Fleurs, avec lod ==============================================
+
+	[Vegetation image pager]
+		Material_Name = fleur_violette_profil
+		Page_Size = 80
+		Distance = 30
+		FadeDistance = 26.5
+		Size_min = 0.31
+		Size_Max = 0.35
+		Sway_Distribution = 7.0
+		Sway_Length = 0.1
+		Sway_Speed = 0.7 
+		Density = 0.1
+		RenderTechnique = 0
+		ColorMap = None
+	[/Vegetation image pager]
+
+	[Vegetation image pager]
+		Material_Name = fleur_violette_profil
+		Page_Size = 80
+		Distance = 30
+		FadeDistance = 26.5
+		Size_min = 0.31
+		Size_Max = 0.35
+		Sway_Distribution = 7.0
+		Sway_Length = 0.1
+		Sway_Speed = 0.7 
+		Density = 0.06
+		RenderTechnique = 0
+		ColorMap = None
+	[/Vegetation image pager]
+
+
+	[Vegetation image pager]
+		Material_Name = fleur_violette_profil
+		Page_Size = 80
+		Distance = 30
+		FadeDistance = 26.5
+		Size_min = 0.31
+		Size_Max = 0.35
+		Sway_Distribution = 7.0
+		Sway_Length = 0.1
+		Sway_Speed = 0.7 
+		Density = 1.5
+		RenderTechnique = 0
+		ColorMap = None
+	[/Vegetation image pager]
+
+	[Vegetation image pager]
+		Material_Name = fleur_jaune_profil
+		Page_Size = 80
+		Distance = 30
+		FadeDistance = 26.5
+		Size_min = 0.31
+		Size_Max = 0.35
+		Sway_Distribution = 7.0
+		Sway_Length = 0.1
+		Sway_Speed = 0.7 
+		Density = 1.5
+		RenderTechnique = 0
+		ColorMap = None
+	[/Vegetation image pager]
+
+
+	[Vegetation image pager]
+		Material_Name = fleur_jaune_profil
+		Page_Size = 80
+		Distance = 30
+		FadeDistance = 26.5
+		Size_min = 0.31
+		Size_Max = 0.35
+		Sway_Distribution = 7.0
+		Sway_Length = 0.1
+		Sway_Speed = 0.7 
+		Density = 0.03
+		RenderTechnique = 0
+		ColorMap = None
+	[/Vegetation image pager]
+
+	[Vegetation image pager]
+		Material_Name = gramine01
+		Page_Size = 150
+		Distance = 40
+		FadeDistance = 26.5
+		Size_min = 1.1
+		Size_Max = 1.4
+		Sway_Distribution = 7.0
+		Sway_Length = 0.1
+		Sway_Speed = 0.7 
+		Density = 0.12
+		RenderTechnique = 0
+		ColorMap = None
+	[/Vegetation image pager]
+
+# =================================================== Herbe, avec lod ==============================================
+
+
+	[Vegetation image pager]
+		Material_Name = grass4
+		Page_Size = 80
+		Distance = 5
+		FadeDistance = 6.5
+		Size_min = 4.61
+		Size_Max = 6.7
+		Sway_Distribution = 7.0
+		Sway_Length = 0.1
+		Sway_Speed = 0.7 
+		Density = 2.7
+		RenderTechnique = 0
+		ColorMap = None
+	[/Vegetation image pager]
+
+	[Vegetation image pager]
+		Material_Name = grass4
+		Page_Size = 80
+		Distance = 70
+		FadeDistance = 5
+		Size_min = 4.61
+		Size_Max = 6.7
+		Sway_Distribution = 7.0
+		Sway_Length = 0.1
+		Sway_Speed = 0.7 
+		Density = 0.31
+		RenderTechnique = 0
+	[/Vegetation image pager]
+
+	[Vegetation image pager]
+		Material_Name = grass4
+		Page_Size = 150
+		Distance = 40
+		FadeDistance = 26.5
+		Size_min = 4.61
+		Size_Max = 6.7
+		Sway_Distribution = 7.0
+		Sway_Length = 0.1
+		Sway_Speed = 0.7 
+		Density = 0.22
+		RenderTechnique = 0
+		ColorMap = None
+	[/Vegetation image pager]
+
+	[Vegetation image pager]
+		Material_Name = grass4
+		Page_Size = 200
+		Distance = 400
+		FadeDistance = 126.5
+		Size_min = 4.61
+		Size_Max = 6.7
+		Sway_Distribution = 7.0
+		Sway_Length = 0.1
+		Sway_Speed = 0.7 
+		Density = 0.12
+		RenderTechnique = 0
+	[/Vegetation image pager]

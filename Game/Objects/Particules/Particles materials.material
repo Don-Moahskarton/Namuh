@@ -1,0 +1,19 @@
+material particles_generic
+{
+	technique
+	{
+		pass
+		{
+			diffuse 0.005 0.005 0.005 0.8
+			cull_hardware none
+			cull_software none
+			scene_blend one src_alpha 
+			alpha_rejection greater_equal 64
+		
+			texture_unit
+			{
+				texture generic.tga
+			}
+		}
+	}
+}

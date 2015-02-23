@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="TaharezLook/GroupBox" Name="SanboxLinkCreator/ObjectSelector" >
+        <Property Name="Text" Value="Select two objects to link :" />
+        <Property Name="RiseOnClick" Value="False" />
+        <Property Name="UnifiedAreaRect" Value="{{0.000281925,0},{0.0237726,0},{0.998878,0},{0.818345,0}}" />
+    </Window>
+</GUILayout>

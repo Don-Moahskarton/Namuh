@@ -1,0 +1,473 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="DefaultWindow" Name="root" >
+        <Property Name="Font" Value="The-Lost-Paintings10" />
+        <Property Name="UnifiedAreaRect" Value="{{-0.000216195,0},{0.000672508,0},{0.999775,0},{0.993487,0}}" />
+        <Window Type="GlossySerpent/Menubar" Name="Sandbox_interface/Menubar" >
+            <Property Name="Font" Value="The-Lost-Paintings10" />
+            <Property Name="ItemSpacing" Value="10" />
+            <Property Name="UnifiedAreaRect" Value="{{0.00156251,0},{0,0},{1.20156,0},{0.025,0}}" />
+            <Window Type="GlossySerpent/MenuItem" Name="Sandbox_interface/Menubar/FileButton" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="File" />
+                <Property Name="UnifiedAreaRect" Value="{{0,9},{0,0},{0,37},{0,26}}" />
+                <Property Name="VerticalAlignment" Value="Centre" />
+                <Window Type="GlossySerpent/PopupMenu" Name="Sandbox_interface/Menubar/FileButton/FileMenu" >
+                    <Property Name="Font" Value="The-Lost-Paintings10" />
+                    <Property Name="Visible" Value="False" />
+                    <Property Name="FadeInTime" Value="0" />
+                    <Property Name="FadeOutTime" Value="0" />
+                    <Property Name="ItemSpacing" Value="2" />
+                    <Property Name="ClippedByParent" Value="False" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0,19},{0,143},{0,111.431}}" />
+                    <Property Name="AutoResizeEnabled" Value="True" />
+                    <Window Type="GlossySerpent/MenuItem" Name="Sandbox_interface/Menubar/FileButton/FileMenu/Load" >
+                        <Property Name="Font" Value="The-Lost-Paintings10" />
+                        <Property Name="Text" Value="Load Construction..." />
+                        <Property Name="Tooltip" Value="Load Construction" />
+                        <Property Name="UnifiedAreaRect" Value="{{0,4},{0,3},{0,135},{0,29}}" />
+                    </Window>
+                    <Window Type="GlossySerpent/MenuItem" Name="Sandbox_interface/Menubar/FileButton/FileMenu/Save" >
+                        <Property Name="Font" Value="The-Lost-Paintings10" />
+                        <Property Name="Text" Value="Save Construction" />
+                        <Property Name="Tooltip" Value="Save Construction" />
+                        <Property Name="Disabled" Value="True" />
+                        <Property Name="UnifiedAreaRect" Value="{{0,4},{0,31},{0,135},{0,57}}" />
+                    </Window>
+                    <Window Type="GlossySerpent/MenuItem" Name="Sandbox_interface/Menubar/FileButton/FileMenu/SaveAs" >
+                        <Property Name="Font" Value="The-Lost-Paintings10" />
+                        <Property Name="Text" Value="Save Construction as..." />
+                        <Property Name="Tooltip" Value="Save Construction as..." />
+                        <Property Name="UnifiedAreaRect" Value="{{0,4},{0,59},{0,135},{0,85}}" />
+                    </Window>
+                </Window>
+            </Window>
+        </Window>
+        <Window Type="GlossySerpent/FrameWindow" Name="Sandbox_interface/System_info" >
+            <Property Name="Font" Value="The-Lost-Paintings10" />
+            <Property Name="Text" Value="Namuh system informations" />
+            <Property Name="TitlebarFont" Value="The-Lost-Paintings10" />
+            <Property Name="TitlebarEnabled" Value="True" />
+            <Property Name="UnifiedAreaRect" Value="{{0.0553235,0},{0.023419,0},{0.345739,0},{0.212099,0}}" />
+            <Property Name="CloseButtonEnabled" Value="False" />
+            <Property Name="EWSizingCursorImage" Value="set:TaharezLook image:MouseEsWeCursor" />
+            <Property Name="NSSizingCursorImage" Value="set:TaharezLook image:MouseNoSoCursor" />
+            <Property Name="NESWSizingCursorImage" Value="set:TaharezLook image:MouseNeSwCursor" />
+            <Property Name="NWSESizingCursorImage" Value="set:TaharezLook image:MouseNwSeCursor" />
+            <Window Type="GlossySerpent/StaticText" Name="Sandbox_interface/System_info/Info_text" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{0,0},{0,0},{1,0},{0.75,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="VertScrollPosition" Value="0" />
+            </Window>
+            <Window Type="GlossySerpent/Checkbox" Name="Sandbox_interface/System_info/Camera_volante" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="GRound clipping" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.0161408,0},{0.738818,0},{0.983859,0},{1.03812,0}}" />
+            </Window>
+        </Window>
+        <Window Type="GlossySerpent/StaticText" Name="Live_debugger" >
+            <Property Name="Font" Value="The-Lost-Paintings10" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+            <Property Name="VertFormatting" Value="TopAligned" />
+            <Property Name="UnifiedAreaRect" Value="{{0.00417241,0},{0.398418,0},{0.50966,0},{0.979665,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Property Name="VertScrollPosition" Value="0" />
+        </Window>
+        <Window Type="GlossySerpent/FrameWindow" Name="Sandbox_interface/Sandbox" >
+            <Property Name="Font" Value="The-Lost-Paintings10" />
+            <Property Name="Text" Value="Control panel" />
+            <Property Name="Alpha" Value="0" />
+            <Property Name="TitlebarFont" Value="DejaVuSans-10" />
+            <Property Name="InheritsAlpha" Value="False" />
+            <Property Name="RollUpEnabled" Value="False" />
+            <Property Name="TitlebarEnabled" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{0.853111,0},{0.00453457,0},{1.00988,0},{1.01296,0}}" />
+            <Property Name="DragMovingEnabled" Value="False" />
+            <Property Name="EWSizingCursorImage" Value="set:TaharezLook image:MouseEsWeCursor" />
+            <Property Name="NSSizingCursorImage" Value="set:TaharezLook image:MouseNoSoCursor" />
+            <Property Name="NESWSizingCursorImage" Value="set:TaharezLook image:MouseNeSwCursor" />
+            <Property Name="NWSESizingCursorImage" Value="set:TaharezLook image:MouseNwSeCursor" />
+            <Window Type="GlossySerpent/Button" Name="Sandbox_interface/Sandbox/Log/Bttn" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="Trunk" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.0149654,0},{0.00229422,0},{0.985034,0},{0.0187827,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/StaticText" Name="Sandbox_interface/Sandbox/Log/Orientation/Label" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="orientation : 90" />
+                <Property Name="HorzExtent" Value="86" />
+                <Property Name="VertExtent" Value="16.7533" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{0.0135146,0},{0.0181274,0},{1.02076,0},{0.0381274,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="VertScrollPosition" Value="0" />
+            </Window>
+            <Window Type="GlossySerpent/HorizontalScrollbar" Name="Sandbox_interface/Sandbox/Log/Orientation/Scroller" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="PageSize" Value="0" />
+                <Property Name="StepSize" Value="5" />
+                <Property Name="OverlapSize" Value="0" />
+                <Property Name="DocumentSize" Value="90" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="ScrollPosition" Value="90" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.0331975,0},{0.0360962,0},{1.03989,0},{0.043948,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/StaticText" Name="Sandbox_interface/Sandbox/Log/Length/Label" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="Lenth : 10m" />
+                <Property Name="HorzExtent" Value="67" />
+                <Property Name="VertExtent" Value="16.7533" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{0.0259767,0},{0.047514,0},{1.03322,0},{0.067514,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="VertScrollPosition" Value="0" />
+            </Window>
+            <Window Type="GlossySerpent/HorizontalScrollbar" Name="Sandbox_interface/Sandbox/Log/Length/Scroller" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="PageSize" Value="0" />
+                <Property Name="StepSize" Value="5" />
+                <Property Name="OverlapSize" Value="0" />
+                <Property Name="DocumentSize" Value="45" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="ScrollPosition" Value="1" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.0324037,0},{0.0675297,0},{1.04401,0},{0.0754069,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/StaticText" Name="Sandbox_interface/Sandbox/Log/Radius/Label" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="Radius : 1m" />
+                <Property Name="HorzExtent" Value="63" />
+                <Property Name="VertExtent" Value="16.7533" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{0.0268148,0},{0.0727743,0},{1.03406,0},{0.0927743,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="VertScrollPosition" Value="0" />
+            </Window>
+            <Window Type="GlossySerpent/HorizontalScrollbar" Name="Sandbox_interface/Sandbox/Log/Radius/Scroller" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="PageSize" Value="0" />
+                <Property Name="StepSize" Value="5" />
+                <Property Name="OverlapSize" Value="0" />
+                <Property Name="DocumentSize" Value="3" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="ScrollPosition" Value="1" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.0340496,0},{0.0927954,0},{1.04236,0},{0.100647,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/Button" Name="Sandbox_interface/Sandbox/Rocher/Bttn" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="Menhir" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.010816,0},{0.120354,0},{0.989184,0},{0.137018,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/StaticText" Name="Sandbox_interface/Sandbox/Liste_liaisons_Label" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="Links :" />
+                <Property Name="HorzExtent" Value="34" />
+                <Property Name="VertExtent" Value="16.7533" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.00968266,0},{0.59399,0},{1.00119,0},{0.61399,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="VertScrollPosition" Value="0" />
+            </Window>
+            <Window Type="GlossySerpent/Listbox" Name="Sandbox_interface/Sandbox/Liste_liaisons" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{0.00223334,0},{0.613459,0},{1.00948,0},{0.819304,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/StaticText" Name="Sandbox_interface/Sandbox/Liste_constructions_Label" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="Loaded constructions :" />
+                <Property Name="HorzExtent" Value="120" />
+                <Property Name="VertExtent" Value="16.7533" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{0.00466967,0},{0.855292,0},{1.01192,0},{0.87527,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="VertScrollPosition" Value="0" />
+            </Window>
+            <Window Type="GlossySerpent/Listbox" Name="Sandbox_interface/Sandbox/Liste_constructions" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{0.0107566,0},{0.876067,0},{1.018,0},{1.00374,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/Button" Name="Sandbox_interface/Sandbox/DelLnkBttn" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="Delete attachement" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{0.0142868,0},{0.817006,0},{0.989373,0},{0.831678,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/Button" Name="Sandbox_interface/Sandbox/NewLnkBttn" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="Attach..." />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{0.00811796,0},{0.836019,0},{0.983204,0},{0.850955,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/Button" Name="Sandbox_interface/Sandbox/DelObjBttn" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="Delete an bject..." />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.00344082,0},{0.570829,0},{0.987717,0},{0.588712,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/Button" Name="Sandbox_interface/Sandbox/Disk/Bttn" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="Disk" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.00694563,0},{0.14342,0},{0.99305,0},{0.160059,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/Button" Name="Sandbox_interface/Sandbox/Triangle/Bttn" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="Triangle" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.0111644,0},{0.260598,0},{0.988839,0},{0.277211,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/HorizontalScrollbar" Name="Sandbox_interface/Sandbox/Disk/Radius/Scroller" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="PageSize" Value="0" />
+                <Property Name="StepSize" Value="5" />
+                <Property Name="OverlapSize" Value="0" />
+                <Property Name="DocumentSize" Value="45" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="ScrollPosition" Value="1" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.0355929,0},{0.188928,0},{1.03417,0},{0.196856,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/StaticText" Name="Sandbox_interface/Sandbox/Disk/Thickness/Label" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="Thickness : 0.2m" />
+                <Property Name="HorzExtent" Value="93" />
+                <Property Name="VertExtent" Value="16.7533" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{0.049299,0},{0.195569,0},{1.05655,0},{0.215568,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="VertScrollPosition" Value="0" />
+            </Window>
+            <Window Type="GlossySerpent/StaticText" Name="Sandbox_interface/Sandbox/Disk/Radius/Label" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="Radius : 1m" />
+                <Property Name="HorzExtent" Value="63" />
+                <Property Name="VertExtent" Value="16.7533" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{0.0301591,0},{0.164367,0},{1.03741,0},{0.184367,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="VertScrollPosition" Value="0" />
+            </Window>
+            <Window Type="GlossySerpent/HorizontalScrollbar" Name="Sandbox_interface/Sandbox/Disk/Thickness/Scroller" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="PageSize" Value="0" />
+                <Property Name="StepSize" Value="5" />
+                <Property Name="OverlapSize" Value="0" />
+                <Property Name="DocumentSize" Value="2" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="ScrollPosition" Value="0.2" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.0373497,0},{0.217243,0},{1.03906,0},{0.222062,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/HorizontalScrollbar" Name="Sandbox_interface/Sandbox/Triangle/Length/Scroller" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="PageSize" Value="0" />
+                <Property Name="StepSize" Value="5" />
+                <Property Name="OverlapSize" Value="0" />
+                <Property Name="DocumentSize" Value="10" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="ScrollPosition" Value="1.5" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.0322631,0},{0.300327,0},{1.03504,0},{0.306182,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/StaticText" Name="Sandbox_interface/Sandbox/Triangle/Length/Label" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="Lenth : 1.5m" />
+                <Property Name="HorzExtent" Value="70" />
+                <Property Name="VertExtent" Value="16.7533" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{0.0193432,0},{0.279503,0},{1.02659,0},{0.299503,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="VertScrollPosition" Value="0" />
+            </Window>
+            <Window Type="GlossySerpent/HorizontalScrollbar" Name="Sandbox_interface/Sandbox/Triangle/Radius/Scroller" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="PageSize" Value="0" />
+                <Property Name="StepSize" Value="5" />
+                <Property Name="OverlapSize" Value="0" />
+                <Property Name="DocumentSize" Value="3" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="ScrollPosition" Value="0.2" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.035475,0},{0.32743,0},{1.03256,0},{0.334252,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/StaticText" Name="Sandbox_interface/Sandbox/Triangle/Radius/Label" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="Radius : 0.2m" />
+                <Property Name="HorzExtent" Value="77" />
+                <Property Name="VertExtent" Value="16.7533" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{0.0101593,0},{0.304839,0},{1.01741,0},{0.323803,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="VertScrollPosition" Value="0" />
+            </Window>
+            <Window Type="GlossySerpent/HorizontalScrollbar" Name="Sandbox_interface/Sandbox/Disk/Orientation/Scroller" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="PageSize" Value="0" />
+                <Property Name="StepSize" Value="5" />
+                <Property Name="OverlapSize" Value="0" />
+                <Property Name="DocumentSize" Value="90" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="ScrollPosition" Value="90" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.0363535,0},{0.242564,0},{1.03673,0},{0.250416,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/StaticText" Name="Sandbox_interface/Sandbox/Disk/Orientation/Label" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="orientation : 0" />
+                <Property Name="HorzExtent" Value="77" />
+                <Property Name="VertExtent" Value="16.7533" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{0.0301259,0},{0.222261,0},{1.03738,0},{0.24226,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="VertScrollPosition" Value="0" />
+            </Window>
+            <Window Type="GlossySerpent/HorizontalScrollbar" Name="Sandbox_interface/Sandbox/Triangle/Orientation/Scroller" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="PageSize" Value="0" />
+                <Property Name="StepSize" Value="5" />
+                <Property Name="OverlapSize" Value="0" />
+                <Property Name="DocumentSize" Value="90" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="ScrollPosition" Value="90" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.0328649,0},{0.355771,0},{1.04022,0},{0.363623,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/StaticText" Name="Sandbox_interface/Sandbox/Triangle/Orientation/Label" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="orientation : 90" />
+                <Property Name="HorzExtent" Value="86" />
+                <Property Name="VertExtent" Value="16.7533" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{0.0201592,0},{0.336243,0},{1.02741,0},{0.356243,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="VertScrollPosition" Value="0" />
+            </Window>
+            <Window Type="GlossySerpent/StaticText" Name="Sandbox_interface/Sandbox/Triangle/Direction/Label" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="direction : 0" />
+                <Property Name="HorzExtent" Value="66" />
+                <Property Name="VertExtent" Value="16.7533" />
+                <Property Name="FrameEnabled" Value="False" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+                <Property Name="VertFormatting" Value="TopAligned" />
+                <Property Name="UnifiedAreaRect" Value="{{0.0203246,0},{0.369664,0},{1.02757,0},{0.389664,0}}" />
+                <Property Name="BackgroundEnabled" Value="False" />
+                <Property Name="VertScrollPosition" Value="0" />
+            </Window>
+            <Window Type="GlossySerpent/HorizontalScrollbar" Name="Sandbox_interface/Sandbox/Triangle/Direction/Scroller" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="PageSize" Value="0" />
+                <Property Name="StepSize" Value="5" />
+                <Property Name="OverlapSize" Value="0" />
+                <Property Name="DocumentSize" Value="60" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="ScrollPosition" Value="60" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.0328649,0},{0.39411,0},{1.04022,0},{0.401962,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/Button" Name="Sandbox_interface/Sandbox/Hide/Bttn" >
+                <Property Name="Font" Value="The-Lost-Paintings10" />
+                <Property Name="Text" Value="Hide" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.0109984,0},{0.413519,0},{0.989005,0},{0.430132,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/Checkbox" Name="Sandbox_interface/Sandbox/Hide/CheckWing" >
+                <Property Name="Text" Value="Wing" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{0.00132764,0},{0.438321,0},{0.719768,0},{0.466802,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/Checkbox" Name="Sandbox_interface/Sandbox/Hide/CheckBounce" >
+                <Property Name="Text" Value="Bounce" />
+                <Property Name="InheritsAlpha" Value="False" />
+                <Property Name="UnifiedAreaRect" Value="{{-0.00376906,0},{0.475929,0},{0.714672,0},{0.505939,0}}" />
+            </Window>
+        </Window>
+        <Window Type="GlossySerpent/StaticText" Name="Sandbox_interface/StatusBar" >
+            <Property Name="Font" Value="The-Lost-Paintings10" />
+            <Property Name="Text" Value="Status bar" />
+            <Property Name="HorzExtent" Value="58" />
+            <Property Name="VertExtent" Value="16.7533" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="VertFormatting" Value="TopAligned" />
+            <Property Name="ClippedByParent" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{-0.000309513,0},{0.98355,0},{1.20119,0},{1.1,0}}" />
+            <Property Name="VertScrollPosition" Value="0" />
+        </Window>
+        <Window Type="GlossySerpent/StaticText" Name="Sandbox_interface/Toaster" >
+            <Property Name="Font" Value="The-Lost-Paintings10" />
+            <Property Name="Text" Value="Sample Toast" />
+            <Property Name="Visible" Value="False" />
+            <Property Name="Disabled" Value="True" />
+            <Property Name="HorzExtent" Value="72" />
+            <Property Name="VertExtent" Value="16.7533" />
+            <Property Name="AlwaysOnTop" Value="True" />
+            <Property Name="HorzFormatting" Value="HorzCentred" />
+            <Property Name="UnifiedAreaRect" Value="{{-0.00572971,0},{0.907775,0},{0.480209,0},{0.962728,0}}" />
+            <Property Name="VertScrollPosition" Value="0" />
+            <Property Name="HorizontalAlignment" Value="Centre" />
+        </Window>
+        <Window Type="GlossySerpent/SimpleTransparentPanel" Name="Sandbox_interface/ToolBox" >
+            <Property Name="UnifiedAreaRect" Value="{{0.00521394,0},{0.0249462,0},{0.0600119,0},{0.37266,0}}" />
+            <Window Type="GlossySerpent/StaticText" Name="Sandbox_interface/ToolBox/Label1" >
+                <Property Name="Text" Value="Tools : " />
+                <Property Name="HorzExtent" Value="51" />
+                <Property Name="VertExtent" Value="11.9862" />
+                <Property Name="HorzFormatting" Value="HorzCentred" />
+                <Property Name="UnifiedAreaRect" Value="{{0.0564875,0},{-0.000543014,0},{0.892319,0},{0.187388,0}}" />
+                <Property Name="VertScrollPosition" Value="0" />
+            </Window>
+            <Window Type="GlossySerpent/Button32_4C" Name="Sandbox_interface/ToolBox/MoveBttn1" >
+                <Property Name="Text" Value="Move" />
+                <Property Name="UnifiedAreaRect" Value="{{0.199388,0},{0.198923,0},{0.790364,0},{0.440882,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/Button32_4C" Name="Sandbox_interface/ToolBox/RotateBttn1" >
+                <Property Name="Text" Value="Rotate" />
+                <Property Name="UnifiedAreaRect" Value="{{0.173371,0},{0.450147,0},{0.813137,0},{0.691601,0}}" />
+            </Window>
+            <Window Type="GlossySerpent/Button32_4C" Name="Sandbox_interface/ToolBox/ScaleBttn1" >
+                <Property Name="Text" Value="Scale" />
+                <Property Name="UnifiedAreaRect" Value="{{0.163488,0},{0.700644,0},{0.816951,0},{0.95519,0}}" />
+            </Window>
+        </Window>
+        <Window Type="GlossySerpent/SimpleTransparentPanel" Name="root/SandboxSeparator" >
+            <Property Name="UnifiedAreaRect" Value="{{0.842607,0},{0.0234162,0},{0.871523,0},{0.98752,0}}" />
+        </Window>
+    </Window>
+</GUILayout>

@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="GlossySerpent/FrameWindow" Name="PlayerProfileEditFavCstrsWin" >
+        <Property Name="Font" Value="CFMarieEve10" />
+        <Property Name="Text" Value="Edit Favorites Constuctions" />
+        <Property Name="TitlebarFont" Value="CFMarieEve10" />
+        <Property Name="ClippedByParent" Value="False" />
+        <Property Name="TitlebarEnabled" Value="True" />
+        <Property Name="UnifiedAreaRect" Value="{{0.363021,0},{0.252411,0},{0.612499,0},{0.784383,0}}" />
+        <Property Name="EWSizingCursorImage" Value="set:TaharezLook image:MouseEsWeCursor" />
+        <Property Name="NSSizingCursorImage" Value="set:TaharezLook image:MouseNoSoCursor" />
+        <Property Name="NESWSizingCursorImage" Value="set:TaharezLook image:MouseNeSwCursor" />
+        <Property Name="NWSESizingCursorImage" Value="set:TaharezLook image:MouseNwSeCursor" />
+        <Window Type="GlossySerpent/Listbox" Name="PlayerProfileEditFavCstrsWin/FavoritedConstructionSelector" >
+            <Property Name="Font" Value="CFMarieEve10" />
+            <Property Name="UnifiedAreaRect" Value="{{0.00206223,0},{0.29816,0},{1.00212,0},{0.927628,0}}" />
+        </Window>
+        <Window Type="GlossySerpent/Button" Name="PlayerProfileEditFavCstrsWin/SaveAndCloseBttn" >
+            <Property Name="Font" Value="CFMarieEve10" />
+            <Property Name="Text" Value="Save &amp; Close" />
+            <Property Name="UnifiedAreaRect" Value="{{0.606908,0},{0.922266,0},{0.990088,0},{1.00461,0}}" />
+        </Window>
+        <Window Type="GlossySerpent/Button" Name="PlayerProfileEditFavCstrsWin/SaveBttn" >
+            <Property Name="Font" Value="CFMarieEve10" />
+            <Property Name="Text" Value="Save" />
+            <Property Name="UnifiedAreaRect" Value="{{0.313003,0},{0.928181,0},{0.58993,0},{1.00264,0}}" />
+        </Window>
+        <Window Type="GlossySerpent/Button" Name="PlayerProfileEditFavCstrsWin/CancelBttn" >
+            <Property Name="Font" Value="CFMarieEve10" />
+            <Property Name="Text" Value="Cancel" />
+            <Property Name="UnifiedAreaRect" Value="{{0.0140199,0},{0.926214,0},{0.292655,0},{0.994763,0}}" />
+        </Window>
+        <Window Type="GlossySerpent/StaticText" Name="PlayerProfileEditFavCstrsWin/Text" >
+            <Property Name="Font" Value="CFMarieEve10" />
+            <Property Name="Text" Value="Liste des constructions en favoris : " />
+            <Property Name="HorzExtent" Value="294" />
+            <Property Name="VertExtent" Value="14.8907" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{0.0166769,0},{0.254892,0},{0.733346,0},{0.300369,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+        </Window>
+        <Window Type="GlossySerpent/Menubar" Name="PlayerProfileEditFavCstrsWin/Menubar" >
+            <Property Name="Font" Value="CFMarieEve10" />
+            <Property Name="ItemSpacing" Value="10" />
+            <Property Name="UnifiedAreaRect" Value="{{-0.0020869,0},{0.000490805,0},{1.02292,0},{0.0459668,0}}" />
+            <Window Type="GlossySerpent/MenuItem" Name="PlayerProfileEditFavCstrsWin/Menubar/FileButton" >
+                <Property Name="Font" Value="CFMarieEve10" />
+                <Property Name="Text" Value="File" />
+                <Property Name="UnifiedAreaRect" Value="{{0,10},{0,0},{0,51},{0,26}}" />
+                <Property Name="VerticalAlignment" Value="Centre" />
+                <Window Type="GlossySerpent/PopupMenu" Name="PlayerProfileEditFavCstrsWin/Menubar/FileButton/FileMenu" >
+                    <Property Name="Font" Value="CFMarieEve10" />
+                    <Property Name="Visible" Value="False" />
+                    <Property Name="FadeInTime" Value="0" />
+                    <Property Name="FadeOutTime" Value="0" />
+                    <Property Name="ItemSpacing" Value="2" />
+                    <Property Name="ClippedByParent" Value="False" />
+                    <Property Name="UnifiedAreaRect" Value="{{0,0},{0,20},{0,201},{0,110.479}}" />
+                    <Property Name="AutoResizeEnabled" Value="True" />
+                    <Window Type="GlossySerpent/MenuItem" Name="PlayerProfileEditFavCstrsWin/Menubar/FileButton/FileMenu/Load" >
+                        <Property Name="Font" Value="CFMarieEve10" />
+                        <Property Name="Text" Value="Load favorite list..." />
+                        <Property Name="Tooltip" Value="Load favorite list" />
+                        <Property Name="UnifiedAreaRect" Value="{{0,5},{0,3},{0,191},{0,29}}" />
+                    </Window>
+                    <Window Type="GlossySerpent/MenuItem" Name="PlayerProfileEditFavCstrsWin/Menubar/FileButton/FileMenu/Save" >
+                        <Property Name="Font" Value="CFMarieEve10" />
+                        <Property Name="Text" Value="Save favorite list" />
+                        <Property Name="Tooltip" Value="Save favorite list" />
+                        <Property Name="Disabled" Value="True" />
+                        <Property Name="UnifiedAreaRect" Value="{{0,5},{0,31},{0,191},{0,57}}" />
+                    </Window>
+                    <Window Type="GlossySerpent/MenuItem" Name="PlayerProfileEditFavCstrsWin/Menubar/FileButton/FileMenu/SaveAs" >
+                        <Property Name="Font" Value="CFMarieEve10" />
+                        <Property Name="Text" Value="Save favorite list as..." />
+                        <Property Name="Tooltip" Value="Save favorite list as ..." />
+                        <Property Name="UnifiedAreaRect" Value="{{0,5},{0,59},{0,191},{0,85}}" />
+                    </Window>
+                </Window>
+            </Window>
+        </Window>
+        <Window Type="GlossySerpent/Button" Name="PlayerProfileEditFavCstrsWin/AddFavBttn" >
+            <Property Name="Font" Value="CFMarieEve10" />
+            <Property Name="Text" Value="Add" />
+            <Property Name="UnifiedAreaRect" Value="{{0.696011,0},{0.133851,0},{0.98752,0},{0.210844,0}}" />
+        </Window>
+        <Window Type="GlossySerpent/Button" Name="PlayerProfileEditFavCstrsWin/ReplaceFavBttn" >
+            <Property Name="Font" Value="CFMarieEve10" />
+            <Property Name="Text" Value="Replace selected" />
+            <Property Name="UnifiedAreaRect" Value="{{0.00916877,0},{0.138516,0},{0.49064,0},{0.207627,0}}" />
+        </Window>
+        <Window Type="GlossySerpent/Combobox" Name="PlayerProfileEditFavCstrsWin/ConstructionSelector" >
+            <Property Name="Font" Value="CFMarieEve10" />
+            <Property Name="ReadOnly" Value="True" />
+            <Property Name="ClippedByParent" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{0.00616464,0},{0.081961,0},{0.990431,0},{0.975599,0}}" />
+            <Property Name="MaxEditTextLength" Value="1073741823" />
+        </Window>
+        <Window Type="GlossySerpent/StaticText" Name="PlayerProfileEditFavCstrsWin/Text1" >
+            <Property Name="Font" Value="CFMarieEve10" />
+            <Property Name="Text" Value="Constructions enregistrés :" />
+            <Property Name="HorzExtent" Value="229" />
+            <Property Name="VertExtent" Value="14.8907" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{0.0165896,0},{0.0434771,0},{0.623019,0},{0.0830547,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+        </Window>
+        <Window Type="GlossySerpent/Button" Name="PlayerProfileEditFavCstrsWin/DelFavBttn" >
+            <Property Name="Font" Value="CFMarieEve10" />
+            <Property Name="Text" Value="Delete Selected" />
+            <Property Name="UnifiedAreaRect" Value="{{0.00687169,0},{0.201078,0},{0.486256,0},{0.266248,0}}" />
+        </Window>
+    </Window>
+</GUILayout>

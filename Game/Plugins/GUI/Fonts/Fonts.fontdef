@@ -1,0 +1,72 @@
+DejaVuSans
+{
+    type truetype
+    source DejaVuSans.ttf
+	size 		10
+	resolution 	96
+}
+
+DejaVuSans6
+{
+    type truetype
+    source DejaVuSans.ttf
+	size 		6
+	resolution 	96
+}
+
+TheLostPaintings10
+{
+    type truetype
+    source The Lost Paintings.ttf
+	size 		10
+	resolution 	96
+}
+
+
+The-Lost-Paintings10
+{
+    type truetype
+    source The Lost Paintings.ttf
+	size 		10
+	resolution 	96
+}
+
+TheLostPaintings12
+{
+    type truetype
+    source The Lost Paintings.ttf
+	size 		12
+	resolution 	96
+}
+
+TheLostPaintings14
+{
+    type truetype
+    source The Lost Paintings.ttf
+	size 		14
+	resolution 	96
+}
+
+TheLostPaintings18
+{
+    type truetype
+    source The Lost Paintings.ttf
+	size 		18
+	resolution 	96
+}
+
+Delius-Regular10
+{
+    type truetype
+    source Delius-Regular.ttf
+	size 		10
+	resolution 	96
+}
+
+CFMarieEve10
+{
+    type truetype
+    source CFMarieEve.ttf
+	size 		9
+	resolution 	96
+}

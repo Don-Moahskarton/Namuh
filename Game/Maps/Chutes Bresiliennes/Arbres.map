@@ -1,0 +1,111 @@
+	[Vegetation object pager]
+		Page_Size = 100
+		# Chaque object paginé peut contenir plusieurs entités, elles seront tirés au hasard
+
+		[Entity]
+			Visual_FileName = Chesne2.mesh
+			PhysX_FileName = Objects/Palmier_droit/Palmier_droit.nxs
+			RandomScale_MaxValue = 1
+			windFactorX = 0.001
+			windFactorY = 0.001
+		[/Entity]
+		[Entity]
+			Visual_FileName = Chesne Groupe 1.mesh
+			PhysX_FileName = Objects/Palmier_droit/Palmier_droit.nxs
+			RandomScale_MaxValue = 1
+			windFactorX = 0.0001
+			windFactorY = 0.0001
+		[/Entity]
+
+
+		Object_Count = 150
+		Baches_Distance = 65
+		Baches_FadingDistance = 0
+		Impostor_Resolution = 512
+		Impostor_Distance = 1500 # Les objets se voient très très loin
+		Impostor_FadingDistance = 0
+
+		# Les object pagers tirent au hasard leur position
+		RandomPosition_Y_minDelta = -1 # Attn ! Here, squared delta !
+		RandomPosition_Y_MaxDelta = 30 # Attn ! Here, squared delta !
+		RandomPosition_Y_UpperBound = 150
+		RandomPosition_Y_LowerBound = 15
+	[/Vegetation object pager]
+
+
+	[Vegetation object pager]
+		Page_Size = 30
+		# Chaque object paginé peut contenir plusieurs entités, elles seront tirés au hasard
+
+		[Entity]
+			Visual_FileName = Arbre Large.mesh
+			PhysX_FileName = Objects/Palmier_droit/Palmier_droit.nxs
+			RandomScale_MaxValue = 1
+			windFactorX = 0.003
+			windFactorY = 0.003
+		[/Entity]
+		[Entity]
+			Visual_FileName = Chesne2.mesh
+			PhysX_FileName = Objects/Palmier_droit/Palmier_droit.nxs
+			RandomScale_MaxValue = 1
+			windFactorX = 0.001
+			windFactorY = 0.001
+		[/Entity]
+
+		Object_Count = 700
+		Baches_Distance = 55
+		Baches_FadingDistance = 0
+		Impostor_Resolution = 512
+		Impostor_Distance = 600 # Icic se voit d'assez près
+		Impostor_FadingDistance = 0
+
+		# Les object pagers tirent au hasard leur position
+		RandomPosition_Y_minDelta = -1 # Attn ! Here, squared delta !
+		RandomPosition_Y_MaxDelta = 30 # Attn ! Here, squared delta !
+		RandomPosition_Y_UpperBound = 150
+		RandomPosition_Y_LowerBound = 15
+	[/Vegetation object pager]
+
+	[Vegetation object pager]
+		Page_Size = 20
+		# Chaque object paginé peut contenir plusieurs entités, elles seront tirés au hasard
+
+
+		[Entity]
+			Visual_FileName = Chesne Groupe 1.mesh
+			PhysX_FileName = Objects/Palmier_droit/Palmier_droit.nxs
+			RandomScale_MaxValue = 1
+			windFactorX = 0.0001
+			windFactorY = 0.0001
+		[/Entity]
+
+		[Entity]
+			Visual_FileName = Buisson Rond.mesh
+			PhysX_FileName = Objects/Palmier_droit/Palmier_droit.nxs
+			RandomScale_MinValue = 0.4
+			RandomScale_MaxValue = 1.8
+			windFactorX = 0.001
+			windFactorY = 0.001
+		[/Entity]
+		[Entity]
+			Visual_FileName = Buisson Rond2.mesh
+			PhysX_FileName = Objects/Palmier_droit/Palmier_droit.nxs
+			RandomScale_MinValue = 0.4
+			RandomScale_MaxValue = 1.8
+			windFactorX = 0.001
+			windFactorY = 0.001
+		[/Entity]
+
+		Object_Count = 1250
+		Baches_Distance = 55
+		Baches_FadingDistance = 0
+		Impostor_Resolution = 512
+		Impostor_Distance = 200 # Se voit juste de très près
+		Impostor_FadingDistance = 0
+
+		# Les object pagers tirent au hasard leur position
+		RandomPosition_Y_minDelta = -1 # Attn ! Here, squared delta !
+		RandomPosition_Y_MaxDelta = 30 # Attn ! Here, squared delta !
+		RandomPosition_Y_UpperBound = 150
+		RandomPosition_Y_LowerBound = 15
+	[/Vegetation object pager]

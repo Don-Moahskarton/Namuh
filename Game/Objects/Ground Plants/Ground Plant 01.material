@@ -1,0 +1,20 @@
+
+material GroundPlant01
+{
+	technique
+	{
+		pass
+		{
+			cull_hardware none 
+			alpha_rejection greater_equal 197
+			texture_unit
+			{
+				texture Leaves0088_2_S.png
+			}
+		}
+
+	}
+
+}
+
+

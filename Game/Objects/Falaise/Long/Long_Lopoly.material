@@ -1,0 +1,35 @@
+import * from "general.material"
+ material Falaise_long : base_material
+{
+    // any of these maps can be left out if you don't have one
+    set_texture_alias diffuseMap cliff_basalt_small.dds
+    //set_texture_alias specMap cliff_basalt_small.dds
+    set_texture_alias normalMap cliff_basalt_ddn.dds
+   // set_texture_alias aoMap cliff_basalt_small.dds
+ 
+    // diffuse colour multiplier 
+    set $diffuseCol "0.7 0.7 0.7"
+    // specular colour multiplier
+    set $specularCol "0.5 0.5 0.5"
+    // specular power (shininess) (the higher, the sharper the highlights)
+    set $shininess "255"
+ 
+    // once again, you can leave any of these configurables out if you don't need them
+}
+ material Falaise_Long : base_material
+{
+    // any of these maps can be left out if you don't have one
+    set_texture_alias diffuseMap cliff_basalt_small.dds
+    //set_texture_alias specMap cliff_basalt_small.dds
+    set_texture_alias normalMap cliff_basalt_ddn.dds
+   // set_texture_alias aoMap cliff_basalt_small.dds
+ 
+    // diffuse colour multiplier 
+    set $diffuseCol "0.7 0.7 0.7"
+    // specular colour multiplier
+    set $specularCol "0.5 0.5 0.5"
+    // specular power (shininess) (the higher, the sharper the highlights)
+    set $shininess "255"
+ 
+    // once again, you can leave any of these configurables out if you don't need them
+}

@@ -1,0 +1,67 @@
+set $LayerNb "28"
+
+vertex_program furVP cg
+{
+    source fur.cg
+    entry_point main_vp
+    profiles vs_1_1 
+
+    default_params
+    {
+        param_named_auto worldViewProj worldviewproj_matrix
+        param_named_auto layerIndex pass_iteration_number
+        param_named furLength float 0.15
+        param_named totalLayerCount float $LayerNb
+    }
+}
+ 
+ fragment_program furFP cg
+ {
+     source fur.cg
+     entry_point main_fp
+     profiles ps_2_x
+
+ }
+ 
+
+material fur
+{
+    technique
+    {
+        pass Fur3D
+        {
+            iteration $LayerNb
+            depth_write off
+            scene_blend alpha_blend
+            //scene_blend src_alpha one
+            vertex_program_ref furVP
+            {
+            }
+            fragment_program_ref furFP
+            {
+                param_named_auto layerIndex pass_iteration_number
+        		param_named totalLayerCount float $LayerNb
+            }
+            texture_unit furTex
+            {
+                 texture fur.png 2d
+                 //tex_address_mode wrap
+            }
+
+            texture_unit coatTex
+            {
+                 texture fur_background.jpg 2d
+            }
+        }
+
+        pass depthWrite
+        {
+
+            scene_blend alpha_blend
+            texture_unit coatTex
+            {
+                 texture fur.png 2d
+            }
+        }
+    }
+}

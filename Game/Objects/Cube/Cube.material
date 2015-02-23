@@ -1,0 +1,18 @@
+import * from "general.material"
+ material Cubedebois : base_material
+{
+    // any of these maps can be left out if you don't have one
+    set_texture_alias diffuseMap WoodRough0050_3_S.jpg
+    set_texture_alias specMap WoodRough0050_3_S_SPEC.jpg
+    set_texture_alias normalMap WoodRough0050_3_S_NRM.jpg
+    set_texture_alias aoMap WoodRough0050_3_S_OCC.jpg
+ 
+    // diffuse colour multiplier 
+    set $diffuseCol "0.7 0.7 0.7"
+    // specular colour multiplier
+    set $specularCol "1 1 1"
+    // specular power (shininess) (the higher, the sharper the highlights)
+    set $shininess "15"
+ 
+    // once again, you can leave any of these configurables out if you don't need them
+}

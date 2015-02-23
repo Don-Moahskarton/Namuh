@@ -1,0 +1,38 @@
+	[Layer]
+		Diffuse =  Grass0155_13_S.jpg
+		Normal = Grass0155_13_S_NORM.tga
+		Size = 1
+	[/Layer]
+
+	[Layer]
+		Diffuse =  Grass0155_13_S.jpg
+		Normal = Grass0155_13_S_NORM.tga
+		Mask =  Grass0155_13_S_DISP.bmp
+		MaskFactor = 1
+		Size = 10
+	[/Layer]
+#
+#	[Layer]
+#		Diffuse = SoilMud0019_5_S.jpg
+#		Normal = Flat_n.png
+#		Mask =  Chutes Bresiliennes_Grassmask3.bmp
+#		Size = 2
+#	[/Layer]
+#
+#	[Layer]
+#		Diffuse = Moss0165_2_S.jpg
+#		Normal = Moss0165_2_S_NRM.jpg
+#		Mask =  Chutes Bresiliennes_Rockmask.bmp
+#		MaskFactor = 0.5
+#		Size = 200
+#	[/Layer]
+#
+#	[Layer]
+#		#Diffuse = Tex.png
+#		Diffuse = Moss0165_2_S.jpg
+#		Normal = Moss0165_2_S_NRM.jpg
+#		Mask =  Chutes Bresiliennes_Rockmask.bmp
+#		MaskFactor = 0.5
+#		#Size = 2000
+#		Size = 5
+#	[/Layer]

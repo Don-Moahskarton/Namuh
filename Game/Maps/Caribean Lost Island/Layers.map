@@ -1,0 +1,41 @@
+
+	[Layer]
+		Diffuse = beach_white_sand2.dds
+		Normal = beach_white_sand_wet_frozen_ddn.dds
+		Size = 0.2
+	[/Layer]
+	[Layer]
+		Diffuse = beach_sand_coarse.dds
+		Normal = beach_sand_coarse_ddn.dds
+		Mask =  Dry sand Mask.png
+		MaskFactor = 0.9
+		Size = 0.65
+	[/Layer]
+	#[Layer]
+	#	Diffuse = beach_sand_coarse.dds
+	#	Normal = beach_sand_coarse_ddn.dds
+	#	Mask =  Dry sand Mask.png
+	#	MaskFactor = 0.8
+	#	Size = 0.65
+	#[/Layer]
+	[Layer]
+		Diffuse = cliff_basalt.dds
+		Normal = cliff_basalt_ddn.dds
+		Mask = Rock Mask.png
+		MaskFactor = 0.4
+		Size = 2
+	[/Layer]
+	[Layer]
+		Diffuse = cliff_basalt.dds
+		Normal = cliff_basalt_ddn.dds
+		Mask = Rock Mask.png
+		MaskFactor = 0.6
+		Size = 10
+	[/Layer]
+	[Layer]
+		Diffuse = beach_sand_coarse.dds
+		Normal = beach_sand_coarse_ddn.dds
+		Mask =  Dry sand Mask.png
+		MaskFactor = 0.1
+		Size = 3
+	[/Layer]

@@ -1,0 +1,19 @@
+
+material Pierre_du_Lance_Pierre
+{
+	technique
+	{
+		pass
+		{
+
+			texture_unit
+			{
+				texture RockSmooth0076_5_XS.jpg
+			}
+		}
+
+	}
+
+}
+
+

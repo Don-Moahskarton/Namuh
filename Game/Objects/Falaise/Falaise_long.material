@@ -1,0 +1,18 @@
+import * from "general.material"
+ material lambert2SGaa : base_material
+{
+    // any of these maps can be left out if you don't have one
+    set_texture_alias diffuseMap Cliffs0146_11_S_COLOR2.jpg
+    set_texture_alias specMap Cliffs0146_11_S.jpg_SPEC.jpg
+    set_texture_alias normalMap Cliffs0146_11_S.jpg_NRM.jpg
+    //set_texture_alias aoMap Cliffs0146_11_S.jpg_OCC.jpg
+ 
+    // diffuse colour multiplier 
+    set $diffuseCol "0.9 0.9 0.9"
+    // specular colour multiplier
+    set $specularCol "1 1 1"
+    // specular power (shininess) (the higher, the sharper the highlights)
+    set $shininess "64"
+ 
+    // once again, you can leave any of these configurables out if you don't need them
+}

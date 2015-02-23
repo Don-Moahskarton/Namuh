@@ -1,0 +1,41 @@
+import * from "general.material"
+ material material017 : base_material
+{
+			cull_hardware none
+			alpha_rejection greater_equal 128
+			scene_blend alpha_blend
+
+    // any of these maps can be left out if you don't have one
+    set_texture_alias diffuseMap Thatched0035_2_S.jpg
+    set_texture_alias specMap Thatched0035_2_S_SPEC.jpg
+    set_texture_alias normalMap Thatched0035_2_S_NRM.jpg
+    set_texture_alias aoMap Thatched0035_2_S_OCC.jpg
+ 
+    // diffuse colour multiplier 
+    set $diffuseCol "1 1 1"
+    // specular colour multiplier
+    //set $specularCol "0.2 0.2 0.2"
+    // specular power (shininess) (the higher, the sharper the highlights)
+    set $shininess "56"
+ 
+    // once again, you can leave any of these configurables out if you don't need them
+}
+
+material material18
+{
+    technique
+    {
+        pass
+        {
+
+			cull_hardware none
+			alpha_rejection greater_equal 128
+			scene_blend alpha_blend
+            texture_unit
+            {
+                texture Palm.png
+                filtering trilinear
+            }
+        }
+    }
+}

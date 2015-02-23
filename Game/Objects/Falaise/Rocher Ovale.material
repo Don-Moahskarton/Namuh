@@ -1,0 +1,18 @@
+import * from "general.material"
+ material Rocher_Ovale : base_material
+{
+    // any of these maps can be left out if you don't have one
+    set_texture_alias diffuseMap Rocher_5mx5m_ovale.jpg
+    set_texture_alias specMap  Rocher_5mx5m_ovale.jpg
+    set_texture_alias normalMap Moss0165_2_S_NRM.jpg
+    set_texture_alias aoMap  Rocher_5mx5m_ovale.jpg
+ 
+    // diffuse colour multiplier 
+    set $diffuseCol "1 1 1"
+    // specular colour multiplier
+    set $specularCol "1 1 1"
+    // specular power (shininess) (the higher, the sharper the highlights)
+    set $shininess "128"
+ 
+    // once again, you can leave any of these configurables out if you don't need them
+}

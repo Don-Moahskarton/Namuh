@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<GUILayout >
+    <Window Type="GlossySerpent/FrameWindow" Name="SanboxLinkCreator" >
+        <Property Name="Font" Value="The-Lost-Paintings10" />
+        <Property Name="Text" Value="Create link" />
+        <Property Name="TitlebarFont" Value="The-Lost-Paintings10" />
+        <Property Name="TitlebarEnabled" Value="True" />
+        <Property Name="UnifiedAreaRect" Value="{{0.315625,0},{0.290147,0},{0.684374,0},{0.846225,0}}" />
+        <Property Name="EWSizingCursorImage" Value="set:TaharezLook image:MouseEsWeCursor" />
+        <Property Name="NSSizingCursorImage" Value="set:TaharezLook image:MouseNoSoCursor" />
+        <Property Name="NESWSizingCursorImage" Value="set:TaharezLook image:MouseNeSwCursor" />
+        <Property Name="NWSESizingCursorImage" Value="set:TaharezLook image:MouseNwSeCursor" />
+        <Window Type="GlossySerpent/Combobox" Name="SanboxLinkCreator/LinkTypeSelector" >
+            <Property Name="Font" Value="The-Lost-Paintings10" />
+            <Property Name="Text" Value="Fixed Link" />
+            <Property Name="ReadOnly" Value="True" />
+            <Property Name="ClippedByParent" Value="False" />
+            <Property Name="UnifiedAreaRect" Value="{{0.00988624,0},{0.945301,0},{0.379943,0},{1.28485,0}}" />
+            <Property Name="MaxEditTextLength" Value="1073741823" />
+        </Window>
+        <Window Type="TaharezLook/StaticText" Name="SanboxLinkCreator/LinkTypeText" >
+            <Property Name="Font" Value="The-Lost-Paintings10" />
+            <Property Name="Text" Value="Link type :" />
+            <Property Name="HorzExtent" Value="316" />
+            <Property Name="VertExtent" Value="17.258" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+            <Property Name="UnifiedAreaRect" Value="{{0.013559,0},{0.89317,0},{0.998024,0},{0.940982,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Property Name="VertScrollPosition" Value="0" />
+        </Window>
+        <Window Type="GlossySerpent/Button" Name="SanboxLinkCreator/OkBttn" >
+            <Property Name="Font" Value="The-Lost-Paintings10" />
+            <Property Name="Text" Value="Create Link" />
+            <Property Name="UnifiedAreaRect" Value="{{0.726555,0},{0.949029,0},{0.986441,0},{0.990844,0}}" />
+        </Window>
+        <Window Type="GlossySerpent/Button" Name="SanboxLinkCreator/CancelBttn" >
+            <Property Name="Font" Value="The-Lost-Paintings10" />
+            <Property Name="Text" Value="Cancel" />
+            <Property Name="UnifiedAreaRect" Value="{{0.469209,0},{0.947144,0},{0.714971,0},{0.989528,0}}" />
+        </Window>
+        <Window Type="GlossySerpent/Listbox" Name="SanboxLinkCreator/FirstObjLst" >
+            <Property Name="Font" Value="DejaVuSans-10" />
+            <Property Name="UnifiedAreaRect" Value="{{0.000281567,0},{0.044721,0},{0.439548,0},{0.823421,0}}" />
+        </Window>
+        <Window Type="GlossySerpent/Listbox" Name="SanboxLinkCreator/SecondObjLst" >
+            <Property Name="Font" Value="DejaVuSans-10" />
+            <Property Name="UnifiedAreaRect" Value="{{0.562995,0},{0.044721,0},{1.00226,0},{0.823421,0}}" />
+        </Window>
+        <Window Type="TaharezLook/StaticText" Name="SanboxLinkCreator/FistObjLstTxt" >
+            <Property Name="Font" Value="The-Lost-Paintings10" />
+            <Property Name="Text" Value=" Select first object :" />
+            <Property Name="HorzExtent" Value="128" />
+            <Property Name="VertExtent" Value="17.258" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+            <Property Name="UnifiedAreaRect" Value="{{-0.001413,0},{0.001649,0},{0.388419,0},{0.044702,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Property Name="VertScrollPosition" Value="0" />
+        </Window>
+        <Window Type="GlossySerpent/StaticText" Name="SanboxLinkCreator/SecondObjLstTxt" >
+            <Property Name="Font" Value="The-Lost-Paintings10" />
+            <Property Name="Text" Value=" Select second object :" />
+            <Property Name="HorzExtent" Value="143" />
+            <Property Name="VertExtent" Value="17.258" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+            <Property Name="UnifiedAreaRect" Value="{{0.558475,0},{0.001649,0},{0.948307,0},{0.044702,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+        </Window>
+        <Window Type="TaharezLook/StaticText" Name="SanboxLinkCreator/ArrowTxt" >
+            <Property Name="Font" Value="The-Lost-Paintings10" />
+            <Property Name="Text" Value="&lt;==&gt;" />
+            <Property Name="HorzExtent" Value="38" />
+            <Property Name="VertExtent" Value="17.258" />
+            <Property Name="FrameEnabled" Value="False" />
+            <Property Name="HorzFormatting" Value="WordWrapLeftAligned" />
+            <Property Name="UnifiedAreaRect" Value="{{0.457345,0},{0.426769,0},{0.549155,0},{0.499086,0}}" />
+            <Property Name="BackgroundEnabled" Value="False" />
+            <Property Name="VertScrollPosition" Value="0" />
+        </Window>
+        <Window Type="GlossySerpent/Button" Name="SanboxLinkCreator/PickFrstObjBttn" >
+            <Property Name="Font" Value="The-Lost-Paintings10" />
+            <Property Name="Text" Value="Pick it graphicaly" />
+            <Property Name="UnifiedAreaRect" Value="{{0.0672304,0},{0.831263,0},{0.36384,0},{0.877417,0}}" />
+        </Window>
+        <Window Type="GlossySerpent/Button" Name="SanboxLinkCreator/PickSecondObjBttn" >
+            <Property Name="Font" Value="The-Lost-Paintings10" />
+            <Property Name="Text" Value="Pick it graphicaly" />
+            <Property Name="UnifiedAreaRect" Value="{{0.630508,0},{0.831357,0},{0.927117,0},{0.877512,0}}" />
+        </Window>
+    </Window>
+</GUILayout>

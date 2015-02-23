@@ -1,0 +1,17 @@
+material hide
+{
+   technique
+   {
+      pass
+      {
+         alpha_rejection greater_equal 197
+         cull_hardware none
+         scene_blend alpha_blend
+
+            texture_unit 
+            {
+                 texture hide01.png
+            }
+      }
+   }
+}

@@ -1,0 +1,143 @@
+[Construction]
+	Name = Construction19478776
+	[Element]
+		Diametre = 1
+		Longueur = 10
+		Position = 0 0 0
+		Type = Rondin
+		Name = Rondin20845
+		[Orientation]
+			w = 0.414185
+			x = 0.602527
+			y = 0.468692
+			z = -0.495714
+		[/Orientation]
+	[/Element]
+	[Element]
+		Diametre = 1
+		Longueur = 10
+		Position = 0.432297 1.54841 0.809937
+		Type = Rondin
+		Name = Rondin23041
+		[Orientation]
+			w = 0.448544
+			x = 0.578169
+			y = 0.523358
+			z = -0.436601
+		[/Orientation]
+	[/Element]
+	[Element]
+		Diametre = 1
+		Longueur = 10
+		Position = 0.814209 0.0555725 -1.75919
+		Type = Rondin
+		Name = Rondin25695
+		[Orientation]
+			w = 0.640107
+			x = 0.0778143
+			y = 0.173845
+			z = -0.744301
+		[/Orientation]
+	[/Element]
+	[Element]
+		Diametre = 1
+		Longueur = 10
+		Position = 2.56241 -0.537411 -3.20239
+		Type = Rondin
+		Name = Rondin29352
+		[Orientation]
+			w = 0.639006
+			x = 0.0787845
+			y = 0.172216
+			z = -0.745525
+		[/Orientation]
+	[/Element]
+	[Element]
+		Diametre = 1
+		Longueur = 10
+		Position = 4.49271 0.390053 -3.75308
+		Type = Rondin
+		Name = Rondin33134
+		[Orientation]
+			w = 0.532781
+			x = 0.472457
+			y = 0.43915
+			z = -0.547789
+		[/Orientation]
+	[/Element]
+	[Element]
+		Diametre = 1
+		Longueur = 10
+		Position = 7.44307 1.35463 -4.15564
+		Type = Rondin
+		Name = Rondin35642
+		[Orientation]
+			w = 0.517841
+			x = 0.504228
+			y = 0.481381
+			z = -0.495845
+		[/Orientation]
+	[/Element]
+	[Element]
+		Diametre = 1
+		Longueur = 10
+		Position = 9.34731 2.40173 -4.64926
+		Type = Rondin
+		Name = Rondin36856
+		[Orientation]
+			w = 0.515184
+			x = 0.507385
+			y = 0.483688
+			z = -0.493144
+		[/Orientation]
+	[/Element]
+	[Element]
+		Diametre = 1
+		Longueur = 10
+		Position = 12.3719 3.59585 -4.5806
+		Type = Rondin
+		Name = Rondin39541
+		[Orientation]
+			w = 0.513382
+			x = 0.509064
+			y = 0.485767
+			z = -0.491246
+		[/Orientation]
+	[/Element]
+	[Link]
+		LinkName = Rondin20845 <==> Rondin23041
+		FirstBodyName = Rondin20845
+		SecondBodyName = Rondin23041
+	[/Link]
+	[Link]
+		LinkName = Rondin20845 <==> Rondin25695
+		FirstBodyName = Rondin20845
+		SecondBodyName = Rondin25695
+	[/Link]
+	[Link]
+		LinkName = Rondin25695 <==> Rondin29352
+		FirstBodyName = Rondin25695
+		SecondBodyName = Rondin29352
+	[/Link]
+	[Link]
+		LinkName = Rondin29352 <==> Rondin33134
+		FirstBodyName = Rondin29352
+		SecondBodyName = Rondin33134
+	[/Link]
+	[Link]
+		LinkName = Rondin33134 <==> Rondin35642
+		FirstBodyName = Rondin33134
+		SecondBodyName = Rondin35642
+	[/Link]
+	[Link]
+		LinkName = Rondin35642 <==> Rondin36856
+		FirstBodyName = Rondin35642
+		SecondBodyName = Rondin36856
+	[/Link]
+	[Link]
+		LinkName = Rondin36856 <==> Rondin39541
+		FirstBodyName = Rondin36856
+		SecondBodyName = Rondin39541
+	[/Link]
+[/Construction]
+

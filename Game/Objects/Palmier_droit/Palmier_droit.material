@@ -1,0 +1,42 @@
+import * from "general.material"
+
+ material OgreMaxMaterial1 : base_material
+{
+    // any of these maps can be left out if you don't have one
+    set_texture_alias diffuseMap Thatched0035_2_S_COLOR.jpg
+    set_texture_alias specMap WoodRough0050_3_S_SPEC.jpg
+    set_texture_alias normalMap Thatched0035_2_S_NRM.jpg
+    set_texture_alias aoMap WoodRough0050_3_S_OCC.jpg
+ 
+    // diffuse colour multiplier 
+    set $diffuseCol "0.65 0.65 0.65"
+     specular colour multiplier
+    set $specularCol "1 1 1"
+    // specular power (shininess) (the higher, the sharper the highlights)
+    set $shininess "96"
+ 
+    // once again, you can leave any of these configurables out if you don't need them
+}
+
+
+material OgreMaxMaterial2
+{
+	technique OgreMaxTechnique2
+	{
+		pass OgreMaxPass2
+		{
+			alpha_rejection greater_equal 197
+			cull_hardware none
+			scene_blend alpha_blend
+
+			texture_unit OgreMaxTextureUnit2
+			{
+				texture Palm.png alpha
+			}
+		}
+
+	}
+
+}
+
+

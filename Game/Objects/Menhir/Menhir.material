@@ -1,0 +1,18 @@
+import * from "general.material"
+ material material16 : base_material
+{
+    // any of these maps can be left out if you don't have one
+    set_texture_alias diffuseMap Menhir_1.jpg
+    set_texture_alias specMap Menhir_1_SPEC.jpg
+    set_texture_alias normalMap Menhir_1_NRM.jpg
+    set_texture_alias aoMap Menhir_1_OCC.jpg
+ 
+    // diffuse colour multiplier 
+    set $diffuseCol "0.8 0.8 0.8"
+    // specular colour multiplier
+    set $specularCol "0.8 0.8 0.8"
+    // specular power (shininess) (the higher, the sharper the highlights)
+    set $shininess "64"
+ 
+    // once again, you can leave any of these configurables out if you don't need them
+}

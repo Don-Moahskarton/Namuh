@@ -1,0 +1,102 @@
+material Underwater_plant07
+{
+	technique
+	{
+		pass
+		{
+			//lighting off
+			cull_hardware none
+			cull_software none
+			scene_blend alpha_blend
+			alpha_rejection greater_equal 128
+			//depth_write off
+			
+			texture_unit
+			{
+				texture "Underwater Plant 07.png"
+			}
+		}
+	}
+}
+
+material Underwater_plant17
+{
+	technique
+	{
+		pass
+		{
+			//lighting off
+			cull_hardware none
+			cull_software none
+			scene_blend alpha_blend
+			alpha_rejection greater_equal 128
+			//depth_write off
+			
+			texture_unit
+			{
+				texture "Underwater Plant 17.png"
+			}
+		}
+	}
+}
+
+material Underwater_plant10
+{
+	technique
+	{
+		pass
+		{
+			//lighting off
+			cull_hardware none
+			cull_software none
+			scene_blend alpha_blend
+			alpha_rejection greater_equal 128
+			//depth_write off
+			
+			texture_unit
+			{
+				texture "Underwater Plant 10.png"
+			}
+		}
+	}
+}
+material Underwater_plant12
+{
+	technique
+	{
+		pass
+		{
+			//lighting off
+			cull_hardware none
+			cull_software none
+			scene_blend alpha_blend
+			alpha_rejection greater_equal 128
+			//depth_write off
+			
+			texture_unit
+			{
+				texture "Underwater Plant 12.png"
+			}
+		}
+	}
+}
+material Underwater_plant23
+{
+	technique
+	{
+		pass
+		{
+			//lighting off
+			cull_hardware none
+			cull_software none
+			scene_blend alpha_blend
+			alpha_rejection greater_equal 128
+			//depth_write off
+			
+			texture_unit
+			{
+				texture "Underwater Plant 23.png"
+			}
+		}
+	}
+}

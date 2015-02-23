@@ -1,0 +1,46 @@
+[Map]
+
+	Name = MainMenu Background
+
+	Heightmap_File = MainMenuBG Height.tif
+	Heightmap_Size = 513
+	Heightmap_MaxPixelError = 8
+
+	World_Horisontal_Size = 500
+	World_Vertical_Size = 100
+	World_Bach_Size_min = 5
+	World_Bach_Size_Max = 65
+	World_Position =  0 0 0
+	World_Water_Height = -16
+
+	Time_Starting = 13.50 # dans [0;24], les minutes sont décimales, ie 12.50f <=> 12h30
+	Time_Multiplier = 0.001 # 0.003 fige casiment le temps
+	Time_Sunrise = 8.0
+	Time_Sunset = 21.0
+
+	World_East_Direction = 1.85 # entre 0 et 2pi pour caractériser un point de l'horison
+	Vegetation_Enabled = true
+	
+	Weather_Cloud_Enabled = true
+	Weather_Cloud_Humidity = 0.30 # la quantité de nuages
+	Weather_Cloud_Average_Width = 0.3 # was 1
+	Weather_Cloud_Altitude = 1500 # en m
+	Weather_Cloud_Height =  4000
+	Weather_Wind_Speed = 800
+	Weather_Wind_Direction = 90
+	Weather_Sky_Exposure = 2
+	Weather_Sky_MieMultiplier = 0.001667
+	Weather_Sky_WaveLength = 0.64f, 0.54f, 0.44f # RGB value of sky, each component in [0;1] range
+
+
+	Faune_Page_Min_Size = 50
+	Faune_Display_Distance = 150
+
+	Spawn_Position = 96 50 102
+
+	<Layers.map>
+	<Herbe.map>
+	<Arbres.map>
+	<Roches.map>
+
+[/Map]
