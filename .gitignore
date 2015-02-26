@@ -7,9 +7,6 @@
 *.sln.docstates
 
 # Build results
-
-[Dd]ebug/
-[Rr]elease/
 x64/
 build/
 [Bb]in/
@@ -27,6 +24,7 @@ build/
 *.ilk
 *.meta
 *.obj
+*.tlog
 *.pch
 *.pdb
 *.pgc
@@ -154,5 +152,3 @@ $RECYCLE.BIN/
 
 # Mac desktop service store files
 .DS_Store
-/msvc/Namuh.sln
-/msvc/Namuh.vcxproj
